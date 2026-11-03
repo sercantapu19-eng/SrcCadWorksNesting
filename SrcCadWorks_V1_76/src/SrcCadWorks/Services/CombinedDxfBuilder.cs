@@ -91,6 +91,15 @@ namespace SrcCadWorks.Services
             "SRC_GEOMETRY", "SRC_BEND", "SRC_CENTER", "SRC_INFO", "SRC_SEPARATOR"
         };
 
+        private static bool IsAllowedOutputLayer(string layer)
+        {
+            if (OutputLayers.Contains(layer)) return true;
+            if (string.IsNullOrWhiteSpace(layer) || !layer.StartsWith("SMARTNEST_SHEET_", StringComparison.OrdinalIgnoreCase))
+                return false;
+            string[] suffixes = { "_GEOMETRY", "_BEND", "_CENTER" };
+            return suffixes.Any(suffix => layer.EndsWith(suffix, StringComparison.OrdinalIgnoreCase));
+        }
+
         private static readonly HashSet<string> OutputLinetypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
         {
             "CONTINUOUS", "DASHED", "CENTER"
@@ -262,12 +271,10 @@ namespace SrcCadWorks.Services
                 Encoding enc;
                 try { enc = Encoding.GetEncoding(1254); } catch { enc = Encoding.Default; }
                 File.WriteAllText(tempPath, sb.ToString(), enc);
-                string check = File.ReadAllText(tempPath, enc);
-                if (!check.Contains("AC1009") || !check.Contains("ENTITIES") || !check.Contains("SMARTNEST_SHEET_") || !check.Contains("EOF"))
-                    throw new InvalidDataException("SMARTNEST DXF R12 doğrulaması başarısız.");
-                if (new FileInfo(tempPath).Length < 128) throw new InvalidDataException("SMARTNEST DXF çıktısı boş.");
+                ValidateForImport(tempPath, 0, entityCount, 0);
                 if (File.Exists(outputPath)) File.Delete(outputPath);
                 File.Move(tempPath, outputPath);
+                ValidateForImport(outputPath, 0, entityCount, 0);
                 Logger.Info("SMARTNEST üretim DXF oluşturuldu. Sac=" + result.SheetCount + ", yerleşim=" + result.Placements.Count + ", entity=" + entityCount);
             }
             finally { try { if (File.Exists(tempPath)) File.Delete(tempPath); } catch { } }
@@ -335,7 +342,7 @@ namespace SrcCadWorks.Services
                 if (code == 6 && !OutputLinetypes.Contains(value))
                     throw new InvalidOperationException("Toplu DXF ön doğrulama: tanımsız çizgi tipi bulundu: " + value + ".");
 
-                if (code == 8 && currentEntity != "LAYER" && !string.IsNullOrWhiteSpace(value) && !OutputLayers.Contains(value))
+                if (code == 8 && currentEntity != "LAYER" && !string.IsNullOrWhiteSpace(value) && !IsAllowedOutputLayer(value))
                     throw new InvalidOperationException("Toplu DXF ön doğrulama: beklenmeyen layer bulundu: " + value + ".");
             }
 
