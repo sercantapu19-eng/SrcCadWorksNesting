@@ -38,7 +38,7 @@ namespace SrcCadWorks.UI
             root.RowStyles.Add(new RowStyle(SizeType.Absolute, 62)); root.RowStyles.Add(new RowStyle(SizeType.Absolute, 94)); root.RowStyles.Add(new RowStyle(SizeType.Percent, 100)); root.RowStyles.Add(new RowStyle(SizeType.Absolute, 38)); Controls.Add(root);
             root.Controls.Add(new Label { Text = "SMARTNEST  |  Sac levha tarama ve otomatik yerleşim", Font = new Font("Segoe UI",17,FontStyle.Bold), ForeColor = Color.FromArgb(40,48,58), Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft },0,0);
             var bar = new FlowLayoutPanel { Dock = DockStyle.Fill, WrapContents = true, BackColor = Color.White, Padding = new Padding(8) };
-            AddButton(bar,"Montajı Tara + Açınımları Al",ScanAndExportAssembly); AddButton(bar,"DXF Ekle",AddDxf); _keepOnTop = new CheckBox { Text = "Pencereyi üstte tut", AutoSize = true, Checked = true, Margin = new Padding(8, 10, 4, 0) }; _keepOnTop.CheckedChanged += (s,e) => { SolidWorksOwnedWindow.Apply(this, _sw, _keepOnTop.Checked, true); _ownedWindowTracker?.SetEnabled(_keepOnTop.Checked); }; bar.Controls.Add(_keepOnTop);
+            AddButton(bar,"Montajı Tara + Açınımları Al",ScanAndExportAssembly); AddButton(bar,"DXF Klasörü + Excel Adetleri",AddDxfFolderWithExcel); AddButton(bar,"DXF Ekle",AddDxf); _keepOnTop = new CheckBox { Text = "Pencereyi üstte tut", AutoSize = true, Checked = true, Margin = new Padding(8, 10, 4, 0) }; _keepOnTop.CheckedChanged += (s,e) => { SolidWorksOwnedWindow.Apply(this, _sw, _keepOnTop.Checked, true); _ownedWindowTracker?.SetEnabled(_keepOnTop.Checked); }; bar.Controls.Add(_keepOnTop);
             AddNumeric(bar,"Sac genişliği",_width,1000,1,10000); AddNumeric(bar,"Sac yüksekliği",_height,2000,1,10000); AddNumeric(bar,"Parça aralığı",_gap,5,0,1000); AddNumeric(bar,"Kenar payı",_margin,5,0,1000); AddNumeric(bar,"Kerf",_kerf,0,0,100);
             AddButton(bar,"NESTING YAP",RunNest); AddButton(bar,"Önizleme",ShowPreview); AddButton(bar,"Yerleşim DXF Kaydet",SaveDxf); AddButton(bar,"Excel Raporu Kaydet",SaveExcel); root.Controls.Add(bar,0,1);
             _grid.Dock=DockStyle.Fill; _grid.BackgroundColor=Color.White; _grid.AllowUserToAddRows=false; _grid.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill; _grid.RowHeadersVisible=false;
@@ -205,6 +205,206 @@ namespace SrcCadWorks.UI
             using(var d=new OpenFileDialog{Filter="DXF dosyaları (*.dxf)|*.dxf",Multiselect=true,Title="Nesting için DXF parçaları seçin"})
             {if(d.ShowDialog(this)!=DialogResult.OK)return;foreach(string f in d.FileNames){try{var contour=ReadClosedOuterContour(f);if(contour.Count<3)throw new InvalidDataException("Kapalı dış kontur bulunamadı.");_parts.Add(new SmartNestPart{Name=Path.GetFileNameWithoutExtension(f),SourceDxfPath=f,Quantity=1,OuterContour=contour});AddPartRow(Path.GetFileName(f),1,"DXF içinden","Geometri alındı");}catch(Exception ex){AddPartRow(Path.GetFileName(f),0,"-","Atlandı: "+ex.Message);}}_status.Text="Geometri alınan parça türü: "+_parts.Count;}
         }
+        private void AddDxfFolderWithExcel()
+        {
+            using (var folder = new FolderBrowserDialog { Description = "Önceden hazırlanmış DXF dosyalarının bulunduğu klasörü seçin." })
+            {
+                if (folder.ShowDialog(this) != DialogResult.OK) return;
+                using (var excel = new OpenFileDialog { Filter = "Excel çalışma kitabı (*.xlsx)|*.xlsx", Title = "Parça kodu ve adet bilgilerini içeren Excel dosyasını seçin" })
+                {
+                    if (excel.ShowDialog(this) != DialogResult.OK) return;
+                    try
+                    {
+                        var quantities = ReadDxfQuantitiesFromExcel(excel.FileName);
+                        var files = Directory.GetFiles(folder.SelectedPath, "*.dxf", SearchOption.AllDirectories);
+                        var fileMap = files.GroupBy(f => NormalizePartKey(Path.GetFileNameWithoutExtension(f)))
+                            .ToDictionary(g => g.Key, g => g.ToList(), StringComparer.OrdinalIgnoreCase);
+                        _parts.Clear();
+                        _grid.Rows.Clear();
+                        int matched = 0, missingDxf = 0, duplicateDxf = 0, invalid = 0;
+                        var missingCodes = new List<string>();
+                        foreach (var entry in quantities.OrderBy(x => x.Key, StringComparer.OrdinalIgnoreCase))
+                        {
+                            string key = NormalizePartKey(entry.Key);
+                            List<string> candidates;
+                            if (!fileMap.TryGetValue(key, out candidates))
+                            {
+                                missingDxf++;
+                                missingCodes.Add(entry.Key);
+                                continue;
+                            }
+                            if (candidates.Count != 1)
+                            {
+                                duplicateDxf++;
+                                AddPartRow(entry.Key, entry.Value, "-", "Aynı kodla birden fazla DXF bulundu; eşleştirme yapılmadı");
+                                continue;
+                            }
+                            string dxf = candidates[0];
+                            try
+                            {
+                                var contour = ReadClosedOuterContour(dxf);
+                                if (contour == null || contour.Count < 3) throw new InvalidDataException("Kapalı dış kontur bulunamadı.");
+                                _parts.Add(new SmartNestPart
+                                {
+                                    Name = entry.Key,
+                                    SourceDxfPath = dxf,
+                                    Quantity = entry.Value,
+                                    OuterContour = contour,
+                                    AllowRotation = true,
+                                    RotationStepDegrees = 10.0
+                                });
+                                AddPartRow(entry.Key, entry.Value, "Excel + DXF", "Eşleşti; nesting'e hazır");
+                                matched++;
+                            }
+                            catch (Exception ex)
+                            {
+                                invalid++;
+                                AddPartRow(entry.Key, entry.Value, "-", "DXF okunamadı: " + ex.Message);
+                            }
+                        }
+                        var excelKeys = new HashSet<string>(quantities.Keys.Select(NormalizePartKey), StringComparer.OrdinalIgnoreCase);
+                        var unusedDxf = files.Where(f => !excelKeys.Contains(NormalizePartKey(Path.GetFileNameWithoutExtension(f))))
+                            .Select(Path.GetFileName).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+                        string summary = string.Format(CultureInfo.CurrentCulture,
+                            "Excel-DXF eşleştirmesi: {0} parça kodu eşleşti; {1} Excel kodunun DXF'si yok; {2} kodda mükerrer DXF; {3} DXF hatası; {4} Excel'de kullanılmayan DXF.",
+                            matched, missingDxf, duplicateDxf, invalid, unusedDxf.Count);
+                        _status.Text = summary;
+                        if (missingCodes.Count > 0)
+                            summary += Environment.NewLine + Environment.NewLine + "DXF bulunamayan kodlar: " + string.Join(", ", missingCodes.Take(20));
+                        if (unusedDxf.Count > 0)
+                            summary += Environment.NewLine + Environment.NewLine + "Excel'de karşılığı olmayan DXF'ler: " + string.Join(", ", unusedDxf.Take(20));
+                        MessageBox.Show(this, summary, "SMARTNEST - Excel / DXF eşleştirmesi", MessageBoxButtons.OK,
+                            missingDxf > 0 || duplicateDxf > 0 || invalid > 0 ? MessageBoxIcon.Warning : MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        _status.Text = "Excel / DXF okuma hatası: " + ex.Message;
+                        MessageBox.Show(this, ex.Message, "SMARTNEST", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Logger.Error("SMARTNEST Excel-DXF import", ex);
+                    }
+                }
+            }
+        }
+
+        private static string NormalizePartKey(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value)) return "";
+            string name = Path.GetFileNameWithoutExtension(value.Trim());
+            var b = new StringBuilder();
+            foreach (char ch in name.ToUpperInvariant())
+                if (char.IsLetterOrDigit(ch)) b.Append(ch);
+            return b.ToString();
+        }
+
+        private static Dictionary<string, int> ReadDxfQuantitiesFromExcel(string path)
+        {
+            if (!File.Exists(path)) throw new FileNotFoundException("Excel dosyası bulunamadı.", path);
+            using (var archive = ZipFile.OpenRead(path))
+            {
+                XNamespace main = "http://schemas.openxmlformats.org/spreadsheetml/2006/main";
+                XNamespace officeRel = "http://schemas.openxmlformats.org/officeDocument/2006/relationships";
+                XNamespace packageRel = "http://schemas.openxmlformats.org/package/2006/relationships";
+                var workbookEntry = archive.GetEntry("xl/workbook.xml");
+                var relsEntry = archive.GetEntry("xl/_rels/workbook.xml.rels");
+                if (workbookEntry == null || relsEntry == null) throw new InvalidDataException("Dosya geçerli bir .xlsx çalışma kitabı değil.");
+                XDocument workbook, relationships;
+                using (var s = workbookEntry.Open()) workbook = XDocument.Load(s);
+                using (var s = relsEntry.Open()) relationships = XDocument.Load(s);
+                var firstSheet = workbook.Root.Element(main + "sheets")?.Elements(main + "sheet").FirstOrDefault();
+                if (firstSheet == null) throw new InvalidDataException("Excel dosyasında çalışma sayfası bulunamadı.");
+                string relationId = (string)firstSheet.Attribute(officeRel + "id");
+                var relation = relationships.Root.Elements(packageRel + "Relationship")
+                    .FirstOrDefault(x => string.Equals((string)x.Attribute("Id"), relationId, StringComparison.Ordinal));
+                if (relation == null) throw new InvalidDataException("Excel çalışma sayfası bağlantısı okunamadı.");
+                string target = (string)relation.Attribute("Target");
+                string sheetPath = target.StartsWith("/", StringComparison.Ordinal)
+                    ? target.TrimStart('/')
+                    : "xl/" + target.Replace('\\', '/');
+                while (sheetPath.Contains("../"))
+                {
+                    int parent = sheetPath.IndexOf("../", StringComparison.Ordinal);
+                    if (parent >= 0) sheetPath = sheetPath.Remove(parent > 0 ? parent - 1 : 0, parent > 0 ? 3 : 3);
+                }
+                var sheetEntry = archive.GetEntry(sheetPath);
+                if (sheetEntry == null) throw new InvalidDataException("İlk çalışma sayfası bulunamadı: " + sheetPath);
+                var shared = new List<string>();
+                var sharedEntry = archive.GetEntry("xl/sharedStrings.xml");
+                if (sharedEntry != null)
+                {
+                    using (var s = sharedEntry.Open())
+                    {
+                        var sharedDoc = XDocument.Load(s);
+                        shared.AddRange(sharedDoc.Root.Elements(main + "si")
+                            .Select(si => string.Concat(si.Descendants(main + "t").Select(t => (string)t))));
+                    }
+                }
+                XDocument sheet;
+                using (var s = sheetEntry.Open()) sheet = XDocument.Load(s);
+                var rows = new List<Dictionary<int, string>>();
+                foreach (var row in sheet.Descendants(main + "row"))
+                {
+                    var values = new Dictionary<int, string>();
+                    foreach (var cell in row.Elements(main + "c"))
+                    {
+                        string reference = (string)cell.Attribute("r") ?? "";
+                        int column = 0;
+                        foreach (char ch in reference.TakeWhile(char.IsLetter))
+                            column = column * 26 + (char.ToUpperInvariant(ch) - 'A' + 1);
+                        if (column <= 0) continue;
+                        string type = (string)cell.Attribute("t");
+                        string value = (string)cell.Element(main + "v") ?? "";
+                        if (type == "s" && int.TryParse(value, NumberStyles.Integer, CultureInfo.InvariantCulture, out int sharedIndex)
+                            && sharedIndex >= 0 && sharedIndex < shared.Count) value = shared[sharedIndex];
+                        else if (type == "inlineStr") value = string.Concat(cell.Descendants(main + "t").Select(t => (string)t));
+                        values[column] = value.Trim();
+                    }
+                    rows.Add(values);
+                }
+                int headerRow = -1, codeColumn = -1, quantityColumn = -1;
+                for (int r = 0; r < Math.Min(rows.Count, 30); r++)
+                {
+                    foreach (var cell in rows[r])
+                    {
+                        string h = NormalizeHeader(cell.Value);
+                        if (codeColumn < 0 && (h.Contains("parcakodu") || h.Contains("stokKodu".ToLowerInvariant()) || h.Contains("partcode") || h == "kod" || h.Contains("dxfadi") || h.Contains("dosyaadi")))
+                            codeColumn = cell.Key;
+                        if (quantityColumn < 0 && (h == "adet" || h.Contains("miktar") || h.Contains("quantity") || h == "qty"))
+                            quantityColumn = cell.Key;
+                    }
+                    if (codeColumn > 0 && quantityColumn > 0) { headerRow = r; break; }
+                    codeColumn = -1; quantityColumn = -1;
+                }
+                if (headerRow < 0) throw new InvalidDataException("İlk sayfada parça kodu ve adet sütunları bulunamadı. Sütun başlıkları örneğin 'Parça Kodu' ve 'Adet' olmalı.");
+                var result = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+                for (int r = headerRow + 1; r < rows.Count; r++)
+                {
+                    string code, qtyText;
+                    if (!rows[r].TryGetValue(codeColumn, out code) || string.IsNullOrWhiteSpace(code)) continue;
+                    if (!rows[r].TryGetValue(quantityColumn, out qtyText) || string.IsNullOrWhiteSpace(qtyText)) continue;
+                    double qtyNumber;
+                    if (!double.TryParse(qtyText, NumberStyles.Any, CultureInfo.InvariantCulture, out qtyNumber)
+                        && !double.TryParse(qtyText, NumberStyles.Any, CultureInfo.CurrentCulture, out qtyNumber)) continue;
+                    int qty = (int)Math.Round(qtyNumber, MidpointRounding.AwayFromZero);
+                    if (qty < 1) continue;
+                    string existing = result.Keys.FirstOrDefault(k => string.Equals(NormalizePartKey(k), NormalizePartKey(code), StringComparison.OrdinalIgnoreCase));
+                    if (existing != null) result[existing] = checked(result[existing] + qty);
+                    else result[code.Trim()] = qty;
+                }
+                if (result.Count == 0) throw new InvalidDataException("Excel'de okunabilir parça kodu ve pozitif adet satırı bulunamadı.");
+                return result;
+            }
+        }
+
+        private static string NormalizeHeader(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value)) return "";
+            string s = value.Trim().ToLowerInvariant().Replace("ı", "i").Replace("İ", "i")
+                .Replace("ş", "s").Replace("ğ", "g").Replace("ü", "u").Replace("ö", "o").Replace("ç", "c");
+            var b = new StringBuilder();
+            foreach (char ch in s) if (char.IsLetterOrDigit(ch)) b.Append(ch);
+            return b.ToString();
+        }
+
         private static IList<SmartNestPoint> ReadClosedOuterContour(string path)
         {
             return DxfContourReader.ReadLargestClosedContour(path);
