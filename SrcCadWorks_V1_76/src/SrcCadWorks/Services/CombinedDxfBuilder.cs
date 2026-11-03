@@ -199,6 +199,67 @@ namespace SrcCadWorks.Services
         }
 
         /// <summary>
+        /// Writes SMARTNEST placements through the same production R12 parser, entity
+        /// normalization, style mapping and active viewport used by the Laser Prep bulk DXF.
+        /// Source entities are rotated as entities (ARC angles included), not flattened to polygons.
+        /// </summary>
+        public void BuildNesting(SmartNestResult result, string outputPath)
+        {
+            if (result == null || result.Placements == null || result.Placements.Count == 0)
+                throw new InvalidOperationException("Nesting yerleşimi boş.");
+            if (string.IsNullOrWhiteSpace(outputPath)) throw new ArgumentException("DXF çıktı yolu boş.", nameof(outputPath));
+
+            var allPoints = result.Placements.SelectMany(p => p.Contour ?? new List<SmartNestPoint>()).ToList();
+            if (allPoints.Count < 3) throw new InvalidOperationException("Nesting konturları geçersiz.");
+            double minX = allPoints.Min(p => p.X), minY = allPoints.Min(p => p.Y);
+            double maxX = allPoints.Max(p => p.X), maxY = allPoints.Max(p => p.Y);
+            string directory = Path.GetDirectoryName(outputPath);
+            if (!string.IsNullOrWhiteSpace(directory)) Directory.CreateDirectory(directory);
+            string tempPath = outputPath + ".src_tmp";
+            try
+            {
+                var sb = new StringBuilder(1024 * 1024);
+                AppendHeaderAndTables(sb, minX, minY, maxX, maxY, Math.Max(1, result.SheetCount));
+                int entityCount = 0;
+                foreach (var placement in result.Placements)
+                {
+                    if (string.IsNullOrWhiteSpace(placement.SourceDxfPath) || !File.Exists(placement.SourceDxfPath))
+                        throw new FileNotFoundException("Yerleşen parçanın kaynak DXF'i bulunamadı: " + placement.PartName, placement.SourceDxfPath);
+
+                    var row = new LaserPartRow { PartCode = placement.PartName ?? "PARCA", Quantity = 1 };
+                    // Do not normalize orientation here: the nest contour and source entities
+                    // must share the exact same original coordinate frame.
+                    var geometry = ReadGeometry(placement.SourceDxfPath, row, false);
+                    RotateEntities(geometry.Entities, placement.RotationDegrees);
+                    double gMinX = double.PositiveInfinity, gMinY = double.PositiveInfinity;
+                    double gMaxX = double.NegativeInfinity, gMaxY = double.NegativeInfinity;
+                    ScanExtents(geometry.Entities, ref gMinX, ref gMinY, ref gMaxX, ref gMaxY);
+                    if (double.IsInfinity(gMinX) || double.IsInfinity(gMinY))
+                        throw new InvalidDataException("Kaynak DXF geometrisinin sınırları okunamadı: " + placement.PartName);
+                    double dx = placement.X - gMinX;
+                    double dy = placement.Y - gMinY;
+                    string layerPrefix = "SMARTNEST_SHEET_" + (placement.SheetIndex + 1).ToString(CultureInfo.InvariantCulture);
+                    int written = AppendTranslatedEntities(sb, geometry, dx, dy, layerPrefix);
+                    if (written <= 0) throw new InvalidDataException("Parça için üretim geometrisi yazılamadı: " + placement.PartName);
+                    entityCount += written;
+                }
+                if (entityCount <= 0) throw new InvalidOperationException("DXF içine geometri yazılmadı.");
+                Add(sb, 0, "ENDSEC"); Add(sb, 0, "EOF");
+                Encoding enc;
+                try { enc = Encoding.GetEncoding(1254); } catch { enc = Encoding.Default; }
+                File.WriteAllText(tempPath, sb.ToString(), enc);
+                string check = File.ReadAllText(tempPath, enc);
+                if (!check.Contains("AC1009") || !check.Contains("ENTITIES") || !check.Contains("SMARTNEST_SHEET_") || !check.Contains("EOF"))
+                    throw new InvalidDataException("SMARTNEST DXF R12 doğrulaması başarısız.");
+                if (new FileInfo(tempPath).Length < 128) throw new InvalidDataException("SMARTNEST DXF çıktısı boş.");
+                if (File.Exists(outputPath)) File.Delete(outputPath);
+                File.Move(tempPath, outputPath);
+                Logger.Info("SMARTNEST üretim DXF oluşturuldu. Sac=" + result.SheetCount + ", yerleşim=" + result.Placements.Count + ", entity=" + entityCount);
+            }
+            finally { try { if (File.Exists(tempPath)) File.Delete(tempPath); } catch { } }
+        }
+
+        /// <summary>
         /// DWG conversion calls this before LoadFile4 so invalid combined DXF files fail with a precise
         /// SrcCadWorks error instead of a generic SOLIDWORKS Hata=1.
         /// </summary>
@@ -324,7 +385,7 @@ namespace SrcCadWorks.Services
             Add(sb, 11, Format(right)); Add(sb, 21, Format(y)); Add(sb, 31, "0.0");
         }
 
-        private static SourceGeometry ReadGeometry(string path, LaserPartRow row)
+        private static SourceGeometry ReadGeometry(string path, LaserPartRow row, bool normalizeOrientation = true)
         {
             byte[] bytes = File.ReadAllBytes(path);
             if (bytes.Length > 22)
@@ -354,7 +415,7 @@ namespace SrcCadWorks.Services
             // Eski/istenen toplu DWG görünümündeki gibi her parçanın ana eksenini
             // yataya çevir. Böylece uzun parçalar dikey/çapraz dağılmaz; tek sütunda
             // okunaklı ve üretim dostu bir görünüm oluşur.
-            NormalizeHorizontalOrientation(entities);
+            if (normalizeOrientation) NormalizeHorizontalOrientation(entities);
 
             double minX = double.PositiveInfinity;
             double minY = double.PositiveInfinity;
@@ -845,7 +906,7 @@ namespace SrcCadWorks.Services
             maxY = Math.Max(maxY, y);
         }
 
-        private static int AppendTranslatedEntities(StringBuilder sb, SourceGeometry geometry, double dx, double dy)
+        private static int AppendTranslatedEntities(StringBuilder sb, SourceGeometry geometry, double dx, double dy, string layerPrefix = null)
         {
             int count = 0;
             foreach (var entity in geometry.Entities)
@@ -857,6 +918,7 @@ namespace SrcCadWorks.Services
                 string layer;
                 string linetype;
                 MapStyle(sourceLinetype, sourceLayer, out layer, out linetype);
+                if (!string.IsNullOrWhiteSpace(layerPrefix)) layer = layerPrefix + "_" + layer.Replace("SRC_", "");
 
                 sb.AppendLine("0");
                 sb.AppendLine(entity.Type.ToUpperInvariant());
@@ -970,7 +1032,7 @@ namespace SrcCadWorks.Services
             return 7; // ACI 7 = white on dark CAD backgrounds / black on light backgrounds
         }
 
-        private static void AppendHeaderAndTables(StringBuilder sb, double minX, double minY, double maxX, double maxY)
+        private static void AppendHeaderAndTables(StringBuilder sb, double minX, double minY, double maxX, double maxY, int sheetCount = 0)
         {
             // AutoCAD R12 ASCII. The geometry can be perfectly valid yet open off-screen
             // when no active model-space view is stored. Write both HEADER view variables
@@ -1011,12 +1073,26 @@ namespace SrcCadWorks.Services
             AppendLinetype(sb, "CENTER", "Center ____ _ ____ _", 21.0, new[] { 12.0, -3.0, 3.0, -3.0 });
             Add(sb, 0, "ENDTAB");
 
-            Add(sb, 0, "TABLE"); Add(sb, 2, "LAYER"); Add(sb, 70, "5");
-            AppendLayer(sb, "SRC_GEOMETRY", 7, "CONTINUOUS");
-            AppendLayer(sb, "SRC_BEND", 3, "DASHED");
-            AppendLayer(sb, "SRC_CENTER", 4, "CENTER");
-            AppendLayer(sb, "SRC_INFO", 1, "CONTINUOUS");
-            AppendLayer(sb, "SRC_SEPARATOR", 7, "CONTINUOUS");
+            int layerCount = sheetCount > 0 ? sheetCount * 3 : 5;
+            Add(sb, 0, "TABLE"); Add(sb, 2, "LAYER"); Add(sb, 70, layerCount.ToString(CultureInfo.InvariantCulture));
+            if (sheetCount > 0)
+            {
+                for (int sheet = 1; sheet <= sheetCount; sheet++)
+                {
+                    string prefix = "SMARTNEST_SHEET_" + sheet.ToString(CultureInfo.InvariantCulture);
+                    AppendLayer(sb, prefix + "_GEOMETRY", 7, "CONTINUOUS");
+                    AppendLayer(sb, prefix + "_BEND", 3, "DASHED");
+                    AppendLayer(sb, prefix + "_CENTER", 4, "CENTER");
+                }
+            }
+            else
+            {
+                AppendLayer(sb, "SRC_GEOMETRY", 7, "CONTINUOUS");
+                AppendLayer(sb, "SRC_BEND", 3, "DASHED");
+                AppendLayer(sb, "SRC_CENTER", 4, "CENTER");
+                AppendLayer(sb, "SRC_INFO", 1, "CONTINUOUS");
+                AppendLayer(sb, "SRC_SEPARATOR", 7, "CONTINUOUS");
+            }
             Add(sb, 0, "ENDTAB");
 
             Add(sb, 0, "TABLE"); Add(sb, 2, "STYLE"); Add(sb, 70, "1");
