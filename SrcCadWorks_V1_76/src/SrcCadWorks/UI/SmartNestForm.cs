@@ -4,7 +4,6 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Threading;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
@@ -19,38 +18,23 @@ namespace SrcCadWorks.UI
     internal sealed class SmartNestForm : Form
     {
         private sealed class AssemblyItem { public LaserPartRow Row; public int Quantity; }
-        /// <summary>SMARTNEST taraması sırasında yalnız bilinen PDM "kasadan alınmadı" uyarısını kapatır.</summary>
-        private sealed class PdmWarningAutoCloser : IDisposable
-        {
-            private readonly Thread _thread; private volatile bool _stop;
-            private const uint BM_CLICK = 0x00F5;
-            [DllImport("user32.dll", CharSet=CharSet.Unicode)] private static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int max);
-            [DllImport("user32.dll", CharSet=CharSet.Unicode)] private static extern int GetClassName(IntPtr hWnd, StringBuilder text, int max);
-            [DllImport("user32.dll")] private static extern bool EnumWindows(EnumWindowsProc callback, IntPtr extra);
-            [DllImport("user32.dll")] private static extern bool EnumChildWindows(IntPtr parent, EnumWindowsProc callback, IntPtr extra);
-            [DllImport("user32.dll", CharSet=CharSet.Unicode)] private static extern IntPtr SendMessage(IntPtr hWnd, uint msg, IntPtr wParam, IntPtr lParam);
-            private delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
-            public PdmWarningAutoCloser() { _thread = new Thread(Loop) { IsBackground = true, Name = "SMARTNEST PDM warning closer" }; _thread.Start(); }
-            private void Loop() { while (!_stop) { try { EnumWindows((h, x) => { string title = TextOf(h); if (title.IndexOf("SOLIDWORKS PDM", StringComparison.OrdinalIgnoreCase) >= 0) { EnumChildWindows(h, (c, y) => { string cls = ClassOf(c); string txt = TextOf(c); if (cls == "Button" && (txt.Equals("Tamam", StringComparison.OrdinalIgnoreCase) || txt.Equals("OK", StringComparison.OrdinalIgnoreCase))) { SendMessage(c, BM_CLICK, IntPtr.Zero, IntPtr.Zero); return false; } return true; }, IntPtr.Zero); } return true; }, IntPtr.Zero); } catch { } Thread.Sleep(180); } }
-            private static string TextOf(IntPtr h) { var b = new StringBuilder(512); try { GetWindowText(h, b, b.Capacity); } catch { } return b.ToString(); }
-            private static string ClassOf(IntPtr h) { var b = new StringBuilder(128); try { GetClassName(h, b, b.Capacity); } catch { } return b.ToString(); }
-            public void Dispose() { _stop = true; try { if (!_thread.Join(700)) _thread.Interrupt(); } catch { } }
-        }
         private readonly SldWorks _sw;
         private readonly DataGridView _grid = new DataGridView();
         private readonly NumericUpDown _width = new NumericUpDown(), _height = new NumericUpDown(), _gap = new NumericUpDown(), _margin = new NumericUpDown(), _kerf = new NumericUpDown();
         private readonly Label _status = new Label();
+        private CheckBox _keepOnTop;
+        private SolidWorksOwnedWindow.Tracker _ownedWindowTracker;
         private readonly List<SmartNestPart> _parts = new List<SmartNestPart>();
         private readonly List<AssemblyItem> _assemblyItems = new List<AssemblyItem>();
         private SmartNestResult _result;
-        public SmartNestForm(SldWorks sw) { _sw = sw; Text = "SMARTNEST | SrcCadWorks"; Width = 1120; Height = 760; MinimumSize = new Size(900, 600); StartPosition = FormStartPosition.CenterScreen; Build(); }
+        public SmartNestForm(SldWorks sw) { _sw = sw; SolidWorksOwnedWindow.Initialize(_sw); Text = "SMARTNEST | SrcCadWorks"; Width = 1120; Height = 760; MinimumSize = new Size(900, 600); StartPosition = FormStartPosition.CenterScreen; Build(); _ownedWindowTracker = SolidWorksOwnedWindow.Track(this, _sw, _keepOnTop.Checked); FormClosed += (s,e) => { try { _ownedWindowTracker?.Dispose(); } catch { } }; }
         private void Build()
         {
             var root = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 1, RowCount = 4, Padding = new Padding(12), BackColor = Color.FromArgb(244,246,249) };
             root.RowStyles.Add(new RowStyle(SizeType.Absolute, 62)); root.RowStyles.Add(new RowStyle(SizeType.Absolute, 94)); root.RowStyles.Add(new RowStyle(SizeType.Percent, 100)); root.RowStyles.Add(new RowStyle(SizeType.Absolute, 38)); Controls.Add(root);
             root.Controls.Add(new Label { Text = "SMARTNEST  |  Sac levha tarama ve otomatik yerleşim", Font = new Font("Segoe UI",17,FontStyle.Bold), ForeColor = Color.FromArgb(40,48,58), Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft },0,0);
             var bar = new FlowLayoutPanel { Dock = DockStyle.Fill, WrapContents = true, BackColor = Color.White, Padding = new Padding(8) };
-            AddButton(bar,"Montajı Tara + Açınımları Al",ScanAndExportAssembly); AddButton(bar,"DXF Ekle",AddDxf);
+            AddButton(bar,"Montajı Tara + Açınımları Al",ScanAndExportAssembly); AddButton(bar,"DXF Ekle",AddDxf); _keepOnTop = new CheckBox { Text = "Pencereyi üstte tut", AutoSize = true, Checked = true, Margin = new Padding(8, 10, 4, 0) }; _keepOnTop.CheckedChanged += (s,e) => { SolidWorksOwnedWindow.Apply(this, _sw, _keepOnTop.Checked, true); _ownedWindowTracker?.SetEnabled(_keepOnTop.Checked); }; bar.Controls.Add(_keepOnTop);
             AddNumeric(bar,"Sac genişliği",_width,1000,1,10000); AddNumeric(bar,"Sac yüksekliği",_height,2000,1,10000); AddNumeric(bar,"Parça aralığı",_gap,5,0,1000); AddNumeric(bar,"Kenar payı",_margin,5,0,1000); AddNumeric(bar,"Kerf",_kerf,0,0,100);
             AddButton(bar,"NESTING YAP",RunNest); AddButton(bar,"Yerleşim DXF Kaydet",SaveDxf); root.Controls.Add(bar,0,1);
             _grid.Dock=DockStyle.Fill; _grid.BackgroundColor=Color.White; _grid.AllowUserToAddRows=false; _grid.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill; _grid.RowHeadersVisible=false;
@@ -82,10 +66,19 @@ namespace SrcCadWorks.UI
                 // ile özel tarama yapılmaz; AssemblyScanner hafif/suppressed durumunu,
                 // alt montajları, SLDPRT filtresini, dosya+konfigürasyon miktarını yönetir.
                 ScanResult scan;
-                using (var pdmCloser = new PdmWarningAutoCloser())
+                using (var dialogGuard = new ModalDialogGuard(null))
+                using (var automationScope = new SolidWorksAutomationScope(_sw, true, false, false, false))
                 {
-                    scan = new AssemblyScanner(_sw).ScanActiveAssembly(
-                        null, null, true, true, false); // forceRefresh=true: eski negatif cache kullanılmaz.
+                    var scanWatch = System.Diagnostics.Stopwatch.StartNew();
+                    scan = new AssemblyScanner(_sw).ScanActiveAssembly(p =>
+                    {
+                        _status.Text = string.Format(CultureInfo.CurrentCulture,
+                            "Montaj taranıyor: {0}/{1} | {2} | {3:0.0} sn",
+                            p.Index, p.Total, p.PartName, scanWatch.Elapsed.TotalSeconds);
+                        try { automationScope.CleanupTransientDocuments(); } catch { }
+                        Application.DoEvents();
+                    }, null, false, true, false); // Hash doğrulamalı ortak cache; değişen dosyalar yeniden analiz edilir.
+                    scanWatch.Stop();
                 }
 
                 // AssemblyScanner yalnız PartAnalyzer tarafından sac levha olarak tanınan
@@ -126,7 +119,7 @@ namespace SrcCadWorks.UI
 
                 var exporter = new DxfExporter(_sw);
                 int ok = 0, failed = 0;
-                using (var pdmCloser = new PdmWarningAutoCloser())
+                using (var dialogGuard = new ModalDialogGuard(null))
                 {
                     foreach (var item in _assemblyItems)
                     {
