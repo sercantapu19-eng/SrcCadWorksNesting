@@ -244,7 +244,7 @@ namespace SrcCadWorks.UI
                     percent = Math.Max(0, Math.Min(100, percent));
                     _nestProgress.Value = percent;
                     string remaining = completed > 0
-                        ? TimeSpan.FromSeconds(Math.Max(0, nestWatch.Elapsed.TotalSeconds / completed * (total - completed))).ToString(@"hh\\:mm\\:ss")
+                        ? TimeSpan.FromSeconds(Math.Max(0, nestWatch.Elapsed.TotalSeconds / completed * (total - completed))).ToString(@"hh\:mm\:ss")
                         : "hesaplanıyor";
                     _status.Text = string.Format(CultureInfo.CurrentCulture,
                         "Nesting: %{0} | {1}/{2} parça yerleşti | {3} konum denendi | Kalan: {4}",
