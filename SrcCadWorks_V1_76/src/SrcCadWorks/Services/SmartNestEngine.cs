@@ -19,6 +19,7 @@ namespace SrcCadWorks.Services
     public sealed class SmartNestPart
     {
         public string Name { get; set; }
+        public string SourceDxfPath { get; set; }
         public int Quantity { get; set; }
         public IList<SmartNestPoint> OuterContour { get; set; }
         public IList<IList<SmartNestPoint>> InnerContours { get; set; }
@@ -48,6 +49,7 @@ namespace SrcCadWorks.Services
     public sealed class SmartNestPlacement
     {
         public string PartName { get; set; }
+        public string SourceDxfPath { get; set; }
         public int SheetIndex { get; set; }
         public double X { get; set; }
         public double Y { get; set; }
@@ -113,7 +115,7 @@ namespace SrcCadWorks.Services
                     result.SheetCount = Math.Max(result.SheetCount, s + 1);
                 }
                 result.SheetCount = Math.Max(result.SheetCount, bestSheet + 1);
-                result.Placements.Add(new SmartNestPlacement { PartName = part.Name ?? "Parça", SheetIndex = bestSheet, X = bestX, Y = bestY, RotationDegrees = best.A, Contour = Translate(best.P, bestX, bestY) });
+                result.Placements.Add(new SmartNestPlacement { PartName = part.Name ?? "Parça", SourceDxfPath = part.SourceDxfPath, SheetIndex = bestSheet, X = bestX, Y = bestY, RotationDegrees = best.A, Contour = Translate(best.P, bestX, bestY) });
                 result.UsedPartArea += Math.Abs(SignedArea(part.OuterContour));
                 if (progress != null) progress(partIndex + 1, totalParts, candidateChecks);
             }
@@ -166,79 +168,8 @@ namespace SrcCadWorks.Services
         {
             if (string.IsNullOrWhiteSpace(path)) throw new ArgumentException("DXF yolu boş.", "path");
             if (result == null) throw new ArgumentNullException("result");
-            if (result.Placements == null || result.Placements.Count == 0)
-                throw new InvalidOperationException("DXF'e yazılacak yerleşim geometrisi yok.");
-
-            var all = result.Placements.SelectMany(p => p.Contour ?? new List<SmartNestPoint>()).ToList();
-            if (all.Count < 3) throw new InvalidOperationException("Yerleşim konturları boş veya geçersiz.");
-            double minX = all.Min(p => p.X), minY = all.Min(p => p.Y);
-            double maxX = all.Max(p => p.X), maxY = all.Max(p => p.Y);
-            double width = Math.Max(1.0, maxX - minX), height = Math.Max(1.0, maxY - minY);
-            double cx = (minX + maxX) / 2.0, cy = (minY + maxY) / 2.0;
-            double viewHeight = Math.Max(height, width / 1.6) * 1.15;
-
-            var sb = new StringBuilder();
-            Pair(sb, "0", "SECTION"); Pair(sb, "2", "HEADER");
-            Pair(sb, "9", "$ACADVER"); Pair(sb, "1", "AC1009");
-            Pair(sb, "9", "$INSBASE"); Pair(sb, "10", "0"); Pair(sb, "20", "0"); Pair(sb, "30", "0");
-            Pair(sb, "9", "$EXTMIN"); Pair(sb, "10", F(minX)); Pair(sb, "20", F(minY)); Pair(sb, "30", "0");
-            Pair(sb, "9", "$EXTMAX"); Pair(sb, "10", F(maxX)); Pair(sb, "20", F(maxY)); Pair(sb, "30", "0");
-            Pair(sb, "9", "$VIEWCTR"); Pair(sb, "10", F(cx)); Pair(sb, "20", F(cy));
-            Pair(sb, "9", "$VIEWSIZE"); Pair(sb, "40", F(viewHeight));
-            Pair(sb, "0", "ENDSEC");
-
-            Pair(sb, "0", "SECTION"); Pair(sb, "2", "TABLES");
-            Pair(sb, "0", "TABLE"); Pair(sb, "2", "VPORT"); Pair(sb, "70", "1");
-            Pair(sb, "0", "VPORT"); Pair(sb, "2", "*ACTIVE"); Pair(sb, "70", "0");
-            Pair(sb, "10", "0.0"); Pair(sb, "20", "0.0"); Pair(sb, "11", "1.0"); Pair(sb, "21", "1.0");
-            Pair(sb, "12", F(cx)); Pair(sb, "22", F(cy)); Pair(sb, "13", "0.0"); Pair(sb, "23", "0.0");
-            Pair(sb, "14", "10.0"); Pair(sb, "24", "10.0"); Pair(sb, "15", "10.0"); Pair(sb, "25", "10.0");
-            Pair(sb, "16", "0.0"); Pair(sb, "26", "0.0"); Pair(sb, "36", "1.0");
-            Pair(sb, "17", "0.0"); Pair(sb, "27", "0.0"); Pair(sb, "37", "0.0");
-            Pair(sb, "40", F(viewHeight)); Pair(sb, "41", "1.6"); Pair(sb, "42", "50.0");
-            Pair(sb, "43", "0.0"); Pair(sb, "44", "0.0"); Pair(sb, "50", "0.0"); Pair(sb, "51", "0.0");
-            Pair(sb, "71", "0"); Pair(sb, "72", "100"); Pair(sb, "73", "1"); Pair(sb, "74", "3");
-            Pair(sb, "75", "0"); Pair(sb, "76", "0"); Pair(sb, "77", "0"); Pair(sb, "78", "0");
-            Pair(sb, "0", "ENDTAB");
-            Pair(sb, "0", "TABLE"); Pair(sb, "2", "LAYER"); Pair(sb, "70", "1");
-            Pair(sb, "0", "LAYER"); Pair(sb, "2", "0"); Pair(sb, "70", "0"); Pair(sb, "62", "7"); Pair(sb, "6", "CONTINUOUS");
-            Pair(sb, "0", "ENDTAB"); Pair(sb, "0", "ENDSEC");
-
-            Pair(sb, "0", "SECTION"); Pair(sb, "2", "ENTITIES");
-            int entityCount = 0;
-            foreach (var p in result.Placements)
-            {
-                if (p.Contour == null || p.Contour.Count < 3)
-                    throw new InvalidDataException("Geçersiz yerleşim konturu: " + (p.PartName ?? "Parça"));
-                Pair(sb, "0", "POLYLINE"); Pair(sb, "8", "0"); Pair(sb, "66", "1"); Pair(sb, "70", "1");
-                foreach (var v in p.Contour)
-                {
-                    Pair(sb, "0", "VERTEX"); Pair(sb, "8", "0");
-                    Pair(sb, "10", F(v.X)); Pair(sb, "20", F(v.Y)); Pair(sb, "30", "0");
-                    Pair(sb, "70", "0");
-                }
-                Pair(sb, "0", "SEQEND"); Pair(sb, "8", "0");
-                entityCount++;
-            }
-            if (entityCount == 0) throw new InvalidOperationException("DXF ENTITIES bölümüne geometri yazılmadı.");
-            Pair(sb, "0", "ENDSEC"); Pair(sb, "0", "EOF");
-
-            string directory = Path.GetDirectoryName(path);
-            if (!string.IsNullOrWhiteSpace(directory)) Directory.CreateDirectory(directory);
-            string temp = path + ".src_tmp";
-            try
-            {
-                File.WriteAllText(temp, sb.ToString(), Encoding.ASCII);
-                string check = File.ReadAllText(temp, Encoding.ASCII);
-                if (!check.Contains("AC1009") || !check.Contains("ENTITIES") ||
-                    !check.Contains("POLYLINE") || !check.Contains("VERTEX") || !check.Contains("EOF"))
-                    throw new InvalidDataException("DXF doğrulaması başarısız: R12 model geometrisi eksik.");
-                if (new FileInfo(temp).Length < 128)
-                    throw new InvalidDataException("DXF doğrulaması başarısız: çıktı dosyası boş.");
-                if (File.Exists(path)) File.Delete(path);
-                File.Move(temp, path);
-            }
-            finally { try { if (File.Exists(temp)) File.Delete(temp); } catch { } }
+            // SmartNest uses the same production-grade R12 entity pipeline as Laser Prep.
+            new CombinedDxfBuilder().BuildNesting(result, path);
         }
 
         private static void Validate(SmartNestSettings s)
