@@ -316,9 +316,9 @@ namespace SrcCadWorks.UI
                             matched, missingDxf, duplicateDxf, invalid, unusedDxf.Count);
                         _status.Text = summary;
                         if (missingCodes.Count > 0)
-                            summary += "\\r\\n" + "\\r\\n" + "DXF bulunamayan kodlar: " + string.Join(", ", missingCodes.Take(20));
+                            summary += "\r\n" + "\r\n" + "DXF bulunamayan kodlar: " + string.Join(", ", missingCodes.Take(20));
                         if (unusedDxf.Count > 0)
-                            summary += "\\r\\n" + "\\r\\n" + "Excel'de karşılığı olmayan DXF'ler: " + string.Join(", ", unusedDxf.Take(20));
+                            summary += "\r\n" + "\r\n" + "Excel'de karşılığı olmayan DXF'ler: " + string.Join(", ", unusedDxf.Take(20));
                         MessageBox.Show(this, summary, "SMARTNEST - Excel / DXF eşleştirmesi", MessageBoxButtons.OK,
                             missingDxf > 0 || duplicateDxf > 0 || invalid > 0 ? MessageBoxIcon.Warning : MessageBoxIcon.Information);
                     }
