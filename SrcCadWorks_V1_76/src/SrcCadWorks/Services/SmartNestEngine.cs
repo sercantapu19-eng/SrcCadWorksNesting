@@ -190,12 +190,15 @@ namespace SrcCadWorks.Services
             Pair(sb, "0", "SECTION"); Pair(sb, "2", "TABLES");
             Pair(sb, "0", "TABLE"); Pair(sb, "2", "VPORT"); Pair(sb, "70", "1");
             Pair(sb, "0", "VPORT"); Pair(sb, "2", "*ACTIVE"); Pair(sb, "70", "0");
-            Pair(sb, "10", "0"); Pair(sb, "20", "0"); Pair(sb, "11", "1"); Pair(sb, "21", "1");
-            Pair(sb, "12", F(cx)); Pair(sb, "22", F(cy)); Pair(sb, "13", "0"); Pair(sb, "23", "0");
-            
-            Pair(sb, "40", F(viewHeight)); Pair(sb, "41", "1.6"); Pair(sb, "42", "50");
-            Pair(sb, "43", "0"); Pair(sb, "44", "0"); Pair(sb, "50", "0");
+            Pair(sb, "10", "0.0"); Pair(sb, "20", "0.0"); Pair(sb, "11", "1.0"); Pair(sb, "21", "1.0");
+            Pair(sb, "12", F(cx)); Pair(sb, "22", F(cy)); Pair(sb, "13", "0.0"); Pair(sb, "23", "0.0");
+            Pair(sb, "14", "10.0"); Pair(sb, "24", "10.0"); Pair(sb, "15", "10.0"); Pair(sb, "25", "10.0");
+            Pair(sb, "16", "0.0"); Pair(sb, "26", "0.0"); Pair(sb, "36", "1.0");
+            Pair(sb, "17", "0.0"); Pair(sb, "27", "0.0"); Pair(sb, "37", "0.0");
+            Pair(sb, "40", F(viewHeight)); Pair(sb, "41", "1.6"); Pair(sb, "42", "50.0");
+            Pair(sb, "43", "0.0"); Pair(sb, "44", "0.0"); Pair(sb, "50", "0.0"); Pair(sb, "51", "0.0");
             Pair(sb, "71", "0"); Pair(sb, "72", "100"); Pair(sb, "73", "1"); Pair(sb, "74", "3");
+            Pair(sb, "75", "0"); Pair(sb, "76", "0"); Pair(sb, "77", "0"); Pair(sb, "78", "0");
             Pair(sb, "0", "ENDTAB");
             Pair(sb, "0", "TABLE"); Pair(sb, "2", "LAYER"); Pair(sb, "70", "1");
             Pair(sb, "0", "LAYER"); Pair(sb, "2", "0"); Pair(sb, "70", "0"); Pair(sb, "62", "7"); Pair(sb, "6", "CONTINUOUS");
