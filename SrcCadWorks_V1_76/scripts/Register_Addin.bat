@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 setlocal EnableExtensions EnableDelayedExpansion
 set "NOPAUSE="
 if /I "%~1"=="/nopause" set "NOPAUSE=1"
