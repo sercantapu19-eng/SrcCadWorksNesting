@@ -37,7 +37,7 @@ namespace SrcCadWorks.UI
             var bar = new FlowLayoutPanel { Dock = DockStyle.Fill, WrapContents = true, BackColor = Color.White, Padding = new Padding(8) };
             AddButton(bar,"Montajı Tara + Açınımları Al",ScanAndExportAssembly); AddButton(bar,"DXF Ekle",AddDxf); _keepOnTop = new CheckBox { Text = "Pencereyi üstte tut", AutoSize = true, Checked = true, Margin = new Padding(8, 10, 4, 0) }; _keepOnTop.CheckedChanged += (s,e) => { SolidWorksOwnedWindow.Apply(this, _sw, _keepOnTop.Checked, true); _ownedWindowTracker?.SetEnabled(_keepOnTop.Checked); }; bar.Controls.Add(_keepOnTop);
             AddNumeric(bar,"Sac genişliği",_width,1000,1,10000); AddNumeric(bar,"Sac yüksekliği",_height,2000,1,10000); AddNumeric(bar,"Parça aralığı",_gap,5,0,1000); AddNumeric(bar,"Kenar payı",_margin,5,0,1000); AddNumeric(bar,"Kerf",_kerf,0,0,100);
-            AddButton(bar,"NESTING YAP",RunNest); AddButton(bar,"Yerleşim DXF Kaydet",SaveDxf); root.Controls.Add(bar,0,1);
+            AddButton(bar,"NESTING YAP",RunNest); AddButton(bar,"Önizleme",ShowPreview); AddButton(bar,"Yerleşim DXF Kaydet",SaveDxf); root.Controls.Add(bar,0,1);
             _grid.Dock=DockStyle.Fill; _grid.BackgroundColor=Color.White; _grid.AllowUserToAddRows=false; _grid.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill; _grid.RowHeadersVisible=false;
             _grid.Columns.Add("No","Sıra No"); _grid.Columns.Add("Name","Parça / DXF"); _grid.Columns.Add("Qty","Adet"); _grid.Columns.Add("Material","Malzeme / Kalınlık"); _grid.Columns.Add("State","Durum"); root.Controls.Add(_grid,0,2);
             var footer = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RowCount = 1 };
@@ -263,6 +263,93 @@ namespace SrcCadWorks.UI
                 Logger.Error("SMARTNEST yerleşim", ex);
             }
         }
-        private void SaveDxf(){if(_result==null){MessageBox.Show("Önce nesting yapın.");return;}using(var d=new SaveFileDialog{Filter="DXF (*.dxf)|*.dxf",FileName="SMARTNEST_YERLESIM.dxf"})if(d.ShowDialog(this)==DialogResult.OK){SmartNestEngine.WriteDxf(d.FileName,_result);_status.Text="DXF kaydedildi: "+d.FileName;}}
+        private void ShowPreview()
+        {
+            if (_result == null || _result.Placements == null || _result.Placements.Count == 0)
+            {
+                MessageBox.Show(this, "Önce NESTING YAP ile geçerli bir yerleşim oluşturun.", "SMARTNEST");
+                return;
+            }
+
+            var preview = new Form
+            {
+                Text = "SMARTNEST | Sac Yerleşim Önizlemesi",
+                Width = 1000, Height = 720, MinimumSize = new Size(640, 480),
+                StartPosition = FormStartPosition.CenterParent, BackColor = Color.FromArgb(244, 246, 249)
+            };
+            var info = new Label
+            {
+                Dock = DockStyle.Top, Height = 38, TextAlign = ContentAlignment.MiddleLeft,
+                Padding = new Padding(12, 0, 0, 0), BackColor = Color.White,
+                Text = string.Format(CultureInfo.CurrentCulture,
+                    "{0} sac | {1} adet yerleşti | Kullanım %{2:0.0}",
+                    _result.SheetCount, _result.Placements.Count, _result.UtilizationPercent)
+            };
+            var canvas = new Panel { Dock = DockStyle.Fill, BackColor = Color.FromArgb(235, 239, 243) };
+            canvas.Paint += (sender, e) =>
+            {
+                var placements = _result.Placements.Where(p => p.SheetIndex == 0 && p.Contour != null && p.Contour.Count >= 3).ToList();
+                if (placements.Count == 0) return;
+                e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                float pad = 36f;
+                float sx = (canvas.ClientSize.Width - 2 * pad) / (float)_width.Value;
+                float sy = (canvas.ClientSize.Height - 2 * pad) / (float)_height.Value;
+                float scale = Math.Max(0.0001f, Math.Min(sx, sy));
+                float sheetW = (float)_width.Value * scale, sheetH = (float)_height.Value * scale;
+                float ox = (canvas.ClientSize.Width - sheetW) / 2f;
+                float oy = (canvas.ClientSize.Height - sheetH) / 2f;
+                using (var sheetPen = new Pen(Color.FromArgb(55, 65, 75), 2f))
+                using (var partPen = new Pen(Color.FromArgb(20, 105, 160), 1.5f))
+                using (var fill = new SolidBrush(Color.FromArgb(105, 75, 160, 210)))
+                using (var font = new Font("Segoe UI", 8f))
+                using (var textBrush = new SolidBrush(Color.FromArgb(35, 45, 55)))
+                {
+                    e.Graphics.DrawRectangle(sheetPen, ox, oy, sheetW, sheetH);
+                    foreach (var placement in placements)
+                    {
+                        var pts = placement.Contour.Select(p => new PointF(
+                            ox + (float)p.X * scale, oy + sheetH - (float)p.Y * scale)).ToArray();
+                        if (pts.Length >= 3)
+                        {
+                            e.Graphics.FillPolygon(fill, pts);
+                            e.Graphics.DrawPolygon(partPen, pts);
+                            var center = new PointF(pts.Average(p => p.X), pts.Average(p => p.Y));
+                            e.Graphics.DrawString(placement.PartName ?? "Parça", font, textBrush, center);
+                        }
+                    }
+                }
+            };
+            preview.Controls.Add(canvas);
+            preview.Controls.Add(info);
+            preview.ShowDialog(this);
+            preview.Dispose();
+        }
+
+        private void SaveDxf()
+        {
+            if (_result == null || _result.Placements == null || _result.Placements.Count == 0)
+            {
+                MessageBox.Show(this, "Önce geçerli bir nesting yerleşimi oluşturun.");
+                return;
+            }
+            using (var d = new SaveFileDialog { Filter = "DXF (*.dxf)|*.dxf", FileName = "SMARTNEST_YERLESIM.dxf" })
+            {
+                if (d.ShowDialog(this) != DialogResult.OK) return;
+                try
+                {
+                    SmartNestEngine.WriteDxf(d.FileName, _result);
+                    var fi = new FileInfo(d.FileName);
+                    if (!fi.Exists || fi.Length < 128)
+                        throw new InvalidDataException("DXF çıktı dosyası boş veya beklenenden küçük.");
+                    _status.Text = "DXF doğrulandı ve kaydedildi: " + d.FileName;
+                }
+                catch (Exception ex)
+                {
+                    _status.Text = "DXF kaydedilemedi: " + ex.Message;
+                    MessageBox.Show(this, ex.Message, "SMARTNEST DXF", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Logger.Error("SMARTNEST DXF export", ex);
+                }
+            }
+        }
     }
 }
