@@ -76,6 +76,11 @@ namespace SrcCadWorks.Services
 
         public static SmartNestResult Nest(IEnumerable<SmartNestPart> source, SmartNestSettings settings)
         {
+            return Nest(source, settings, null);
+        }
+
+        public static SmartNestResult Nest(IEnumerable<SmartNestPart> source, SmartNestSettings settings, Action<int, int, long> progress)
+        {
             Validate(settings);
             var parts = new List<SmartNestPart>();
             foreach (var p in source ?? Enumerable.Empty<SmartNestPart>())
@@ -87,33 +92,42 @@ namespace SrcCadWorks.Services
             parts = parts.OrderByDescending(p => Math.Abs(SignedArea(p.OuterContour))).ToList();
             var result = new SmartNestResult();
             result.TotalSheetArea = settings.SheetWidth * settings.SheetHeight;
-            foreach (var part in parts)
+            long candidateChecks = 0;
+            int totalParts = parts.Count;
+            for (int partIndex = 0; partIndex < totalParts; partIndex++)
             {
+                var part = parts[partIndex];
                 Candidate best = null; int bestSheet = -1; double bestX = 0, bestY = 0;
+                if (progress != null) progress(partIndex, totalParts, candidateChecks);
                 int existingSheets = Math.Max(1, result.SheetCount);
                 for (int s = 0; s < existingSheets; s++)
                 {
-                    FindBest(part, settings, result.Placements.Where(x => x.SheetIndex == s).ToList(), s, ref best, ref bestSheet, ref bestX, ref bestY);
+                    FindBest(part, settings, result.Placements.Where(x => x.SheetIndex == s).ToList(), s, ref best, ref bestSheet, ref bestX, ref bestY, ref candidateChecks, progress, partIndex, totalParts);
                     if (best != null) break;
                 }
                 if (best == null)
                 {
                     int s = result.SheetCount;
-                    FindBest(part, settings, new List<SmartNestPlacement>(), s, ref best, ref bestSheet, ref bestX, ref bestY);
+                    FindBest(part, settings, new List<SmartNestPlacement>(), s, ref best, ref bestSheet, ref bestX, ref bestY, ref candidateChecks, progress, partIndex, totalParts);
                     if (best == null) throw new InvalidOperationException("Parça sac alanına sığmıyor: " + part.Name);
                     result.SheetCount = Math.Max(result.SheetCount, s + 1);
                 }
                 result.SheetCount = Math.Max(result.SheetCount, bestSheet + 1);
                 result.Placements.Add(new SmartNestPlacement { PartName = part.Name ?? "Parça", SheetIndex = bestSheet, X = bestX, Y = bestY, RotationDegrees = best.A, Contour = Translate(best.P, bestX, bestY) });
                 result.UsedPartArea += Math.Abs(SignedArea(part.OuterContour));
+                if (progress != null) progress(partIndex + 1, totalParts, candidateChecks);
             }
             result.UtilizationPercent = result.TotalSheetArea * result.SheetCount <= 0 ? 0 : 100.0 * result.UsedPartArea / (result.TotalSheetArea * result.SheetCount);
             return result;
         }
 
         private static void FindBest(SmartNestPart part, SmartNestSettings cfg, IList<SmartNestPlacement> placed, int sheet,
-            ref Candidate best, ref int bestSheet, ref double bestX, ref double bestY)
+            ref Candidate best, ref int bestSheet, ref double bestX, ref double bestY,
+            ref long candidateChecks, Action<int, int, long> progress, int partIndex, int totalParts)
         {
+            // Expand existing parts once per search, not once for every tested position.
+            double clearance = cfg.PartGap + cfg.Kerf;
+            var expandedPlaced = placed.Select(old => ExpandRadially(old.Contour, clearance / 2.0)).ToList();
             double step = part.AllowRotation ? Math.Max(1, Math.Min(90, part.RotationStepDegrees)) : 360;
             int rotations = part.AllowRotation ? (int)Math.Ceiling(360.0 / step) : 1;
             for (int r = 0; r < rotations; r++)
@@ -123,20 +137,22 @@ namespace SrcCadWorks.Services
                 var minX = rotated.Min(q => q.X); var minY = rotated.Min(q => q.Y);
                 var normalized = rotated.Select(q => new SmartNestPoint(q.X - minX, q.Y - minY)).ToList();
                 double w = normalized.Max(q => q.X), h = normalized.Max(q => q.Y);
-                double clearance = cfg.PartGap + cfg.Kerf;
                 double maxX = cfg.SheetWidth - cfg.EdgeMargin - w;
                 double maxY = cfg.SheetHeight - cfg.EdgeMargin - h;
-                for (double y = cfg.EdgeMargin; y <= maxY + 1e-7; y += Math.Max(2, Math.Min(10, clearance <= 0 ? 5 : clearance)))
-                for (double x = cfg.EdgeMargin; x <= maxX + 1e-7; x += Math.Max(2, Math.Min(10, clearance <= 0 ? 5 : clearance)))
+                double searchStep = Math.Max(10, Math.Min(20, clearance <= 0 ? 10 : clearance * 2.0));
+                for (double y = cfg.EdgeMargin; y <= maxY + 1e-7; y += searchStep)
+                for (double x = cfg.EdgeMargin; x <= maxX + 1e-7; x += searchStep)
                 {
+                    candidateChecks++;
                     var candidate = Translate(normalized, x, y);
+                    var newExpanded = ExpandRadially(candidate, clearance / 2.0);
                     bool hit = false;
-                    foreach (var old in placed)
+                    foreach (var oldExpanded in expandedPlaced)
                     {
-                        var oldExpanded = ExpandRadially(old.Contour, clearance / 2.0);
-                        var newExpanded = ExpandRadially(candidate, clearance / 2.0);
                         if (PolygonsIntersect(newExpanded, oldExpanded)) { hit = true; break; }
                     }
+                    if (progress != null && candidateChecks % 10000 == 0)
+                        progress(partIndex, totalParts, candidateChecks);
                     if (!hit)
                     {
                         best = new Candidate { P = normalized, A = angle, W = w, H = h, MinX = minX, MinY = minY };
