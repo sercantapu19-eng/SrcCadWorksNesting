@@ -1,0 +1,21360 @@
+  0
+SECTION
+  2
+HEADER
+  9
+$ACADVER
+  1
+AC1015
+  9
+$ACADMAINTVER
+ 70
+     6
+  9
+$DWGCODEPAGE
+  3
+ANSI_1254
+  9
+$INSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$EXTMIN
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$EXTMAX
+ 10
+1189.0
+ 20
+841.0
+ 30
+0.0
+  9
+$LIMMIN
+ 10
+0.0
+ 20
+0.0
+  9
+$LIMMAX
+ 10
+1189.0
+ 20
+841.0
+  9
+$ORTHOMODE
+ 70
+     0
+  9
+$REGENMODE
+ 70
+     1
+  9
+$FILLMODE
+ 70
+     1
+  9
+$QTEXTMODE
+ 70
+     0
+  9
+$MIRRTEXT
+ 70
+     1
+  9
+$LTSCALE
+ 40
+1.0
+  9
+$ATTMODE
+ 70
+     1
+  9
+$TEXTSIZE
+ 40
+3.5
+  9
+$TRACEWID
+ 40
+1.0
+  9
+$TEXTSTYLE
+  7
+Standard
+  9
+$CLAYER
+  8
+0
+  9
+$CELTYPE
+  6
+ByLayer
+  9
+$CECOLOR
+ 62
+   256
+  9
+$CELTSCALE
+ 40
+1.0
+  9
+$DISPSILH
+ 70
+     0
+  9
+$DIMSCALE
+ 40
+1.0
+  9
+$DIMASZ
+ 40
+3.302
+  9
+$DIMEXO
+ 40
+1.0
+  9
+$DIMDLI
+ 40
+3.75
+  9
+$DIMRND
+ 40
+0.0
+  9
+$DIMDLE
+ 40
+0.0
+  9
+$DIMEXE
+ 40
+1.0
+  9
+$DIMTP
+ 40
+0.0
+  9
+$DIMTM
+ 40
+0.0
+  9
+$DIMTXT
+ 40
+3.5
+  9
+$DIMCEN
+ 40
+2.5
+  9
+$DIMTSZ
+ 40
+0.0
+  9
+$DIMTOL
+ 70
+     0
+  9
+$DIMLIM
+ 70
+     0
+  9
+$DIMTIH
+ 70
+     1
+  9
+$DIMTOH
+ 70
+     1
+  9
+$DIMSE1
+ 70
+     0
+  9
+$DIMSE2
+ 70
+     0
+  9
+$DIMTAD
+ 70
+     1
+  9
+$DIMZIN
+ 70
+     1
+  9
+$DIMBLK
+  1
+
+  9
+$DIMASO
+ 70
+     1
+  9
+$DIMSHO
+ 70
+     1
+  9
+$DIMPOST
+  1
+
+  9
+$DIMAPOST
+  1
+
+  9
+$DIMALT
+ 70
+     0
+  9
+$DIMALTD
+ 70
+     3
+  9
+$DIMALTF
+ 40
+0.0393700787
+  9
+$DIMLFAC
+ 40
+1.0
+  9
+$DIMTOFL
+ 70
+     1
+  9
+$DIMTVP
+ 40
+0.0
+  9
+$DIMTIX
+ 70
+     0
+  9
+$DIMSOXD
+ 70
+     0
+  9
+$DIMSAH
+ 70
+     0
+  9
+$DIMBLK1
+  1
+
+  9
+$DIMBLK2
+  1
+
+  9
+$DIMSTYLE
+  2
+ISO-25
+  9
+$DIMCLRD
+ 70
+     0
+  9
+$DIMCLRE
+ 70
+     0
+  9
+$DIMCLRT
+ 70
+     0
+  9
+$DIMTFAC
+ 40
+1.0
+  9
+$DIMGAP
+ 40
+1.524
+  9
+$DIMJUST
+ 70
+     0
+  9
+$DIMSD1
+ 70
+     0
+  9
+$DIMSD2
+ 70
+     0
+  9
+$DIMTOLJ
+ 70
+     0
+  9
+$DIMTZIN
+ 70
+     1
+  9
+$DIMALTZ
+ 70
+     0
+  9
+$DIMALTTZ
+ 70
+     0
+  9
+$DIMUPT
+ 70
+     0
+  9
+$DIMDEC
+ 70
+     4
+  9
+$DIMTDEC
+ 70
+     4
+  9
+$DIMALTU
+ 70
+     2
+  9
+$DIMALTTD
+ 70
+     3
+  9
+$DIMTXSTY
+  7
+Standard
+  9
+$DIMAUNIT
+ 70
+     0
+  9
+$DIMADEC
+ 70
+     0
+  9
+$DIMALTRND
+ 40
+0.0
+  9
+$DIMAZIN
+ 70
+     0
+  9
+$DIMDSEP
+ 70
+    44
+  9
+$DIMATFIT
+ 70
+     3
+  9
+$DIMFRAC
+ 70
+     0
+  9
+$DIMLDRBLK
+  1
+
+  9
+$DIMLUNIT
+ 70
+     2
+  9
+$DIMLWD
+ 70
+    -2
+  9
+$DIMLWE
+ 70
+    -2
+  9
+$DIMTMOVE
+ 70
+     0
+  9
+$LUNITS
+ 70
+     2
+  9
+$LUPREC
+ 70
+     4
+  9
+$SKETCHINC
+ 40
+1.0
+  9
+$FILLETRAD
+ 40
+0.0
+  9
+$AUNITS
+ 70
+     0
+  9
+$AUPREC
+ 70
+     0
+  9
+$MENU
+  1
+.
+  9
+$ELEVATION
+ 40
+0.0
+  9
+$PELEVATION
+ 40
+0.0
+  9
+$THICKNESS
+ 40
+0.0
+  9
+$LIMCHECK
+ 70
+     0
+  9
+$CHAMFERA
+ 40
+0.0
+  9
+$CHAMFERB
+ 40
+0.0
+  9
+$CHAMFERC
+ 40
+0.0
+  9
+$CHAMFERD
+ 40
+0.0
+  9
+$SKPOLY
+ 70
+     0
+  9
+$TDCREATE
+ 40
+2461348.418033357
+  9
+$TDUCREATE
+ 40
+2461348.293033357
+  9
+$TDUPDATE
+ 40
+2461348.418034178
+  9
+$TDUUPDATE
+ 40
+2461348.293034178
+  9
+$TDINDWG
+ 40
+0.0000000116
+  9
+$TDUSRTIMER
+ 40
+0.0000000116
+  9
+$USRTIMER
+ 70
+     1
+  9
+$ANGBASE
+ 50
+0.0
+  9
+$ANGDIR
+ 70
+     0
+  9
+$PDMODE
+ 70
+     0
+  9
+$PDSIZE
+ 40
+-1.0
+  9
+$PLINEWID
+ 40
+0.0
+  9
+$SPLFRAME
+ 70
+     0
+  9
+$SPLINETYPE
+ 70
+     6
+  9
+$SPLINESEGS
+ 70
+     8
+  9
+$HANDSEED
+  5
+2EA
+  9
+$SURFTAB1
+ 70
+     6
+  9
+$SURFTAB2
+ 70
+     6
+  9
+$SURFTYPE
+ 70
+     6
+  9
+$SURFU
+ 70
+     6
+  9
+$SURFV
+ 70
+     6
+  9
+$UCSBASE
+  2
+
+  9
+$UCSNAME
+  2
+
+  9
+$UCSORG
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSXDIR
+ 10
+1.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSYDIR
+ 10
+0.0
+ 20
+1.0
+ 30
+0.0
+  9
+$UCSORTHOREF
+  2
+
+  9
+$UCSORTHOVIEW
+ 70
+     0
+  9
+$UCSORGTOP
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGBOTTOM
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGLEFT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGRIGHT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGFRONT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$UCSORGBACK
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSBASE
+  2
+
+  9
+$PUCSNAME
+  2
+
+  9
+$PUCSORG
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSXDIR
+ 10
+1.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSYDIR
+ 10
+0.0
+ 20
+1.0
+ 30
+0.0
+  9
+$PUCSORTHOREF
+  2
+
+  9
+$PUCSORTHOVIEW
+ 70
+     0
+  9
+$PUCSORGTOP
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGBOTTOM
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGLEFT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGRIGHT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGFRONT
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PUCSORGBACK
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$USERI1
+ 70
+     0
+  9
+$USERI2
+ 70
+     0
+  9
+$USERI3
+ 70
+     0
+  9
+$USERI4
+ 70
+     0
+  9
+$USERI5
+ 70
+     0
+  9
+$USERR1
+ 40
+0.0
+  9
+$USERR2
+ 40
+0.0
+  9
+$USERR3
+ 40
+0.0
+  9
+$USERR4
+ 40
+0.0
+  9
+$USERR5
+ 40
+0.0
+  9
+$WORLDVIEW
+ 70
+     1
+  9
+$SHADEDGE
+ 70
+     3
+  9
+$SHADEDIF
+ 70
+    70
+  9
+$TILEMODE
+ 70
+     1
+  9
+$MAXACTVP
+ 70
+    64
+  9
+$PINSBASE
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  9
+$PLIMCHECK
+ 70
+     0
+  9
+$PEXTMIN
+ 10
+1.0000000000E+20
+ 20
+1.0000000000E+20
+ 30
+1.0000000000E+20
+  9
+$PEXTMAX
+ 10
+-1.0000000000E+20
+ 20
+-1.0000000000E+20
+ 30
+-1.0000000000E+20
+  9
+$PLIMMIN
+ 10
+0.0
+ 20
+0.0
+  9
+$PLIMMAX
+ 10
+420.0
+ 20
+297.0
+  9
+$UNITMODE
+ 70
+     0
+  9
+$VISRETAIN
+ 70
+     1
+  9
+$PLINEGEN
+ 70
+     0
+  9
+$PSLTSCALE
+ 70
+     1
+  9
+$TREEDEPTH
+ 70
+  3020
+  9
+$CMLSTYLE
+  2
+Standard
+  9
+$CMLJUST
+ 70
+     0
+  9
+$CMLSCALE
+ 40
+20.0
+  9
+$PROXYGRAPHICS
+ 70
+     1
+  9
+$MEASUREMENT
+ 70
+     1
+  9
+$CELWEIGHT
+370
+    -1
+  9
+$ENDCAPS
+280
+     0
+  9
+$JOINSTYLE
+280
+     0
+  9
+$LWDISPLAY
+290
+     1
+  9
+$INSUNITS
+ 70
+     4
+  9
+$HYPERLINKBASE
+  1
+
+  9
+$STYLESHEET
+  1
+
+  9
+$XEDIT
+290
+     1
+  9
+$CEPSNTYPE
+380
+     0
+  9
+$PSTYLEMODE
+290
+     1
+  9
+$FINGERPRINTGUID
+  2
+{44973f8b-3e6d-4ff9-9cea-be9d2518c2a3}
+  9
+$VERSIONGUID
+  2
+{FAEB1C32-E019-11D5-929B-00C0DF256EC4}
+  9
+$EXTNAMES
+290
+     1
+  9
+$PSVPSCALE
+ 40
+0.0
+  9
+$OLESTARTUP
+290
+     0
+  0
+ENDSEC
+  0
+SECTION
+  2
+CLASSES
+  0
+CLASS
+  1
+ACDBDICTIONARYWDFLT
+  2
+AcDbDictionaryWithDefault
+  3
+ObjectDBX Classes
+ 90
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+VISUALSTYLE
+  2
+AcDbVisualStyle
+  3
+ObjectDBX Classes
+ 90
+     4095
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+MATERIAL
+  2
+AcDbMaterial
+  3
+ObjectDBX Classes
+ 90
+     1153
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+SCALE
+  2
+AcDbScale
+  3
+ObjectDBX Classes
+ 90
+     1153
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+TABLESTYLE
+  2
+AcDbTableStyle
+  3
+ObjectDBX Classes
+ 90
+     4095
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+MLEADERSTYLE
+  2
+AcDbMLeaderStyle
+  3
+ACDB_MLEADERSTYLE_CLASS
+ 90
+     4095
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+SUN
+  2
+AcDbSun
+  3
+SCENEOE
+ 90
+     1153
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+ACDBPLACEHOLDER
+  2
+AcDbPlaceHolder
+  3
+ObjectDBX Classes
+ 90
+        0
+280
+     0
+281
+     0
+  0
+CLASS
+  1
+LAYOUT
+  2
+AcDbLayout
+  3
+ObjectDBX Classes
+ 90
+        0
+280
+     0
+281
+     0
+  0
+ENDSEC
+  0
+SECTION
+  2
+TABLES
+  0
+TABLE
+  2
+VPORT
+  5
+8
+330
+0
+100
+AcDbSymbolTable
+ 70
+     1
+  0
+VPORT
+  5
+29
+330
+8
+100
+AcDbSymbolTableRecord
+100
+AcDbViewportTableRecord
+  2
+*Active
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 11
+1.0
+ 21
+1.0
+ 12
+594.5
+ 22
+420.5
+ 13
+0.0
+ 23
+0.0
+ 14
+10.0
+ 24
+10.0
+ 15
+10.0
+ 25
+10.0
+ 16
+0.0
+ 26
+0.0
+ 36
+1.0
+ 17
+0.0
+ 27
+0.0
+ 37
+0.0
+ 40
+841.0
+ 41
+1.4137931034
+ 42
+50.0
+ 43
+0.0
+ 44
+0.0
+ 50
+0.0
+ 51
+0.0
+ 71
+     0
+ 72
+  2000
+ 73
+     1
+ 74
+     3
+ 75
+     0
+ 76
+     0
+ 77
+     0
+ 78
+     0
+281
+     0
+ 65
+     1
+110
+0.0
+120
+0.0
+130
+0.0
+111
+1.0
+121
+0.0
+131
+0.0
+112
+0.0
+122
+1.0
+132
+0.0
+ 79
+     0
+146
+0.0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LTYPE
+  5
+5
+330
+0
+100
+AcDbSymbolTable
+ 70
+     8
+  0
+LTYPE
+  5
+14
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByBlock
+ 70
+     0
+  3
+
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+15
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+ByLayer
+ 70
+     0
+  3
+
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+16
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+Continuous
+ 70
+     0
+  3
+Solid line
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+5E
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+SLD-Katý
+ 70
+     0
+  3
+SolidWorks Line Style
+ 72
+    65
+ 73
+     0
+ 40
+0.0
+  0
+LTYPE
+  5
+5F
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+SLD-Kesikli
+ 70
+     0
+  3
+SolidWorks Line Style
+ 72
+    65
+ 73
+     2
+ 40
+1.905
+ 49
+1.27
+ 74
+     0
+ 49
+-0.635
+ 74
+     0
+  0
+LTYPE
+  5
+60
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+SLD-Hayalet
+ 70
+     0
+  3
+SolidWorks Line Style
+ 72
+    65
+ 73
+     6
+ 40
+12.7
+ 49
+6.35
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+ 49
+1.27
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+ 49
+1.27
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+  0
+LTYPE
+  5
+61
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+SLD-Zincir
+ 70
+     0
+  3
+SolidWorks Line Style
+ 72
+    65
+ 73
+     4
+ 40
+10.16
+ 49
+6.35
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+ 49
+1.27
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+  0
+LTYPE
+  5
+62
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+SLD-Merkez
+ 70
+     0
+  3
+SolidWorks Line Style
+ 72
+    65
+ 73
+     4
+ 40
+19.05
+ 49
+15.24
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+ 49
+1.27
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+  0
+LTYPE
+  5
+63
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+SLD-Dikiþ
+ 70
+     0
+  3
+SolidWorks Line Style
+ 72
+    65
+ 73
+     2
+ 40
+0.635
+ 49
+0.0
+ 74
+     0
+ 49
+-0.635
+ 74
+     0
+  0
+LTYPE
+  5
+64
+330
+5
+100
+AcDbSymbolTableRecord
+100
+AcDbLinetypeTableRecord
+  2
+SLD-Ýnce-Kalýn-Zincir
+ 70
+     0
+  3
+SolidWorks Line Style
+ 72
+    65
+ 73
+     4
+ 40
+10.16
+ 49
+6.35
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+ 49
+1.27
+ 74
+     0
+ 49
+-1.27
+ 74
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+LAYER
+  5
+2
+330
+0
+100
+AcDbSymbolTable
+ 70
+    18
+  0
+LAYER
+  5
+10
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+0
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+65
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+ANA
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -1
+390
+F
+  0
+LAYER
+  5
+66
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+UP
+ 70
+     0
+ 62
+     7
+  6
+SLD-Merkez
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+67
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+DOWN
+ 70
+     0
+ 62
+     7
+  6
+SLD-Kesikli
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+68
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+FORMAT
+ 70
+     0
+ 62
+     7
+  6
+SLD-Katý
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+69
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+KIRMIZI
+ 70
+     0
+ 62
+     1
+  6
+SLD-Katý
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+6A
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+LACÝVERT
+ 70
+     0
+ 62
+     5
+  6
+SLD-Katý
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+6B
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+TURUNCU
+ 70
+     0
+ 62
+    11
+  6
+SLD-Katý
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+6C
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+MAVÝ
+ 70
+     0
+ 62
+   161
+  6
+SLD-Katý
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+6D
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+YEÞÝL
+ 70
+     0
+ 62
+   102
+  6
+SLD-Katý
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+6E
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+KOYU_YEÞÝL
+ 70
+     0
+ 62
+    96
+  6
+SLD-Katý
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+6F
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+TURKUAZ
+ 70
+     0
+ 62
+   134
+  6
+SLD-Katý
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+70
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+SLD-0
+ 70
+     0
+ 62
+     7
+  6
+Continuous
+370
+    -1
+390
+F
+  0
+LAYER
+  5
+71
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+SRC_GEOMETRY
+ 70
+     0
+ 62
+7
+  6
+SLD-Katý
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+72
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+SRC_BEND
+ 70
+     0
+ 62
+3
+  6
+SLD-Kesikli
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+73
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+SRC_CENTER
+ 70
+     0
+ 62
+4
+  6
+SLD-Zincir
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+74
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+SRC_INFO
+ 70
+     0
+ 62
+1
+  6
+SLD-Katý
+370
+    -3
+390
+F
+  0
+LAYER
+  5
+75
+330
+2
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+SRC_SEPARATOR
+ 70
+     0
+ 62
+7
+  6
+SLD-Katý
+390
+F
+370
+50
+420
+16777215
+  0
+ENDTAB
+  0
+TABLE
+  2
+STYLE
+  5
+3
+330
+0
+100
+AcDbSymbolTable
+ 70
+     3
+  0
+STYLE
+  5
+11
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+Standard
+ 70
+     0
+ 40
+0.0
+ 41
+1.0
+ 50
+0.0
+ 71
+     0
+ 42
+3.5
+  3
+txt
+  4
+
+  0
+STYLE
+  5
+2BE
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+SLDTEXTSTYLE0
+ 70
+     0
+ 40
+0.0
+ 41
+0.7368421053
+ 50
+0.0
+ 71
+     0
+ 42
+3.5
+  3
+TXT
+  4
+
+  0
+STYLE
+  5
+2E3
+330
+3
+100
+AcDbSymbolTableRecord
+100
+AcDbTextStyleTableRecord
+  2
+SLDTEXTSTYLE1
+ 70
+     0
+ 40
+0.0
+ 41
+0.6776315789
+ 50
+0.0
+ 71
+     0
+ 42
+3.5
+  3
+TXT
+  4
+
+  0
+ENDTAB
+  0
+TABLE
+  2
+VIEW
+  5
+6
+330
+0
+100
+AcDbSymbolTable
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+UCS
+  5
+7
+330
+0
+100
+AcDbSymbolTable
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+APPID
+  5
+9
+330
+0
+100
+AcDbSymbolTable
+ 70
+     1
+  0
+APPID
+  5
+12
+330
+9
+100
+AcDbSymbolTableRecord
+100
+AcDbRegAppTableRecord
+  2
+ACAD
+ 70
+     0
+  0
+ENDTAB
+  0
+TABLE
+  2
+DIMSTYLE
+  5
+A
+330
+0
+100
+AcDbSymbolTable
+ 70
+     1
+100
+AcDbDimStyleTable
+  0
+DIMSTYLE
+105
+27
+330
+A
+100
+AcDbSymbolTableRecord
+100
+AcDbDimStyleTableRecord
+  2
+ISO-25
+ 70
+     0
+ 41
+2.5
+ 42
+0.625
+ 43
+3.75
+ 44
+1.25
+ 73
+     0
+ 74
+     0
+ 77
+     1
+ 78
+     8
+140
+2.5
+141
+2.5
+143
+0.0393700787
+147
+0.625
+171
+     3
+172
+     1
+178
+     0
+271
+     2
+272
+     2
+274
+     3
+278
+    44
+283
+     0
+284
+     8
+340
+11
+  0
+ENDTAB
+  0
+TABLE
+  2
+BLOCK_RECORD
+  5
+1
+330
+0
+100
+AcDbSymbolTable
+ 70
+     1
+  0
+BLOCK_RECORD
+  5
+1F
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Model_Space
+340
+22
+  0
+BLOCK_RECORD
+  5
+1B
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Paper_Space
+340
+1E
+  0
+BLOCK_RECORD
+  5
+23
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+*Paper_Space0
+340
+26
+  0
+ENDTAB
+  0
+ENDSEC
+  0
+SECTION
+  2
+BLOCKS
+  0
+BLOCK
+  5
+20
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Model_Space
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Model_Space
+  1
+
+  0
+ENDBLK
+  5
+21
+330
+1F
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+1C
+330
+1B
+100
+AcDbEntity
+ 67
+     1
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Paper_Space
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Paper_Space
+  1
+
+  0
+ENDBLK
+  5
+1D
+330
+1B
+100
+AcDbEntity
+ 67
+     1
+  8
+0
+100
+AcDbBlockEnd
+  0
+BLOCK
+  5
+24
+330
+23
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockBegin
+  2
+*Paper_Space0
+ 70
+     0
+ 10
+0.0
+ 20
+0.0
+ 30
+0.0
+  3
+*Paper_Space0
+  1
+
+  0
+ENDBLK
+  5
+25
+330
+23
+100
+AcDbEntity
+  8
+0
+100
+AcDbBlockEnd
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
+  0
+LINE
+  5
+76
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.22862851
+ 20
+1346.49374253
+ 30
+0.0
+ 11
+1093.22862851
+ 21
+1324.08077839
+ 31
+0.0
+  0
+LINE
+  5
+77
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-171.77137149
+ 20
+1346.49374253
+ 30
+0.0
+ 11
+-146.77137149
+ 21
+1346.49374253
+ 31
+0.0
+  0
+LINE
+  5
+78
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-181.77137149
+ 20
+1958.49374253
+ 30
+0.0
+ 11
+-181.77137149
+ 21
+1356.49374253
+ 31
+0.0
+  0
+LINE
+  5
+79
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-146.77137149
+ 20
+1968.49374253
+ 30
+0.0
+ 11
+-171.77137149
+ 21
+1968.49374253
+ 31
+0.0
+  0
+LINE
+  5
+7A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-146.77137149
+ 20
+1968.49374253
+ 30
+0.0
+ 11
+-146.77137149
+ 21
+1990.90670667
+ 31
+0.0
+  0
+LINE
+  5
+7B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-146.77137149
+ 20
+1990.90670667
+ 30
+0.0
+ 11
+1093.22862851
+ 21
+1990.90670667
+ 31
+0.0
+  0
+LINE
+  5
+7C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.22862851
+ 20
+1990.90670667
+ 30
+0.0
+ 11
+1093.22862851
+ 21
+1968.49374253
+ 31
+0.0
+  0
+LINE
+  5
+7D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1118.22862851
+ 20
+1968.49374253
+ 30
+0.0
+ 11
+1093.22862851
+ 21
+1968.49374253
+ 31
+0.0
+  0
+LINE
+  5
+7E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1128.22862851
+ 20
+1356.49374253
+ 30
+0.0
+ 11
+1128.22862851
+ 21
+1958.49374253
+ 31
+0.0
+  0
+LINE
+  5
+7F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.22862851
+ 20
+1346.49374253
+ 30
+0.0
+ 11
+1118.22862851
+ 21
+1346.49374253
+ 31
+0.0
+  0
+LINE
+  5
+80
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1107.72862851
+ 20
+1404.49374253
+ 30
+0.0
+ 11
+1107.72862851
+ 21
+1410.49374253
+ 31
+0.0
+  0
+LINE
+  5
+81
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1116.72862851
+ 20
+1404.49374253
+ 30
+0.0
+ 11
+1116.72862851
+ 21
+1410.49374253
+ 31
+0.0
+  0
+LINE
+  5
+82
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1107.72862851
+ 20
+1904.49374253
+ 30
+0.0
+ 11
+1107.72862851
+ 21
+1910.49374253
+ 31
+0.0
+  0
+LINE
+  5
+83
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1116.72862851
+ 20
+1904.49374253
+ 30
+0.0
+ 11
+1116.72862851
+ 21
+1910.49374253
+ 31
+0.0
+  0
+LINE
+  5
+84
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-170.27137149
+ 20
+1404.49374253
+ 30
+0.0
+ 11
+-170.27137149
+ 21
+1410.49374253
+ 31
+0.0
+  0
+LINE
+  5
+85
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-161.27137149
+ 20
+1404.49374253
+ 30
+0.0
+ 11
+-161.27137149
+ 21
+1410.49374253
+ 31
+0.0
+  0
+LINE
+  5
+86
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-170.27137149
+ 20
+1904.49374253
+ 30
+0.0
+ 11
+-170.27137149
+ 21
+1910.49374253
+ 31
+0.0
+  0
+LINE
+  5
+87
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-161.27137149
+ 20
+1904.49374253
+ 30
+0.0
+ 11
+-161.27137149
+ 21
+1910.49374253
+ 31
+0.0
+  0
+LINE
+  5
+88
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.22862851
+ 20
+1324.08077839
+ 30
+0.0
+ 11
+-146.77137149
+ 21
+1324.08077839
+ 31
+0.0
+  0
+LINE
+  5
+89
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-146.77137149
+ 20
+1324.08077839
+ 30
+0.0
+ 11
+-146.77137149
+ 21
+1346.49374253
+ 31
+0.0
+  0
+LINE
+  5
+8A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.2803951
+ 20
+1238.86588419
+ 30
+0.0
+ 11
+-148.14107328
+ 21
+1239.04014476
+ 31
+0.0
+  0
+LINE
+  5
+8B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.14107328
+ 20
+1239.04014476
+ 30
+0.0
+ 11
+-148.01610939
+ 21
+1239.21953951
+ 31
+0.0
+  0
+LINE
+  5
+8C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.01610939
+ 20
+1239.21953951
+ 30
+0.0
+ 11
+-147.90550342
+ 21
+1239.40406846
+ 31
+0.0
+  0
+LINE
+  5
+8D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.90550342
+ 20
+1239.40406846
+ 30
+0.0
+ 11
+-147.80925537
+ 21
+1239.59373159
+ 31
+0.0
+  0
+LINE
+  5
+8E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.80925537
+ 20
+1239.59373159
+ 30
+0.0
+ 11
+-147.72752185
+ 21
+1239.78747577
+ 31
+0.0
+  0
+LINE
+  5
+8F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.72752185
+ 20
+1239.78747577
+ 30
+0.0
+ 11
+-147.66025065
+ 21
+1239.98565205
+ 31
+0.0
+  0
+LINE
+  5
+90
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.66025065
+ 20
+1239.98565205
+ 30
+0.0
+ 11
+-147.60712858
+ 21
+1240.19036671
+ 31
+0.0
+  0
+LINE
+  5
+91
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.60712858
+ 20
+1240.19036671
+ 30
+0.0
+ 11
+-147.56784244
+ 21
+1240.40372603
+ 31
+0.0
+  0
+LINE
+  5
+92
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.56784244
+ 20
+1240.40372603
+ 30
+0.0
+ 11
+-147.53382083
+ 21
+1240.83626641
+ 31
+0.0
+  0
+LINE
+  5
+93
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.53382083
+ 20
+1240.83626641
+ 30
+0.0
+ 11
+-147.56161402
+ 21
+1241.26028133
+ 31
+0.0
+  0
+LINE
+  5
+94
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.56161402
+ 20
+1241.26028133
+ 30
+0.0
+ 11
+-147.6511736
+ 21
+1241.6756639
+ 31
+0.0
+  0
+LINE
+  5
+95
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.6511736
+ 20
+1241.6756639
+ 30
+0.0
+ 11
+-147.8024512
+ 21
+1242.08230726
+ 31
+0.0
+  0
+LINE
+  5
+96
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.8024512
+ 20
+1242.08230726
+ 30
+0.0
+ 11
+-148.0085552
+ 21
+1242.46442251
+ 31
+0.0
+  0
+LINE
+  5
+97
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.0085552
+ 20
+1242.46442251
+ 30
+0.0
+ 11
+-148.26218351
+ 21
+1242.80600641
+ 31
+0.0
+  0
+LINE
+  5
+98
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.26218351
+ 20
+1242.80600641
+ 30
+0.0
+ 11
+-148.5626721
+ 21
+1243.10663058
+ 31
+0.0
+  0
+LINE
+  5
+99
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.5626721
+ 20
+1243.10663058
+ 30
+0.0
+ 11
+-148.9093569
+ 21
+1243.36586666
+ 31
+0.0
+  0
+LINE
+  5
+9A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.9093569
+ 20
+1243.36586666
+ 30
+0.0
+ 11
+-149.28814704
+ 21
+1243.57459113
+ 31
+0.0
+  0
+LINE
+  5
+9B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.28814704
+ 20
+1243.57459113
+ 30
+0.0
+ 11
+-149.68539433
+ 21
+1243.72396606
+ 31
+0.0
+  0
+LINE
+  5
+9C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.68539433
+ 20
+1243.72396606
+ 30
+0.0
+ 11
+-150.10109878
+ 21
+1243.81399145
+ 31
+0.0
+  0
+LINE
+  5
+9D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.10109878
+ 20
+1243.81399145
+ 30
+0.0
+ 11
+-150.53526038
+ 21
+1243.84466729
+ 31
+0.0
+  0
+LINE
+  5
+9E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.18189691
+ 20
+1243.84466729
+ 30
+0.0
+ 11
+1092.95871176
+ 21
+1243.8342504
+ 31
+0.0
+  0
+LINE
+  5
+9F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.95871176
+ 20
+1243.8342504
+ 30
+0.0
+ 11
+1092.74122619
+ 21
+1243.80971
+ 31
+0.0
+  0
+LINE
+  5
+A0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.74122619
+ 20
+1243.80971
+ 30
+0.0
+ 11
+1092.5294402
+ 21
+1243.7710461
+ 31
+0.0
+  0
+LINE
+  5
+A1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.5294402
+ 20
+1243.7710461
+ 30
+0.0
+ 11
+1092.32335378
+ 21
+1243.71825868
+ 31
+0.0
+  0
+LINE
+  5
+A2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.32335378
+ 20
+1243.71825868
+ 30
+0.0
+ 11
+1092.12392797
+ 21
+1243.65196741
+ 31
+0.0
+  0
+LINE
+  5
+A3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.12392797
+ 20
+1243.65196741
+ 30
+0.0
+ 11
+1091.93084242
+ 21
+1243.57196573
+ 31
+0.0
+  0
+LINE
+  5
+A4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.93084242
+ 20
+1243.57196573
+ 30
+0.0
+ 11
+1091.74217508
+ 21
+1243.47701435
+ 31
+0.0
+  0
+LINE
+  5
+A5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.74217508
+ 20
+1243.47701435
+ 30
+0.0
+ 11
+1091.55600394
+ 21
+1243.36587398
+ 31
+0.0
+  0
+LINE
+  5
+A6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.55600394
+ 20
+1243.36587398
+ 30
+0.0
+ 11
+1091.20845434
+ 21
+1243.10613105
+ 31
+0.0
+  0
+LINE
+  5
+A7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.20845434
+ 20
+1243.10613105
+ 30
+0.0
+ 11
+1090.90808996
+ 21
+1242.80555934
+ 31
+0.0
+  0
+LINE
+  5
+A8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.90808996
+ 20
+1242.80555934
+ 30
+0.0
+ 11
+1090.65495511
+ 21
+1242.46425659
+ 31
+0.0
+  0
+LINE
+  5
+A9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.65495511
+ 20
+1242.46425659
+ 30
+0.0
+ 11
+1090.44909407
+ 21
+1242.08232059
+ 31
+0.0
+  0
+LINE
+  5
+AA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.44909407
+ 20
+1242.08232059
+ 30
+0.0
+ 11
+1090.36571153
+ 21
+1241.8801215
+ 31
+0.0
+  0
+LINE
+  5
+AB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.36571153
+ 20
+1241.8801215
+ 30
+0.0
+ 11
+1090.29777331
+ 21
+1241.67574428
+ 31
+0.0
+  0
+LINE
+  5
+AC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.29777331
+ 20
+1241.67574428
+ 30
+0.0
+ 11
+1090.24527939
+ 21
+1241.46918893
+ 31
+0.0
+  0
+LINE
+  5
+AD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.24527939
+ 20
+1241.46918893
+ 30
+0.0
+ 11
+1090.20822978
+ 21
+1241.26045544
+ 31
+0.0
+  0
+LINE
+  5
+AE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.20822978
+ 20
+1241.26045544
+ 30
+0.0
+ 11
+1090.18678515
+ 21
+1241.04846181
+ 31
+0.0
+  0
+LINE
+  5
+AF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.18678515
+ 20
+1241.04846181
+ 30
+0.0
+ 11
+1090.18089193
+ 21
+1240.8335687
+ 31
+0.0
+  0
+LINE
+  5
+B0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.18089193
+ 20
+1240.8335687
+ 30
+0.0
+ 11
+1090.1902288
+ 21
+1240.61794014
+ 31
+0.0
+  0
+LINE
+  5
+B1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.1902288
+ 20
+1240.61794014
+ 30
+0.0
+ 11
+1090.21447443
+ 21
+1240.40374015
+ 31
+0.0
+  0
+LINE
+  5
+B2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.21447443
+ 20
+1240.40374015
+ 30
+0.0
+ 11
+1090.3063986
+ 21
+1239.98847759
+ 31
+0.0
+  0
+LINE
+  5
+B3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.3063986
+ 20
+1239.98847759
+ 30
+0.0
+ 11
+1090.45579953
+ 21
+1239.59374741
+ 31
+0.0
+  0
+LINE
+  5
+B4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.45579953
+ 20
+1239.59374741
+ 30
+0.0
+ 11
+1090.6626772
+ 21
+1239.21954961
+ 31
+0.0
+  0
+LINE
+  5
+B5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.6626772
+ 20
+1239.21954961
+ 30
+0.0
+ 11
+1090.92703163
+ 21
+1238.86588419
+ 31
+0.0
+  0
+LINE
+  5
+B6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.53526038
+ 20
+1240.84466729
+ 30
+0.0
+ 11
+-153.52484349
+ 21
+1240.62148214
+ 31
+0.0
+  0
+LINE
+  5
+B7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.52484349
+ 20
+1240.62148214
+ 30
+0.0
+ 11
+-153.50030309
+ 21
+1240.40399657
+ 31
+0.0
+  0
+LINE
+  5
+B8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.50030309
+ 20
+1240.40399657
+ 30
+0.0
+ 11
+-153.46163919
+ 21
+1240.19221058
+ 31
+0.0
+  0
+LINE
+  5
+B9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.46163919
+ 20
+1240.19221058
+ 30
+0.0
+ 11
+-153.40885177
+ 21
+1239.98612416
+ 31
+0.0
+  0
+LINE
+  5
+BA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.40885177
+ 20
+1239.98612416
+ 30
+0.0
+ 11
+-153.3425605
+ 21
+1239.78669835
+ 31
+0.0
+  0
+LINE
+  5
+BB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.3425605
+ 20
+1239.78669835
+ 30
+0.0
+ 11
+-153.26255882
+ 21
+1239.5936128
+ 31
+0.0
+  0
+LINE
+  5
+BC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.26255882
+ 20
+1239.5936128
+ 30
+0.0
+ 11
+-153.16760744
+ 21
+1239.40494546
+ 31
+0.0
+  0
+LINE
+  5
+BD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.16760744
+ 20
+1239.40494546
+ 30
+0.0
+ 11
+-153.05646707
+ 21
+1239.21877432
+ 31
+0.0
+  0
+LINE
+  5
+BE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.05646707
+ 20
+1239.21877432
+ 30
+0.0
+ 11
+-152.79672414
+ 21
+1238.87122472
+ 31
+0.0
+  0
+LINE
+  5
+BF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.79672414
+ 20
+1238.87122472
+ 30
+0.0
+ 11
+-152.49615243
+ 21
+1238.57086034
+ 31
+0.0
+  0
+LINE
+  5
+C0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.49615243
+ 20
+1238.57086034
+ 30
+0.0
+ 11
+-152.15484968
+ 21
+1238.31772549
+ 31
+0.0
+  0
+LINE
+  5
+C1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.15484968
+ 20
+1238.31772549
+ 30
+0.0
+ 11
+-151.77291368
+ 21
+1238.11186445
+ 31
+0.0
+  0
+LINE
+  5
+C2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.77291368
+ 20
+1238.11186445
+ 30
+0.0
+ 11
+-151.57071459
+ 21
+1238.02848191
+ 31
+0.0
+  0
+LINE
+  5
+C3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.57071459
+ 20
+1238.02848191
+ 30
+0.0
+ 11
+-151.36633737
+ 21
+1237.96054369
+ 31
+0.0
+  0
+LINE
+  5
+C4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.36633737
+ 20
+1237.96054369
+ 30
+0.0
+ 11
+-151.15978202
+ 21
+1237.90804977
+ 31
+0.0
+  0
+LINE
+  5
+C5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.15978202
+ 20
+1237.90804977
+ 30
+0.0
+ 11
+-150.95104853
+ 21
+1237.87100016
+ 31
+0.0
+  0
+LINE
+  5
+C6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.95104853
+ 20
+1237.87100016
+ 30
+0.0
+ 11
+-150.7390549
+ 21
+1237.84955553
+ 31
+0.0
+  0
+LINE
+  5
+C7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.7390549
+ 20
+1237.84955553
+ 30
+0.0
+ 11
+-150.52416179
+ 21
+1237.84366231
+ 31
+0.0
+  0
+LINE
+  5
+C8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.52416179
+ 20
+1237.84366231
+ 30
+0.0
+ 11
+-150.30853323
+ 21
+1237.85299918
+ 31
+0.0
+  0
+LINE
+  5
+C9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.30853323
+ 20
+1237.85299918
+ 30
+0.0
+ 11
+-150.09433324
+ 21
+1237.87724481
+ 31
+0.0
+  0
+LINE
+  5
+CA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.09433324
+ 20
+1237.87724481
+ 30
+0.0
+ 11
+-149.67907068
+ 21
+1237.96916898
+ 31
+0.0
+  0
+LINE
+  5
+CB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.67907068
+ 20
+1237.96916898
+ 30
+0.0
+ 11
+-149.2843405
+ 21
+1238.11856991
+ 31
+0.0
+  0
+LINE
+  5
+CC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.2843405
+ 20
+1238.11856991
+ 30
+0.0
+ 11
+-148.9101427
+ 21
+1238.32544758
+ 31
+0.0
+  0
+LINE
+  5
+CD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.9101427
+ 20
+1238.32544758
+ 30
+0.0
+ 11
+-148.55647728
+ 21
+1238.58980201
+ 31
+0.0
+  0
+LINE
+  5
+CE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.55647728
+ 20
+500.38237528
+ 30
+0.0
+ 11
+-148.73073785
+ 21
+500.5216971
+ 31
+0.0
+  0
+LINE
+  5
+CF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.73073785
+ 20
+500.5216971
+ 30
+0.0
+ 11
+-148.9101326
+ 21
+500.64666099
+ 31
+0.0
+  0
+LINE
+  5
+D0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.9101326
+ 20
+500.64666099
+ 30
+0.0
+ 11
+-149.09466155
+ 21
+500.75726696
+ 31
+0.0
+  0
+LINE
+  5
+D1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.09466155
+ 20
+500.75726696
+ 30
+0.0
+ 11
+-149.28432468
+ 21
+500.85351501
+ 31
+0.0
+  0
+LINE
+  5
+D2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.28432468
+ 20
+500.85351501
+ 30
+0.0
+ 11
+-149.47806886
+ 21
+500.93524853
+ 31
+0.0
+  0
+LINE
+  5
+D3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.47806886
+ 20
+500.93524853
+ 30
+0.0
+ 11
+-149.67624514
+ 21
+501.00251973
+ 31
+0.0
+  0
+LINE
+  5
+D4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.67624514
+ 20
+501.00251973
+ 30
+0.0
+ 11
+-149.8809598
+ 21
+501.0556418
+ 31
+0.0
+  0
+LINE
+  5
+D5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.8809598
+ 20
+501.0556418
+ 30
+0.0
+ 11
+-150.09431912
+ 21
+501.09492794
+ 31
+0.0
+  0
+LINE
+  5
+D6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.09431912
+ 20
+501.09492794
+ 30
+0.0
+ 11
+-150.5268595
+ 21
+501.12894955
+ 31
+0.0
+  0
+LINE
+  5
+D7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.5268595
+ 20
+501.12894955
+ 30
+0.0
+ 11
+-150.95087442
+ 21
+501.10115636
+ 31
+0.0
+  0
+LINE
+  5
+D8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.95087442
+ 20
+501.10115636
+ 30
+0.0
+ 11
+-151.36625699
+ 21
+501.01159678
+ 31
+0.0
+  0
+LINE
+  5
+D9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.36625699
+ 20
+501.01159678
+ 30
+0.0
+ 11
+-151.77290035
+ 21
+500.86031918
+ 31
+0.0
+  0
+LINE
+  5
+DA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.77290035
+ 20
+500.86031918
+ 30
+0.0
+ 11
+-152.1550156
+ 21
+500.65421518
+ 31
+0.0
+  0
+LINE
+  5
+DB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.1550156
+ 20
+500.65421518
+ 30
+0.0
+ 11
+-152.4965995
+ 21
+500.40058687
+ 31
+0.0
+  0
+LINE
+  5
+DC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.4965995
+ 20
+500.40058687
+ 30
+0.0
+ 11
+-152.79722367
+ 21
+500.10009828
+ 31
+0.0
+  0
+LINE
+  5
+DD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.79722367
+ 20
+500.10009828
+ 30
+0.0
+ 11
+-153.05645975
+ 21
+499.75341348
+ 31
+0.0
+  0
+LINE
+  5
+DE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.05645975
+ 20
+499.75341348
+ 30
+0.0
+ 11
+-153.26518422
+ 21
+499.37462334
+ 31
+0.0
+  0
+LINE
+  5
+DF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.26518422
+ 20
+499.37462334
+ 30
+0.0
+ 11
+-153.41455915
+ 21
+498.97737605
+ 31
+0.0
+  0
+LINE
+  5
+E0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.41455915
+ 20
+498.97737605
+ 30
+0.0
+ 11
+-153.50458454
+ 21
+498.5616716
+ 31
+0.0
+  0
+LINE
+  5
+E1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.50458454
+ 20
+498.5616716
+ 30
+0.0
+ 11
+-153.53526038
+ 21
+498.12751
+ 31
+0.0
+  0
+LINE
+  5
+E2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.53526038
+ 20
+495.12751
+ 30
+0.0
+ 11
+-150.31207523
+ 21
+495.13792689
+ 31
+0.0
+  0
+LINE
+  5
+E3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.31207523
+ 20
+495.13792689
+ 30
+0.0
+ 11
+-150.09458966
+ 21
+495.16246729
+ 31
+0.0
+  0
+LINE
+  5
+E4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.09458966
+ 20
+495.16246729
+ 30
+0.0
+ 11
+-149.88280367
+ 21
+495.20113119
+ 31
+0.0
+  0
+LINE
+  5
+E5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.88280367
+ 20
+495.20113119
+ 30
+0.0
+ 11
+-149.67671725
+ 21
+495.25391861
+ 31
+0.0
+  0
+LINE
+  5
+E6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.67671725
+ 20
+495.25391861
+ 30
+0.0
+ 11
+-149.47729144
+ 21
+495.32020988
+ 31
+0.0
+  0
+LINE
+  5
+E7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.47729144
+ 20
+495.32020988
+ 30
+0.0
+ 11
+-149.28420589
+ 21
+495.40021156
+ 31
+0.0
+  0
+LINE
+  5
+E8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.28420589
+ 20
+495.40021156
+ 30
+0.0
+ 11
+-149.09553855
+ 21
+495.49516294
+ 31
+0.0
+  0
+LINE
+  5
+E9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-149.09553855
+ 20
+495.49516294
+ 30
+0.0
+ 11
+-148.90936741
+ 21
+495.60630331
+ 31
+0.0
+  0
+LINE
+  5
+EA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.90936741
+ 20
+495.60630331
+ 30
+0.0
+ 11
+-148.56181781
+ 21
+495.86604624
+ 31
+0.0
+  0
+LINE
+  5
+EB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.56181781
+ 20
+495.86604624
+ 30
+0.0
+ 11
+-148.26145343
+ 21
+496.16661795
+ 31
+0.0
+  0
+LINE
+  5
+EC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.26145343
+ 20
+496.16661795
+ 30
+0.0
+ 11
+-148.00831858
+ 21
+496.5079207
+ 31
+0.0
+  0
+LINE
+  5
+ED
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.00831858
+ 20
+496.5079207
+ 30
+0.0
+ 11
+-147.80245754
+ 21
+496.8898567
+ 31
+0.0
+  0
+LINE
+  5
+EE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.80245754
+ 20
+496.8898567
+ 30
+0.0
+ 11
+-147.719075
+ 21
+497.09205579
+ 31
+0.0
+  0
+LINE
+  5
+EF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.719075
+ 20
+497.09205579
+ 30
+0.0
+ 11
+-147.65113678
+ 21
+497.29643301
+ 31
+0.0
+  0
+LINE
+  5
+F0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.65113678
+ 20
+497.29643301
+ 30
+0.0
+ 11
+-147.59864286
+ 21
+497.50298836
+ 31
+0.0
+  0
+LINE
+  5
+F1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.59864286
+ 20
+497.50298836
+ 30
+0.0
+ 11
+-147.56159325
+ 21
+497.71172185
+ 31
+0.0
+  0
+LINE
+  5
+F2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.56159325
+ 20
+497.71172185
+ 30
+0.0
+ 11
+-147.54014862
+ 21
+497.92371549
+ 31
+0.0
+  0
+LINE
+  5
+F3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.54014862
+ 20
+497.92371549
+ 30
+0.0
+ 11
+-147.5342554
+ 21
+498.13860859
+ 31
+0.0
+  0
+LINE
+  5
+F4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.5342554
+ 20
+498.13860859
+ 30
+0.0
+ 11
+-147.54359227
+ 21
+498.35423715
+ 31
+0.0
+  0
+LINE
+  5
+F5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.54359227
+ 20
+498.35423715
+ 30
+0.0
+ 11
+-147.5678379
+ 21
+498.56843714
+ 31
+0.0
+  0
+LINE
+  5
+F6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.5678379
+ 20
+498.56843714
+ 30
+0.0
+ 11
+-147.65976207
+ 21
+498.9836997
+ 31
+0.0
+  0
+LINE
+  5
+F7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.65976207
+ 20
+498.9836997
+ 30
+0.0
+ 11
+-147.809163
+ 21
+499.37842988
+ 31
+0.0
+  0
+LINE
+  5
+F8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.809163
+ 20
+499.37842988
+ 30
+0.0
+ 11
+-148.01604067
+ 21
+499.75262768
+ 31
+0.0
+  0
+LINE
+  5
+F9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.01604067
+ 20
+499.75262768
+ 30
+0.0
+ 11
+-148.2803951
+ 21
+500.1062931
+ 31
+0.0
+  0
+LINE
+  5
+FA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.92703163
+ 20
+500.1062931
+ 30
+0.0
+ 11
+1090.78770981
+ 21
+499.93203253
+ 31
+0.0
+  0
+LINE
+  5
+FB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.78770981
+ 20
+499.93203253
+ 30
+0.0
+ 11
+1090.66274592
+ 21
+499.75263778
+ 31
+0.0
+  0
+LINE
+  5
+FC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.66274592
+ 20
+499.75263778
+ 30
+0.0
+ 11
+1090.55213995
+ 21
+499.56810883
+ 31
+0.0
+  0
+LINE
+  5
+FD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.55213995
+ 20
+499.56810883
+ 30
+0.0
+ 11
+1090.4558919
+ 21
+499.3784457
+ 31
+0.0
+  0
+LINE
+  5
+FE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.4558919
+ 20
+499.3784457
+ 30
+0.0
+ 11
+1090.37415838
+ 21
+499.18470152
+ 31
+0.0
+  0
+LINE
+  5
+FF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.37415838
+ 20
+499.18470152
+ 30
+0.0
+ 11
+1090.30688718
+ 21
+498.98652524
+ 31
+0.0
+  0
+LINE
+  5
+100
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.30688718
+ 20
+498.98652524
+ 30
+0.0
+ 11
+1090.25376511
+ 21
+498.78181058
+ 31
+0.0
+  0
+LINE
+  5
+101
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.25376511
+ 20
+498.78181058
+ 30
+0.0
+ 11
+1090.21447897
+ 21
+498.56845126
+ 31
+0.0
+  0
+LINE
+  5
+102
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.21447897
+ 20
+498.56845126
+ 30
+0.0
+ 11
+1090.18045736
+ 21
+498.13591088
+ 31
+0.0
+  0
+LINE
+  5
+103
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.18045736
+ 20
+498.13591088
+ 30
+0.0
+ 11
+1090.20825055
+ 21
+497.71189596
+ 31
+0.0
+  0
+LINE
+  5
+104
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.20825055
+ 20
+497.71189596
+ 30
+0.0
+ 11
+1090.29781013
+ 21
+497.29651339
+ 31
+0.0
+  0
+LINE
+  5
+105
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.29781013
+ 20
+497.29651339
+ 30
+0.0
+ 11
+1090.44908773
+ 21
+496.88987003
+ 31
+0.0
+  0
+LINE
+  5
+106
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.44908773
+ 20
+496.88987003
+ 30
+0.0
+ 11
+1090.65519173
+ 21
+496.50775478
+ 31
+0.0
+  0
+LINE
+  5
+107
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.65519173
+ 20
+496.50775478
+ 30
+0.0
+ 11
+1090.90882004
+ 21
+496.16617088
+ 31
+0.0
+  0
+LINE
+  5
+108
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.90882004
+ 20
+496.16617088
+ 30
+0.0
+ 11
+1091.20930863
+ 21
+495.86554671
+ 31
+0.0
+  0
+LINE
+  5
+109
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.20930863
+ 20
+495.86554671
+ 30
+0.0
+ 11
+1091.55599343
+ 21
+495.60631063
+ 31
+0.0
+  0
+LINE
+  5
+10A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.55599343
+ 20
+495.60631063
+ 30
+0.0
+ 11
+1091.93478357
+ 21
+495.39758616
+ 31
+0.0
+  0
+LINE
+  5
+10B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.93478357
+ 20
+495.39758616
+ 30
+0.0
+ 11
+1092.33203086
+ 21
+495.24821123
+ 31
+0.0
+  0
+LINE
+  5
+10C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.33203086
+ 20
+495.24821123
+ 30
+0.0
+ 11
+1092.74773531
+ 21
+495.15818584
+ 31
+0.0
+  0
+LINE
+  5
+10D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.74773531
+ 20
+495.15818584
+ 30
+0.0
+ 11
+1093.18189691
+ 21
+495.12751
+ 31
+0.0
+  0
+LINE
+  5
+10E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.20311397
+ 20
+1238.58980188
+ 30
+0.0
+ 11
+1091.37737454
+ 21
+1238.45048007
+ 31
+0.0
+  0
+LINE
+  5
+10F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.37737454
+ 20
+1238.45048007
+ 30
+0.0
+ 11
+1091.55676929
+ 21
+1238.32551619
+ 31
+0.0
+  0
+LINE
+  5
+110
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.55676929
+ 20
+1238.32551619
+ 30
+0.0
+ 11
+1091.74129824
+ 21
+1238.21491024
+ 31
+0.0
+  0
+LINE
+  5
+111
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.74129824
+ 20
+1238.21491024
+ 30
+0.0
+ 11
+1091.93096138
+ 21
+1238.11866221
+ 31
+0.0
+  0
+LINE
+  5
+112
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.93096138
+ 20
+1238.11866221
+ 30
+0.0
+ 11
+1092.12470556
+ 21
+1238.0369287
+ 31
+0.0
+  0
+LINE
+  5
+113
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.12470556
+ 20
+1238.0369287
+ 30
+0.0
+ 11
+1092.32288183
+ 21
+1237.96965751
+ 31
+0.0
+  0
+LINE
+  5
+114
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.32288183
+ 20
+1237.96965751
+ 30
+0.0
+ 11
+1092.52759649
+ 21
+1237.91653545
+ 31
+0.0
+  0
+LINE
+  5
+115
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.52759649
+ 20
+1237.91653545
+ 30
+0.0
+ 11
+1092.74095581
+ 21
+1237.87724933
+ 31
+0.0
+  0
+LINE
+  5
+116
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.74095581
+ 20
+1237.87724933
+ 30
+0.0
+ 11
+1093.17349618
+ 21
+1237.84322774
+ 31
+0.0
+  0
+LINE
+  5
+117
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.17349618
+ 20
+1237.84322774
+ 30
+0.0
+ 11
+1093.59751107
+ 21
+1237.87102094
+ 31
+0.0
+  0
+LINE
+  5
+118
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.59751107
+ 20
+1237.87102094
+ 30
+0.0
+ 11
+1094.01289363
+ 21
+1237.96058054
+ 31
+0.0
+  0
+LINE
+  5
+119
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1094.01289363
+ 20
+1237.96058054
+ 30
+0.0
+ 11
+1094.41953697
+ 21
+1238.11185816
+ 31
+0.0
+  0
+LINE
+  5
+11A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1094.41953697
+ 20
+1238.11185816
+ 30
+0.0
+ 11
+1094.8016522
+ 21
+1238.31796215
+ 31
+0.0
+  0
+LINE
+  5
+11B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1094.8016522
+ 20
+1238.31796215
+ 30
+0.0
+ 11
+1095.14323608
+ 21
+1238.57159047
+ 31
+0.0
+  0
+LINE
+  5
+11C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.14323608
+ 20
+1238.57159047
+ 30
+0.0
+ 11
+1095.44386024
+ 21
+1238.87207905
+ 31
+0.0
+  0
+LINE
+  5
+11D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.44386024
+ 20
+1238.87207905
+ 30
+0.0
+ 11
+1095.70309631
+ 21
+1239.21876386
+ 31
+0.0
+  0
+LINE
+  5
+11E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.70309631
+ 20
+1239.21876386
+ 30
+0.0
+ 11
+1095.91182077
+ 21
+1239.597554
+ 31
+0.0
+  0
+LINE
+  5
+11F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.91182077
+ 20
+1239.597554
+ 30
+0.0
+ 11
+1096.0611957
+ 21
+1239.99480129
+ 31
+0.0
+  0
+LINE
+  5
+120
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1096.0611957
+ 20
+1239.99480129
+ 30
+0.0
+ 11
+1096.15122108
+ 21
+1240.41050572
+ 31
+0.0
+  0
+LINE
+  5
+121
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1096.15122108
+ 20
+1240.41050572
+ 30
+0.0
+ 11
+1096.18189691
+ 21
+1240.84466729
+ 31
+0.0
+  0
+LINE
+  5
+122
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1096.18189691
+ 20
+498.12751
+ 30
+0.0
+ 11
+1096.17148002
+ 21
+498.35069514
+ 31
+0.0
+  0
+LINE
+  5
+123
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1096.17148002
+ 20
+498.35069514
+ 30
+0.0
+ 11
+1096.14693962
+ 21
+498.56818071
+ 31
+0.0
+  0
+LINE
+  5
+124
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1096.14693962
+ 20
+498.56818071
+ 30
+0.0
+ 11
+1096.10827572
+ 21
+498.7799667
+ 31
+0.0
+  0
+LINE
+  5
+125
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1096.10827572
+ 20
+498.7799667
+ 30
+0.0
+ 11
+1096.05548831
+ 21
+498.9860531
+ 31
+0.0
+  0
+LINE
+  5
+126
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1096.05548831
+ 20
+498.9860531
+ 30
+0.0
+ 11
+1095.98919704
+ 21
+499.18547891
+ 31
+0.0
+  0
+LINE
+  5
+127
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.98919704
+ 20
+499.18547891
+ 30
+0.0
+ 11
+1095.90919537
+ 21
+499.37856446
+ 31
+0.0
+  0
+LINE
+  5
+128
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.90919537
+ 20
+499.37856446
+ 30
+0.0
+ 11
+1095.81424399
+ 21
+499.56723179
+ 31
+0.0
+  0
+LINE
+  5
+129
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.81424399
+ 20
+499.56723179
+ 30
+0.0
+ 11
+1095.70310363
+ 21
+499.75340293
+ 31
+0.0
+  0
+LINE
+  5
+12A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.70310363
+ 20
+499.75340293
+ 30
+0.0
+ 11
+1095.44336072
+ 21
+500.10095253
+ 31
+0.0
+  0
+LINE
+  5
+12B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.44336072
+ 20
+500.10095253
+ 30
+0.0
+ 11
+1095.14278902
+ 21
+500.4013169
+ 31
+0.0
+  0
+LINE
+  5
+12C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.14278902
+ 20
+500.4013169
+ 30
+0.0
+ 11
+1094.80148629
+ 21
+500.65445175
+ 31
+0.0
+  0
+LINE
+  5
+12D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1094.80148629
+ 20
+500.65445175
+ 30
+0.0
+ 11
+1094.4195503
+ 21
+500.8603128
+ 31
+0.0
+  0
+LINE
+  5
+12E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1094.4195503
+ 20
+500.8603128
+ 30
+0.0
+ 11
+1094.21735123
+ 21
+500.94369534
+ 31
+0.0
+  0
+LINE
+  5
+12F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1094.21735123
+ 20
+500.94369534
+ 30
+0.0
+ 11
+1094.01297401
+ 21
+501.01163357
+ 31
+0.0
+  0
+LINE
+  5
+130
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1094.01297401
+ 20
+501.01163357
+ 30
+0.0
+ 11
+1093.80641867
+ 21
+501.06412749
+ 31
+0.0
+  0
+LINE
+  5
+131
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.80641867
+ 20
+501.06412749
+ 30
+0.0
+ 11
+1093.59768519
+ 21
+501.10117711
+ 31
+0.0
+  0
+LINE
+  5
+132
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.59768519
+ 20
+501.10117711
+ 30
+0.0
+ 11
+1093.38569156
+ 21
+501.12262175
+ 31
+0.0
+  0
+LINE
+  5
+133
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.38569156
+ 20
+501.12262175
+ 30
+0.0
+ 11
+1093.17079847
+ 21
+501.12851498
+ 31
+0.0
+  0
+LINE
+  5
+134
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.17079847
+ 20
+501.12851498
+ 30
+0.0
+ 11
+1092.95516991
+ 21
+501.11917812
+ 31
+0.0
+  0
+LINE
+  5
+135
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.95516991
+ 20
+501.11917812
+ 30
+0.0
+ 11
+1092.74096992
+ 21
+501.0949325
+ 31
+0.0
+  0
+LINE
+  5
+136
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.74096992
+ 20
+501.0949325
+ 30
+0.0
+ 11
+1092.32570736
+ 21
+501.00300835
+ 31
+0.0
+  0
+LINE
+  5
+137
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1092.32570736
+ 20
+501.00300835
+ 30
+0.0
+ 11
+1091.93097718
+ 21
+500.85360746
+ 31
+0.0
+  0
+LINE
+  5
+138
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.93097718
+ 20
+500.85360746
+ 30
+0.0
+ 11
+1091.55677939
+ 21
+500.64672981
+ 31
+0.0
+  0
+LINE
+  5
+139
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.55677939
+ 20
+500.64672981
+ 30
+0.0
+ 11
+1091.20311397
+ 21
+500.38237541
+ 31
+0.0
+  0
+LINE
+  5
+13A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.53526038
+ 20
+1272.0807784
+ 30
+0.0
+ 11
+1093.18189691
+ 21
+1272.0807784
+ 31
+0.0
+  0
+LINE
+  5
+13B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1124.41800802
+ 20
+1240.84466729
+ 30
+0.0
+ 11
+1124.41800802
+ 21
+498.12751
+ 31
+0.0
+  0
+LINE
+  5
+13C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.18189691
+ 20
+466.89139889
+ 30
+0.0
+ 11
+-150.53526038
+ 21
+466.89139889
+ 31
+0.0
+  0
+LINE
+  5
+13D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-181.77137149
+ 20
+498.12751
+ 30
+0.0
+ 11
+-181.77137149
+ 21
+1240.84466729
+ 31
+0.0
+  0
+LINE
+  5
+13E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+403.82331826
+ 20
+651.98608864
+ 30
+0.0
+ 11
+538.82331826
+ 21
+651.98608864
+ 31
+0.0
+  0
+LINE
+  5
+13F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+538.82331826
+ 20
+676.98608864
+ 30
+0.0
+ 11
+403.82331826
+ 21
+676.98608864
+ 31
+0.0
+  0
+LINE
+  5
+140
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+403.82331826
+ 20
+1061.98608864
+ 30
+0.0
+ 11
+538.82331826
+ 21
+1061.98608864
+ 31
+0.0
+  0
+LINE
+  5
+141
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+538.82331826
+ 20
+1086.98608864
+ 30
+0.0
+ 11
+403.82331826
+ 21
+1086.98608864
+ 31
+0.0
+  0
+LINE
+  5
+142
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+773.82331826
+ 20
+801.98608864
+ 30
+0.0
+ 11
+773.82331826
+ 21
+936.98608864
+ 31
+0.0
+  0
+LINE
+  5
+143
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+748.82331826
+ 20
+936.98608864
+ 30
+0.0
+ 11
+748.82331826
+ 21
+801.98608864
+ 31
+0.0
+  0
+LINE
+  5
+144
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+193.82331826
+ 20
+801.98608864
+ 30
+0.0
+ 11
+193.82331826
+ 21
+936.98608864
+ 31
+0.0
+  0
+LINE
+  5
+145
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+168.82331826
+ 20
+936.98608864
+ 30
+0.0
+ 11
+168.82331826
+ 21
+801.98608864
+ 31
+0.0
+  0
+LINE
+  5
+146
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.53526038
+ 20
+1243.84466729
+ 30
+0.0
+ 11
+-150.53526038
+ 21
+1272.0807784
+ 31
+0.0
+  0
+LINE
+  5
+147
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.60597106
+ 20
+1237.98608865
+ 30
+0.0
+ 11
+-148.2803951
+ 21
+1238.86588419
+ 31
+0.0
+  0
+LINE
+  5
+148
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.92703163
+ 20
+1238.86588419
+ 30
+0.0
+ 11
+1090.25260759
+ 21
+1237.98608865
+ 31
+0.0
+  0
+LINE
+  5
+149
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.18189691
+ 20
+1272.0807784
+ 30
+0.0
+ 11
+1093.18189691
+ 21
+1243.84466729
+ 31
+0.0
+  0
+LINE
+  5
+14A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.53526038
+ 20
+498.12751
+ 30
+0.0
+ 11
+-181.77137149
+ 21
+498.12751
+ 31
+0.0
+  0
+LINE
+  5
+14B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-181.77137149
+ 20
+1240.84466729
+ 30
+0.0
+ 11
+-153.53526038
+ 21
+1240.84466729
+ 31
+0.0
+  0
+LINE
+  5
+14C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.53526038
+ 20
+466.89139889
+ 30
+0.0
+ 11
+-150.53526038
+ 21
+495.12751
+ 31
+0.0
+  0
+LINE
+  5
+14D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-147.67668174
+ 20
+501.05679932
+ 30
+0.0
+ 11
+-148.55647728
+ 21
+500.38237528
+ 31
+0.0
+  0
+LINE
+  5
+14E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.2803951
+ 20
+500.1062931
+ 30
+0.0
+ 11
+-147.60597106
+ 21
+500.98608864
+ 31
+0.0
+  0
+LINE
+  5
+14F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.55647728
+ 20
+1238.58980201
+ 30
+0.0
+ 11
+-147.67668174
+ 21
+1237.91537797
+ 31
+0.0
+  0
+LINE
+  5
+150
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.25260759
+ 20
+500.98608864
+ 30
+0.0
+ 11
+1090.92703163
+ 21
+500.1062931
+ 31
+0.0
+  0
+LINE
+  5
+151
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1090.32331827
+ 20
+1237.91537797
+ 30
+0.0
+ 11
+1091.20311397
+ 21
+1238.58980188
+ 31
+0.0
+  0
+LINE
+  5
+152
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1091.20311397
+ 20
+500.38237541
+ 30
+0.0
+ 11
+1090.32331827
+ 21
+501.05679932
+ 31
+0.0
+  0
+LINE
+  5
+153
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1093.18189691
+ 20
+495.12751
+ 30
+0.0
+ 11
+1093.18189691
+ 21
+466.89139889
+ 31
+0.0
+  0
+LINE
+  5
+154
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1124.41800802
+ 20
+498.12751
+ 30
+0.0
+ 11
+1096.18189691
+ 21
+498.12751
+ 31
+0.0
+  0
+LINE
+  5
+155
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1096.18189691
+ 20
+1240.84466729
+ 30
+0.0
+ 11
+1124.41800802
+ 21
+1240.84466729
+ 31
+0.0
+  0
+LINE
+  5
+156
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1339.81445607
+ 20
+78.34865592
+ 30
+0.0
+ 11
+1339.79584839
+ 21
+77.95223347
+ 31
+0.0
+  0
+LINE
+  5
+157
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1339.79584839
+ 20
+77.95223347
+ 30
+0.0
+ 11
+1339.85208115
+ 21
+77.56818011
+ 31
+0.0
+  0
+LINE
+  5
+158
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1339.85208115
+ 20
+77.56818011
+ 30
+0.0
+ 11
+1339.98260662
+ 21
+77.20315713
+ 31
+0.0
+  0
+LINE
+  5
+159
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1339.98260662
+ 20
+77.20315713
+ 30
+0.0
+ 11
+1340.18687703
+ 21
+76.86382588
+ 31
+0.0
+  0
+LINE
+  5
+15A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1340.18687703
+ 20
+76.86382588
+ 30
+0.0
+ 11
+1340.44968481
+ 21
+76.57146832
+ 31
+0.0
+  0
+LINE
+  5
+15B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1340.44968481
+ 20
+76.57146832
+ 30
+0.0
+ 11
+1340.75618754
+ 21
+76.34292556
+ 31
+0.0
+  0
+LINE
+  5
+15C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1340.75618754
+ 20
+76.34292556
+ 30
+0.0
+ 11
+1341.10638523
+ 21
+76.17819759
+ 31
+0.0
+  0
+LINE
+  5
+15D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1341.10638523
+ 20
+76.17819759
+ 30
+0.0
+ 11
+1341.50027788
+ 21
+76.07728443
+ 31
+0.0
+  0
+LINE
+  5
+15E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.5002778803
+ 20
+76.07728443
+ 30
+0.0
+ 11
+-152.1061311603
+ 21
+76.1773819
+ 31
+0.0
+  0
+LINE
+  5
+15F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.1061311603
+ 20
+76.1773819
+ 30
+0.0
+ 11
+-151.7563025603
+ 21
+76.34147983
+ 31
+0.0
+  0
+LINE
+  5
+160
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.7563025603
+ 20
+76.34147983
+ 30
+0.0
+ 11
+-151.4501103103
+ 21
+76.57011674
+ 31
+0.0
+  0
+LINE
+  5
+161
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.4501103103
+ 20
+76.57011674
+ 30
+0.0
+ 11
+-151.1868726503
+ 21
+76.86383116
+ 31
+0.0
+  0
+LINE
+  5
+162
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.1868726503
+ 20
+76.86383116
+ 30
+0.0
+ 11
+-150.9821058903
+ 21
+77.20145722
+ 31
+0.0
+  0
+LINE
+  5
+163
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.9821058903
+ 20
+77.20145722
+ 30
+0.0
+ 11
+-150.8517808803
+ 21
+77.56147003
+ 31
+0.0
+  0
+LINE
+  5
+164
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.8517808803
+ 20
+77.56147003
+ 30
+0.0
+ 11
+-150.7958976003
+ 21
+77.9438696
+ 31
+0.0
+  0
+LINE
+  5
+165
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.7958976003
+ 20
+77.9438696
+ 30
+0.0
+ 11
+-150.8144560703
+ 21
+78.34865592
+ 31
+0.0
+  0
+LINE
+  5
+166
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.77137149
+ 20
+372.3489338003
+ 30
+0.0
+ 11
+-154.67127402
+ 21
+371.9547870803
+ 31
+0.0
+  0
+LINE
+  5
+167
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.67127402
+ 20
+371.9547870803
+ 30
+0.0
+ 11
+-154.50717609
+ 21
+371.6049584803
+ 31
+0.0
+  0
+LINE
+  5
+168
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.50717609
+ 20
+371.6049584803
+ 30
+0.0
+ 11
+-154.27853918
+ 21
+371.2987662303
+ 31
+0.0
+  0
+LINE
+  5
+169
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.27853918
+ 20
+371.2987662303
+ 30
+0.0
+ 11
+-153.98482476
+ 21
+371.0355285703
+ 31
+0.0
+  0
+LINE
+  5
+16A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.98482476
+ 20
+371.0355285703
+ 30
+0.0
+ 11
+-153.6471987
+ 21
+370.8307618103
+ 31
+0.0
+  0
+LINE
+  5
+16B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.6471987
+ 20
+370.8307618103
+ 30
+0.0
+ 11
+-153.28718589
+ 21
+370.7004368003
+ 31
+0.0
+  0
+LINE
+  5
+16C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.28718589
+ 20
+370.7004368003
+ 30
+0.0
+ 11
+-152.90478632
+ 21
+370.6445535203
+ 31
+0.0
+  0
+LINE
+  5
+16D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.90478632
+ 20
+370.6445535203
+ 30
+0.0
+ 11
+-152.5
+ 21
+370.6631119903
+ 31
+0.0
+  0
+LINE
+  5
+16E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.81445607
+ 20
+372.34865592
+ 30
+0.0
+ 11
+-150.79584839
+ 21
+372.74507837
+ 31
+0.0
+  0
+LINE
+  5
+16F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.79584839
+ 20
+372.74507837
+ 30
+0.0
+ 11
+-150.85208115
+ 21
+373.12913173
+ 31
+0.0
+  0
+LINE
+  5
+170
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.85208115
+ 20
+373.12913173
+ 30
+0.0
+ 11
+-150.98260662
+ 21
+373.49415471
+ 31
+0.0
+  0
+LINE
+  5
+171
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.98260662
+ 20
+373.49415471
+ 30
+0.0
+ 11
+-151.18687703
+ 21
+373.83348596
+ 31
+0.0
+  0
+LINE
+  5
+172
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.18687703
+ 20
+373.83348596
+ 30
+0.0
+ 11
+-151.44968481
+ 21
+374.12584352
+ 31
+0.0
+  0
+LINE
+  5
+173
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.44968481
+ 20
+374.12584352
+ 30
+0.0
+ 11
+-151.75618754
+ 21
+374.35438628
+ 31
+0.0
+  0
+LINE
+  5
+174
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-151.75618754
+ 20
+374.35438628
+ 30
+0.0
+ 11
+-152.10638523
+ 21
+374.51911425
+ 31
+0.0
+  0
+LINE
+  5
+175
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.10638523
+ 20
+374.51911425
+ 30
+0.0
+ 11
+-152.50027788
+ 21
+374.62002741
+ 31
+0.0
+  0
+LINE
+  5
+176
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1341.5002778803
+ 20
+374.62002741
+ 30
+0.0
+ 11
+1341.1061311603
+ 21
+374.51992994
+ 31
+0.0
+  0
+LINE
+  5
+177
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1341.1061311603
+ 20
+374.51992994
+ 30
+0.0
+ 11
+1340.7563025603
+ 21
+374.35583201
+ 31
+0.0
+  0
+LINE
+  5
+178
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1340.7563025603
+ 20
+374.35583201
+ 30
+0.0
+ 11
+1340.4501103103
+ 21
+374.1271951
+ 31
+0.0
+  0
+LINE
+  5
+179
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1340.4501103103
+ 20
+374.1271951
+ 30
+0.0
+ 11
+1340.1868726503
+ 21
+373.83348068
+ 31
+0.0
+  0
+LINE
+  5
+17A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1340.1868726503
+ 20
+373.83348068
+ 30
+0.0
+ 11
+1339.9821058903
+ 21
+373.49585462
+ 31
+0.0
+  0
+LINE
+  5
+17B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1339.9821058903
+ 20
+373.49585462
+ 30
+0.0
+ 11
+1339.8517808803
+ 21
+373.13584181
+ 31
+0.0
+  0
+LINE
+  5
+17C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1339.8517808803
+ 20
+373.13584181
+ 30
+0.0
+ 11
+1339.7958976003
+ 21
+372.75344224
+ 31
+0.0
+  0
+LINE
+  5
+17D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1339.7958976003
+ 20
+372.75344224
+ 30
+0.0
+ 11
+1339.8144560703
+ 21
+372.34865592
+ 31
+0.0
+  0
+LINE
+  5
+17E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1341.5
+ 20
+370.66311199
+ 30
+0.0
+ 11
+1341.89642245
+ 21
+370.64450431
+ 31
+0.0
+  0
+LINE
+  5
+17F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1341.89642245
+ 20
+370.64450431
+ 30
+0.0
+ 11
+1342.28047581
+ 21
+370.70073707
+ 31
+0.0
+  0
+LINE
+  5
+180
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1342.28047581
+ 20
+370.70073707
+ 30
+0.0
+ 11
+1342.64549879
+ 21
+370.83126254
+ 31
+0.0
+  0
+LINE
+  5
+181
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1342.64549879
+ 20
+370.83126254
+ 30
+0.0
+ 11
+1342.98483004
+ 21
+371.03553295
+ 31
+0.0
+  0
+LINE
+  5
+182
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1342.98483004
+ 20
+371.03553295
+ 30
+0.0
+ 11
+1343.2771876
+ 21
+371.29834073
+ 31
+0.0
+  0
+LINE
+  5
+183
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.2771876
+ 20
+371.29834073
+ 30
+0.0
+ 11
+1343.50573036
+ 21
+371.60484346
+ 31
+0.0
+  0
+LINE
+  5
+184
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.50573036
+ 20
+371.60484346
+ 30
+0.0
+ 11
+1343.67045833
+ 21
+371.95504115
+ 31
+0.0
+  0
+LINE
+  5
+185
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.67045833
+ 20
+371.95504115
+ 30
+0.0
+ 11
+1343.77137149
+ 21
+372.3489338
+ 31
+0.0
+  0
+LINE
+  5
+186
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.77137149
+ 20
+78.34837804
+ 30
+0.0
+ 11
+1343.67127402
+ 21
+78.74252476
+ 31
+0.0
+  0
+LINE
+  5
+187
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.67127402
+ 20
+78.74252476
+ 30
+0.0
+ 11
+1343.50717609
+ 21
+79.09235336
+ 31
+0.0
+  0
+LINE
+  5
+188
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.50717609
+ 20
+79.09235336
+ 30
+0.0
+ 11
+1343.27853918
+ 21
+79.39854561
+ 31
+0.0
+  0
+LINE
+  5
+189
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.27853918
+ 20
+79.39854561
+ 30
+0.0
+ 11
+1342.98482476
+ 21
+79.66178327
+ 31
+0.0
+  0
+LINE
+  5
+18A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1342.98482476
+ 20
+79.66178327
+ 30
+0.0
+ 11
+1342.6471987
+ 21
+79.86655003
+ 31
+0.0
+  0
+LINE
+  5
+18B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1342.6471987
+ 20
+79.86655003
+ 30
+0.0
+ 11
+1342.28718589
+ 21
+79.99687504
+ 31
+0.0
+  0
+LINE
+  5
+18C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1342.28718589
+ 20
+79.99687504
+ 30
+0.0
+ 11
+1341.90478632
+ 21
+80.05275832
+ 31
+0.0
+  0
+LINE
+  5
+18D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1341.90478632
+ 20
+80.05275832
+ 30
+0.0
+ 11
+1341.5
+ 21
+80.03419985
+ 31
+0.0
+  0
+LINE
+  5
+18E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.5
+ 20
+80.03419985
+ 30
+0.0
+ 11
+-152.89642245
+ 21
+80.05280753
+ 31
+0.0
+  0
+LINE
+  5
+18F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.89642245
+ 20
+80.05280753
+ 30
+0.0
+ 11
+-153.28047581
+ 21
+79.99657477
+ 31
+0.0
+  0
+LINE
+  5
+190
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.28047581
+ 20
+79.99657477
+ 30
+0.0
+ 11
+-153.64549879
+ 21
+79.8660493
+ 31
+0.0
+  0
+LINE
+  5
+191
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.64549879
+ 20
+79.8660493
+ 30
+0.0
+ 11
+-153.98483004
+ 21
+79.66177889
+ 31
+0.0
+  0
+LINE
+  5
+192
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.98483004
+ 20
+79.66177889
+ 30
+0.0
+ 11
+-154.2771876
+ 21
+79.39897111
+ 31
+0.0
+  0
+LINE
+  5
+193
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.2771876
+ 20
+79.39897111
+ 30
+0.0
+ 11
+-154.50573036
+ 21
+79.09246838
+ 31
+0.0
+  0
+LINE
+  5
+194
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.50573036
+ 20
+79.09246838
+ 30
+0.0
+ 11
+-154.67045833
+ 21
+78.74227069
+ 31
+0.0
+  0
+LINE
+  5
+195
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.67045833
+ 20
+78.74227069
+ 30
+0.0
+ 11
+-154.77137149
+ 21
+78.34837804
+ 31
+0.0
+  0
+LINE
+  5
+196
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-172.57137149
+ 20
+129.54865592
+ 30
+0.0
+ 11
+-172.57137149
+ 21
+121.14865592
+ 31
+0.0
+  0
+LINE
+  5
+197
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-165.97137149
+ 20
+121.14865592
+ 30
+0.0
+ 11
+-165.97137149
+ 21
+129.54865592
+ 31
+0.0
+  0
+LINE
+  5
+198
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-172.57137149
+ 20
+329.54865592
+ 30
+0.0
+ 11
+-172.57137149
+ 21
+321.14865592
+ 31
+0.0
+  0
+LINE
+  5
+199
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-165.97137149
+ 20
+321.14865592
+ 30
+0.0
+ 11
+-165.97137149
+ 21
+329.54865592
+ 31
+0.0
+  0
+LINE
+  5
+19A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-172.57137149
+ 20
+229.54865592
+ 30
+0.0
+ 11
+-172.57137149
+ 21
+221.14865592
+ 31
+0.0
+  0
+LINE
+  5
+19B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-165.97137149
+ 20
+221.14865592
+ 30
+0.0
+ 11
+-165.97137149
+ 21
+229.54865592
+ 31
+0.0
+  0
+LINE
+  5
+19C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1354.97137149
+ 20
+121.14865592
+ 30
+0.0
+ 11
+1354.97137149
+ 21
+129.54865592
+ 31
+0.0
+  0
+LINE
+  5
+19D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1361.57137149
+ 20
+121.14865592
+ 30
+0.0
+ 11
+1361.57137149
+ 21
+129.54865592
+ 31
+0.0
+  0
+LINE
+  5
+19E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1361.57137149
+ 20
+321.14865592
+ 30
+0.0
+ 11
+1361.57137149
+ 21
+329.54865592
+ 31
+0.0
+  0
+LINE
+  5
+19F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1354.97137149
+ 20
+321.14865592
+ 30
+0.0
+ 11
+1354.97137149
+ 21
+329.54865592
+ 31
+0.0
+  0
+LINE
+  5
+1A0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1361.57137149
+ 20
+221.14865592
+ 30
+0.0
+ 11
+1361.57137149
+ 21
+229.54865592
+ 31
+0.0
+  0
+LINE
+  5
+1A1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1354.97137149
+ 20
+221.14865592
+ 30
+0.0
+ 11
+1354.97137149
+ 21
+229.54865592
+ 31
+0.0
+  0
+LINE
+  5
+1A2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1341.79289322
+ 20
+76.0557626995
+ 30
+0.0
+ 11
+1342.3999999997
+ 21
+76.0557626995
+ 31
+0.0
+  0
+LINE
+  5
+1A3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1342.3999999997
+ 20
+76.0557626995
+ 30
+0.0
+ 11
+1342.3999999997
+ 21
+38.8059129395
+ 31
+0.0
+  0
+LINE
+  5
+1A4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1339.3999999997
+ 20
+35.8059129395
+ 30
+0.0
+ 11
+-150.4000000003
+ 21
+35.8059129395
+ 31
+0.0
+  0
+LINE
+  5
+1A5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.4000000003
+ 20
+38.8059129395
+ 30
+0.0
+ 11
+-153.4000000003
+ 21
+76.0557626995
+ 31
+0.0
+  0
+LINE
+  5
+1A6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.7928932203
+ 20
+76.0557626995
+ 30
+0.0
+ 11
+-153.4000000003
+ 21
+76.0557626995
+ 31
+0.0
+  0
+LINE
+  5
+1A7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.7928932205
+ 20
+78.0557627
+ 30
+0.0
+ 11
+-154.7928932205
+ 21
+75.34865592
+ 31
+0.0
+  0
+LINE
+  5
+1A8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.7928932205
+ 20
+75.34865592
+ 30
+0.0
+ 11
+-177.7713714905
+ 21
+75.34865592
+ 31
+0.0
+  0
+LINE
+  5
+1A9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-181.7713714905
+ 20
+79.34865592
+ 30
+0.0
+ 11
+-181.7713714905
+ 21
+371.34865592
+ 31
+0.0
+  0
+LINE
+  5
+1AA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.7928932205
+ 20
+375.34865592
+ 30
+0.0
+ 11
+-177.7713714905
+ 21
+375.34865592
+ 31
+0.0
+  0
+LINE
+  5
+1AB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-154.7928932205
+ 20
+372.6415491403
+ 30
+0.0
+ 11
+-154.7928932205
+ 21
+375.34865592
+ 31
+0.0
+  0
+LINE
+  5
+1AC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-152.79289322
+ 20
+374.6415491405
+ 30
+0.0
+ 11
+-153.4
+ 21
+374.6415491405
+ 31
+0.0
+  0
+LINE
+  5
+1AD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.4
+ 20
+374.6415491405
+ 30
+0.0
+ 11
+-153.4
+ 21
+414.8913988905
+ 31
+0.0
+  0
+LINE
+  5
+1AE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-153.4
+ 20
+414.8913988905
+ 30
+0.0
+ 11
+1342.4000000003
+ 21
+414.8913988905
+ 31
+0.0
+  0
+LINE
+  5
+1AF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1342.4000000003
+ 20
+414.8913988905
+ 30
+0.0
+ 11
+1342.4000000003
+ 21
+374.6415491405
+ 31
+0.0
+  0
+LINE
+  5
+1B0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1341.7928932203
+ 20
+374.6415491405
+ 30
+0.0
+ 11
+1342.4000000003
+ 21
+374.6415491405
+ 31
+0.0
+  0
+LINE
+  5
+1B1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.7928932205
+ 20
+372.64154914
+ 30
+0.0
+ 11
+1343.7928932205
+ 21
+375.34865592
+ 31
+0.0
+  0
+LINE
+  5
+1B2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.7928932205
+ 20
+375.34865592
+ 30
+0.0
+ 11
+1366.7713714905
+ 21
+375.34865592
+ 31
+0.0
+  0
+LINE
+  5
+1B3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1370.7713714905
+ 20
+371.34865592
+ 30
+0.0
+ 11
+1370.7713714905
+ 21
+79.34865592
+ 31
+0.0
+  0
+LINE
+  5
+1B4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.7928932205
+ 20
+75.34865592
+ 30
+0.0
+ 11
+1366.7713714905
+ 21
+75.34865592
+ 31
+0.0
+  0
+LINE
+  5
+1B5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1343.7928932205
+ 20
+78.0557627
+ 30
+0.0
+ 11
+1343.7928932205
+ 21
+75.34865592
+ 31
+0.0
+  0
+LINE
+  5
+1B6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-142.64637149
+ 20
+-79.6237327
+ 30
+0.0
+ 11
+-142.64637149
+ 21
+-87.6237327
+ 31
+0.0
+  0
+LINE
+  5
+1B7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.89637149
+ 20
+-79.6237327
+ 30
+0.0
+ 11
+-150.89637149
+ 21
+-87.6237327
+ 31
+0.0
+  0
+LINE
+  5
+1B8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+537.35362851
+ 20
+-79.6237327
+ 30
+0.0
+ 11
+537.35362851
+ 21
+-87.6237327
+ 31
+0.0
+  0
+LINE
+  5
+1B9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+529.10362851
+ 20
+-79.6237327
+ 30
+0.0
+ 11
+529.10362851
+ 21
+-87.6237327
+ 31
+0.0
+  0
+LINE
+  5
+1BA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+607.35362851
+ 20
+-79.6237327
+ 30
+0.0
+ 11
+607.35362851
+ 21
+-87.6237327
+ 31
+0.0
+  0
+LINE
+  5
+1BB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+599.10362851
+ 20
+-79.6237327
+ 30
+0.0
+ 11
+599.10362851
+ 21
+-87.6237327
+ 31
+0.0
+  0
+LINE
+  5
+1BC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1287.35362851
+ 20
+-79.6237327
+ 30
+0.0
+ 11
+1287.35362851
+ 21
+-87.6237327
+ 31
+0.0
+  0
+LINE
+  5
+1BD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1279.10362851
+ 20
+-79.6237327
+ 30
+0.0
+ 11
+1279.10362851
+ 21
+-87.6237327
+ 31
+0.0
+  0
+LINE
+  5
+1BE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-80.02137149
+ 20
+-226.55337834
+ 30
+0.0
+ 11
+-80.02137149
+ 21
+-210.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1BF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-84.52137149
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+-81.52137149
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1C0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-84.52137149
+ 20
+-241.48302398
+ 30
+0.0
+ 11
+-84.52137149
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1C1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-84.52137149
+ 20
+-241.48302398
+ 30
+0.0
+ 11
+-66.52137149
+ 21
+-241.48302398
+ 31
+0.0
+  0
+LINE
+  5
+1C2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-66.52137149
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+-66.52137149
+ 21
+-241.48302398
+ 31
+0.0
+  0
+LINE
+  5
+1C3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-69.52137149
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+-66.52137149
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1C4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-71.02137149
+ 20
+-210.05337834
+ 30
+0.0
+ 11
+-71.02137149
+ 21
+-226.55337834
+ 31
+0.0
+  0
+LINE
+  5
+1C5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+467.97862851
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+470.97862851
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1C6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+466.47862851
+ 20
+-210.05337834
+ 30
+0.0
+ 11
+466.47862851
+ 21
+-226.55337834
+ 31
+0.0
+  0
+LINE
+  5
+1C7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+457.47862851
+ 20
+-226.55337834
+ 30
+0.0
+ 11
+457.47862851
+ 21
+-210.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1C8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+452.97862851
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+455.97862851
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1C9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+452.97862851
+ 20
+-241.48302398
+ 30
+0.0
+ 11
+452.97862851
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1CA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+452.97862851
+ 20
+-241.48302398
+ 30
+0.0
+ 11
+470.97862851
+ 21
+-241.48302398
+ 31
+0.0
+  0
+LINE
+  5
+1CB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+470.97862851
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+470.97862851
+ 21
+-241.48302398
+ 31
+0.0
+  0
+LINE
+  5
+1CC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+680.47862851
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+683.47862851
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1CD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+678.97862851
+ 20
+-210.05337834
+ 30
+0.0
+ 11
+678.97862851
+ 21
+-226.55337834
+ 31
+0.0
+  0
+LINE
+  5
+1CE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+669.97862851
+ 20
+-226.55337834
+ 30
+0.0
+ 11
+669.97862851
+ 21
+-210.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1CF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+665.47862851
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+668.47862851
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1D0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+665.47862851
+ 20
+-241.48302398
+ 30
+0.0
+ 11
+665.47862851
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1D1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+665.47862851
+ 20
+-241.48302398
+ 30
+0.0
+ 11
+683.47862851
+ 21
+-241.48302398
+ 31
+0.0
+  0
+LINE
+  5
+1D2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+683.47862851
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+683.47862851
+ 21
+-241.48302398
+ 31
+0.0
+  0
+LINE
+  5
+1D3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1217.97862851
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+1220.97862851
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1D4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1216.47862851
+ 20
+-210.05337834
+ 30
+0.0
+ 11
+1216.47862851
+ 21
+-226.55337834
+ 31
+0.0
+  0
+LINE
+  5
+1D5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1207.47862851
+ 20
+-226.55337834
+ 30
+0.0
+ 11
+1207.47862851
+ 21
+-210.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1D6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1202.97862851
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+1205.97862851
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1D7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1202.97862851
+ 20
+-241.48302398
+ 30
+0.0
+ 11
+1202.97862851
+ 21
+-228.05337834
+ 31
+0.0
+  0
+LINE
+  5
+1D8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1202.97862851
+ 20
+-241.48302398
+ 30
+0.0
+ 11
+1220.97862851
+ 21
+-241.48302398
+ 31
+0.0
+  0
+LINE
+  5
+1D9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1220.97862851
+ 20
+-228.05337834
+ 30
+0.0
+ 11
+1220.97862851
+ 21
+-241.48302398
+ 31
+0.0
+  0
+LINE
+  5
+1DA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1315.72862851
+ 20
+-56.19408706
+ 30
+0.0
+ 11
+-179.27137149
+ 21
+-56.19408706
+ 31
+0.0
+  0
+LINE
+  5
+1DB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1318.2286285073
+ 20
+-269.4126696289
+ 30
+0.0
+ 11
+1318.2286285073
+ 21
+-58.6940870589
+ 31
+0.0
+  0
+LINE
+  5
+1DC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1315.7286285073
+ 20
+-271.9126696289
+ 30
+0.0
+ 11
+1222.5409435973
+ 21
+-271.9126696289
+ 31
+0.0
+  0
+LINE
+  5
+1DD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1201.4163134179
+ 20
+-271.9126696292
+ 30
+0.0
+ 11
+685.0409435979
+ 21
+-271.9126696292
+ 31
+0.0
+  0
+LINE
+  5
+1DE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+663.9163134186
+ 20
+-271.9126696294
+ 30
+0.0
+ 11
+472.5409435986
+ 21
+-271.9126696294
+ 31
+0.0
+  0
+LINE
+  5
+1DF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+451.4163134193
+ 20
+-271.9126696297
+ 30
+0.0
+ 11
+-64.9590564007
+ 21
+-271.9126696297
+ 31
+0.0
+  0
+LINE
+  5
+1E0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-86.08368658
+ 20
+-271.91266963
+ 30
+0.0
+ 11
+-179.27137149
+ 21
+-271.91266963
+ 31
+0.0
+  0
+LINE
+  5
+1E1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-181.77137149
+ 20
+-269.41266963
+ 30
+0.0
+ 11
+-181.77137149
+ 21
+-58.69408706
+ 31
+0.0
+  0
+LINE
+  5
+1E2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-176.77137149
+ 20
+-437.97678409
+ 30
+0.0
+ 11
+244.72862851
+ 21
+-437.97678409
+ 31
+0.0
+  0
+LINE
+  5
+1E3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-181.77137149
+ 20
+-347.16266963
+ 30
+0.0
+ 11
+-181.77137149
+ 21
+-432.97678409
+ 31
+0.0
+  0
+LINE
+  5
+1E4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+244.72862851
+ 20
+-342.16266963
+ 30
+0.0
+ 11
+-176.77137149
+ 21
+-342.16266963
+ 31
+0.0
+  0
+LINE
+  5
+1E5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+249.72862851
+ 20
+-432.97678409
+ 30
+0.0
+ 11
+249.72862851
+ 21
+-347.16266963
+ 31
+0.0
+  0
+LINE
+  5
+1E6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.77137149
+ 20
+-568.77324352
+ 30
+0.0
+ 11
+-150.77137149
+ 21
+-562.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1E7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.77137149
+ 20
+-568.77324352
+ 30
+0.0
+ 11
+-150.77137149
+ 21
+-568.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1E8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.77137149
+ 20
+-529.97678409
+ 30
+0.0
+ 11
+-148.77137149
+ 21
+-568.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1E9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.77137149
+ 20
+-529.97678409
+ 30
+0.0
+ 11
+1095.22862851
+ 21
+-529.97678409
+ 31
+0.0
+  0
+LINE
+  5
+1EA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.22862851
+ 20
+-568.77324352
+ 30
+0.0
+ 11
+1095.22862851
+ 21
+-529.97678409
+ 31
+0.0
+  0
+LINE
+  5
+1EB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1097.22862851
+ 20
+-568.77324352
+ 30
+0.0
+ 11
+1095.22862851
+ 21
+-568.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1EC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1097.22862851
+ 20
+-562.77324352
+ 30
+0.0
+ 11
+1097.22862851
+ 21
+-568.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1ED
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1118.22862851
+ 20
+-562.77324352
+ 30
+0.0
+ 11
+1097.22862851
+ 21
+-562.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1EE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1128.22862851
+ 20
+-654.77324352
+ 30
+0.0
+ 11
+1128.22862851
+ 21
+-572.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1EF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1097.22862851
+ 20
+-664.77324352
+ 30
+0.0
+ 11
+1118.22862851
+ 21
+-664.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1F0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1097.22862851
+ 20
+-658.77324352
+ 30
+0.0
+ 11
+1097.22862851
+ 21
+-664.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1F1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.22862851
+ 20
+-658.77324352
+ 30
+0.0
+ 11
+1097.22862851
+ 21
+-658.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1F2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.22862851
+ 20
+-697.56970295
+ 30
+0.0
+ 11
+1095.22862851
+ 21
+-658.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1F3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1095.22862851
+ 20
+-697.56970295
+ 30
+0.0
+ 11
+-148.77137149
+ 21
+-697.56970295
+ 31
+0.0
+  0
+LINE
+  5
+1F4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-148.77137149
+ 20
+-658.77324352
+ 30
+0.0
+ 11
+-148.77137149
+ 21
+-697.56970295
+ 31
+0.0
+  0
+LINE
+  5
+1F5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.77137149
+ 20
+-658.77324352
+ 30
+0.0
+ 11
+-148.77137149
+ 21
+-658.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1F6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.77137149
+ 20
+-664.77324352
+ 30
+0.0
+ 11
+-150.77137149
+ 21
+-658.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1F7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-171.77137149
+ 20
+-664.77324352
+ 30
+0.0
+ 11
+-150.77137149
+ 21
+-664.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1F8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-181.77137149
+ 20
+-572.77324352
+ 30
+0.0
+ 11
+-181.77137149
+ 21
+-654.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1F9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-150.77137149
+ 20
+-562.77324352
+ 30
+0.0
+ 11
+-171.77137149
+ 21
+-562.77324352
+ 31
+0.0
+  0
+LINE
+  5
+1FA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-132.27137149
+ 20
+-583.27324352
+ 30
+0.0
+ 11
+-137.27137149
+ 21
+-583.27324352
+ 31
+0.0
+  0
+LINE
+  5
+1FB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-132.27137149
+ 20
+-574.27324352
+ 30
+0.0
+ 11
+-137.27137149
+ 21
+-574.27324352
+ 31
+0.0
+  0
+LINE
+  5
+1FC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-132.27137149
+ 20
+-653.27324352
+ 30
+0.0
+ 11
+-137.27137149
+ 21
+-653.27324352
+ 31
+0.0
+  0
+LINE
+  5
+1FD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-132.27137149
+ 20
+-644.27324352
+ 30
+0.0
+ 11
+-137.27137149
+ 21
+-644.27324352
+ 31
+0.0
+  0
+LINE
+  5
+1FE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1080.72862851
+ 20
+-583.27324352
+ 30
+0.0
+ 11
+1075.72862851
+ 21
+-583.27324352
+ 31
+0.0
+  0
+LINE
+  5
+1FF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1080.72862851
+ 20
+-574.27324352
+ 30
+0.0
+ 11
+1075.72862851
+ 21
+-574.27324352
+ 31
+0.0
+  0
+LINE
+  5
+200
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1080.72862851
+ 20
+-653.27324352
+ 30
+0.0
+ 11
+1075.72862851
+ 21
+-653.27324352
+ 31
+0.0
+  0
+LINE
+  5
+201
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+1080.72862851
+ 20
+-644.27324352
+ 30
+0.0
+ 11
+1075.72862851
+ 21
+-644.27324352
+ 31
+0.0
+  0
+LINE
+  5
+202
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-136.77137149
+ 20
+-793.76457105
+ 30
+0.0
+ 11
+-176.77137149
+ 21
+-793.76457105
+ 31
+0.0
+  0
+LINE
+  5
+203
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-136.77137149
+ 20
+-749.56970295
+ 30
+0.0
+ 11
+-176.77137149
+ 21
+-749.56970295
+ 31
+0.0
+  0
+LINE
+  5
+204
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-131.77137149
+ 20
+-754.56970295
+ 30
+0.0
+ 11
+-131.77137149
+ 21
+-788.76457105
+ 31
+0.0
+  0
+LINE
+  5
+205
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-181.77137149
+ 20
+-788.76457105
+ 30
+0.0
+ 11
+-181.77137149
+ 21
+-754.56970295
+ 31
+0.0
+  0
+LINE
+  5
+206
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-181.77137149
+ 20
+-906.97777448
+ 30
+0.0
+ 11
+-181.77137149
+ 21
+-948.69350324
+ 31
+0.0
+  0
+LINE
+  5
+207
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-167.6292358723
+ 20
+-888.6935032391
+ 30
+0.0
+ 11
+-178.8424393023
+ 21
+-899.9067066691
+ 31
+0.0
+  0
+LINE
+  5
+208
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-160.5581680538
+ 20
+-885.7645710453
+ 30
+0.0
+ 11
+7.0154250662
+ 21
+-885.7645710453
+ 31
+0.0
+  0
+LINE
+  5
+209
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+25.2996963146
+ 20
+-899.9067066691
+ 30
+0.0
+ 11
+14.0864928846
+ 21
+-888.6935032391
+ 31
+0.0
+  0
+LINE
+  5
+20A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+28.2286285024
+ 20
+-948.69350324
+ 30
+0.0
+ 11
+28.2286285024
+ 21
+-906.97777448
+ 31
+0.0
+  0
+LINE
+  5
+20B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+14.0864928846
+ 20
+-966.9777744809
+ 30
+0.0
+ 11
+25.2996963146
+ 21
+-955.7645710509
+ 31
+0.0
+  0
+LINE
+  5
+20C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+7.0154250662
+ 20
+-969.9067066747
+ 30
+0.0
+ 11
+-160.5581680538
+ 21
+-969.9067066747
+ 31
+0.0
+  0
+LINE
+  5
+20D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-178.8424393023
+ 20
+-955.7645710509
+ 30
+0.0
+ 11
+-167.6292358723
+ 21
+-966.9777744809
+ 31
+0.0
+  0
+LINE
+  5
+20E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-59.77137149
+ 20
+-1105.90670667
+ 30
+0.0
+ 11
+-59.77137149
+ 21
+-1067.90670667
+ 31
+0.0
+  0
+LINE
+  5
+20F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-175.77137149
+ 20
+-1111.90670667
+ 30
+0.0
+ 11
+-65.77137149
+ 21
+-1111.90670667
+ 31
+0.0
+  0
+LINE
+  5
+210
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-181.77137149
+ 20
+-1067.90670667
+ 30
+0.0
+ 11
+-181.77137149
+ 21
+-1105.90670667
+ 31
+0.0
+  0
+LINE
+  5
+211
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbLine
+ 10
+-65.77137149
+ 20
+-1061.90670667
+ 30
+0.0
+ 11
+-175.77137149
+ 21
+-1061.90670667
+ 31
+0.0
+  0
+LINE
+  5
+212
+330
+1F
+100
+AcDbEntity
+  8
+SRC_SEPARATOR
+  6
+SLD-Katý
+ 62
+7
+370
+50
+420
+16777215
+100
+AcDbLine
+ 10
+-191.77137149
+ 20
+-2.19408706
+ 30
+0.0
+ 11
+1380.77137149
+ 21
+-2.19408706
+ 31
+0.0
+  0
+LINE
+  5
+213
+330
+1F
+100
+AcDbEntity
+  8
+SRC_SEPARATOR
+  6
+SLD-Katý
+ 62
+7
+370
+50
+420
+16777215
+100
+AcDbLine
+ 10
+-191.77137149
+ 20
+-475.97678409
+ 30
+0.0
+ 11
+1328.22862851
+ 21
+-475.97678409
+ 31
+0.0
+  0
+LINE
+  5
+214
+330
+1F
+100
+AcDbEntity
+  8
+SRC_SEPARATOR
+  6
+SLD-Katý
+ 62
+7
+370
+50
+420
+16777215
+100
+AcDbLine
+ 10
+-191.77137149
+ 20
+-831.76457105
+ 30
+0.0
+ 11
+1138.22862851
+ 21
+-831.76457105
+ 31
+0.0
+  0
+LINE
+  5
+215
+330
+1F
+100
+AcDbEntity
+  8
+SRC_SEPARATOR
+  6
+SLD-Katý
+ 62
+7
+370
+50
+420
+16777215
+100
+AcDbLine
+ 10
+-191.77137149
+ 20
+-1007.90670667
+ 30
+0.0
+ 11
+38.22862851
+ 21
+-1007.90670667
+ 31
+0.0
+  0
+LINE
+  5
+216
+330
+1F
+100
+AcDbEntity
+  8
+SRC_SEPARATOR
+  6
+SLD-Katý
+ 62
+7
+370
+50
+420
+16777215
+100
+AcDbLine
+ 10
+-191.77137149
+ 20
+-1149.90670667
+ 30
+0.0
+ 11
+-49.77137149
+ 21
+-1149.90670667
+ 31
+0.0
+  0
+ARC
+  5
+217
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-171.77137149
+ 20
+1356.49374253
+ 30
+0.0
+ 40
+10.0
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+218
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-171.77137149
+ 20
+1958.49374253
+ 30
+0.0
+ 40
+10.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+ARC
+  5
+219
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1118.22862851
+ 20
+1958.49374253
+ 30
+0.0
+ 40
+10.0
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+ARC
+  5
+21A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1118.22862851
+ 20
+1356.49374253
+ 30
+0.0
+ 40
+10.0
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+21B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1112.22862851
+ 20
+1410.49374253
+ 30
+0.0
+ 40
+4.500000000000227
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+21C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1112.22862851
+ 20
+1404.49374253
+ 30
+0.0
+ 40
+4.500000000000227
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+21D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1112.22862851
+ 20
+1910.49374253
+ 30
+0.0
+ 40
+4.500000000000227
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+21E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1112.22862851
+ 20
+1904.49374253
+ 30
+0.0
+ 40
+4.500000000000227
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+21F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-165.77137149
+ 20
+1410.49374253
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+220
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-165.77137149
+ 20
+1404.49374253
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+221
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-165.77137149
+ 20
+1910.49374253
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+222
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-165.77137149
+ 20
+1904.49374253
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+CIRCLE
+  5
+223
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-172.77137149
+ 20
+1138.23608864
+ 30
+0.0
+ 40
+4.499999999999886
+  0
+CIRCLE
+  5
+224
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-172.77137149
+ 20
+600.73608864
+ 30
+0.0
+ 40
+4.499999999999659
+  0
+CIRCLE
+  5
+225
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1115.41800801
+ 20
+1138.23608864
+ 30
+0.0
+ 40
+4.499999999999773
+  0
+CIRCLE
+  5
+226
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1115.41800801
+ 20
+600.73608864
+ 30
+0.0
+ 40
+4.500000000000455
+  0
+ARC
+  5
+227
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1090.28796293
+ 20
+1237.95073331
+ 30
+0.0
+ 40
+0.0500000013305063
+100
+AcDbArc
+ 50
+135.0000000002
+ 51
+315.0
+  0
+ARC
+  5
+228
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1090.28796293
+ 20
+501.02144398
+ 30
+0.0
+ 40
+0.0500000013304661
+100
+AcDbArc
+ 50
+45.0000000001
+ 51
+224.9999999998
+  0
+ARC
+  5
+229
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-147.6413264
+ 20
+501.02144398
+ 30
+0.0
+ 40
+0.0500000013304259
+100
+AcDbArc
+ 50
+315.0
+ 51
+134.9999999999
+  0
+ARC
+  5
+22A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-147.6413264
+ 20
+1237.95073331
+ 30
+0.0
+ 40
+0.0500000013303857
+100
+AcDbArc
+ 50
+225.0
+ 51
+45.0000000001
+  0
+ARC
+  5
+22B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+538.82331826
+ 20
+664.48608864
+ 30
+0.0
+ 40
+12.5
+100
+AcDbArc
+ 50
+270.0
+ 51
+90.0
+  0
+ARC
+  5
+22C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+403.82331826
+ 20
+664.48608864
+ 30
+0.0
+ 40
+12.5
+100
+AcDbArc
+ 50
+90.0
+ 51
+270.0
+  0
+ARC
+  5
+22D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+538.82331826
+ 20
+1074.48608864
+ 30
+0.0
+ 40
+12.50000000000023
+100
+AcDbArc
+ 50
+270.0
+ 51
+90.0
+  0
+ARC
+  5
+22E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+403.82331826
+ 20
+1074.48608864
+ 30
+0.0
+ 40
+12.50000000000023
+100
+AcDbArc
+ 50
+90.0
+ 51
+270.0
+  0
+ARC
+  5
+22F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+761.32331826
+ 20
+936.98608864
+ 30
+0.0
+ 40
+12.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+230
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+761.32331826
+ 20
+801.98608864
+ 30
+0.0
+ 40
+12.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+231
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+181.32331826
+ 20
+936.98608864
+ 30
+0.0
+ 40
+12.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+232
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+181.32331826
+ 20
+801.98608864
+ 30
+0.0
+ 40
+12.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+233
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-169.27137149
+ 20
+129.54865592
+ 30
+0.0
+ 40
+3.300000000000011
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+234
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-169.27137149
+ 20
+121.14865592
+ 30
+0.0
+ 40
+3.300000000000011
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+235
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-169.27137149
+ 20
+329.54865592
+ 30
+0.0
+ 40
+3.300000000000011
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+236
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-169.27137149
+ 20
+321.14865592
+ 30
+0.0
+ 40
+3.300000000000011
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+237
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-169.27137149
+ 20
+221.14865592
+ 30
+0.0
+ 40
+3.300000000000011
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+238
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-169.27137149
+ 20
+229.54865592
+ 30
+0.0
+ 40
+3.300000000000011
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+239
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1358.27137149
+ 20
+121.14865592
+ 30
+0.0
+ 40
+3.300000000000182
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+23A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1358.27137149
+ 20
+129.54865592
+ 30
+0.0
+ 40
+3.300000000000182
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+23B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1358.27137149
+ 20
+329.54865592
+ 30
+0.0
+ 40
+3.300000000000182
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+23C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1358.27137149
+ 20
+321.14865592
+ 30
+0.0
+ 40
+3.300000000000182
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+23D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1358.27137149
+ 20
+221.14865592
+ 30
+0.0
+ 40
+3.300000000000182
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+23E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1358.27137149
+ 20
+229.54865592
+ 30
+0.0
+ 40
+3.300000000000182
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+23F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1341.79289322
+ 20
+78.0557627
+ 30
+0.0
+ 40
+2.00000000051655
+100
+AcDbArc
+ 50
+261.5869892045
+ 51
+270.0
+  0
+ARC
+  5
+240
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1339.3999999997
+ 20
+38.8059129395
+ 30
+0.0
+ 40
+3.0
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+241
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-150.4000000003
+ 20
+38.8059129395
+ 30
+0.0
+ 40
+3.0
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+242
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-152.7928932203
+ 20
+78.0557627
+ 30
+0.0
+ 40
+2.00000000051648
+100
+AcDbArc
+ 50
+270.0
+ 51
+278.4130107955
+  0
+ARC
+  5
+243
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-152.7928932203
+ 20
+78.0557627
+ 30
+0.0
+ 40
+1.999999998705569
+100
+AcDbArc
+ 50
+8.421058158
+ 51
+81.5789418346
+  0
+ARC
+  5
+244
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-177.7713714905
+ 20
+79.34865592
+ 30
+0.0
+ 40
+3.999999999999986
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+245
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-177.7713714905
+ 20
+371.34865592
+ 30
+0.0
+ 40
+4.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+ARC
+  5
+246
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-152.79289322
+ 20
+372.6415491403
+ 30
+0.0
+ 40
+2.000000000516384
+100
+AcDbArc
+ 50
+180.0
+ 51
+188.4130107955
+  0
+ARC
+  5
+247
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-152.79289322
+ 20
+372.6415491403
+ 30
+0.0
+ 40
+1.999999998705573
+100
+AcDbArc
+ 50
+278.421058158
+ 51
+351.5789418346
+  0
+ARC
+  5
+248
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-152.79289322
+ 20
+372.6415491403
+ 30
+0.0
+ 40
+2.000000000258126
+100
+AcDbArc
+ 50
+81.5869892045
+ 51
+90.0
+  0
+ARC
+  5
+249
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1341.7928932203
+ 20
+372.64154914
+ 30
+0.0
+ 40
+2.000000000516366
+100
+AcDbArc
+ 50
+90.0
+ 51
+98.4130107955
+  0
+ARC
+  5
+24A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1341.7928932203
+ 20
+372.64154914
+ 30
+0.0
+ 40
+1.99999999870557
+100
+AcDbArc
+ 50
+188.421058158
+ 51
+261.5789418346
+  0
+ARC
+  5
+24B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1341.7928932203
+ 20
+372.64154914
+ 30
+0.0
+ 40
+2.000000000258296
+100
+AcDbArc
+ 50
+351.5869892045
+ 51
+0.0
+  0
+ARC
+  5
+24C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1366.7713714905
+ 20
+371.34865592
+ 30
+0.0
+ 40
+4.0
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+ARC
+  5
+24D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1366.7713714905
+ 20
+79.34865592
+ 30
+0.0
+ 40
+4.000000000000014
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+24E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1341.79289322
+ 20
+78.0557627
+ 30
+0.0
+ 40
+2.000000000516366
+100
+AcDbArc
+ 50
+0.0
+ 51
+8.4130107955
+  0
+ARC
+  5
+24F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1341.79289322
+ 20
+78.0557627
+ 30
+0.0
+ 40
+1.999999998705513
+100
+AcDbArc
+ 50
+98.421058158
+ 51
+171.578941842
+  0
+ARC
+  5
+250
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-152.7928932203
+ 20
+78.0557627
+ 30
+0.0
+ 40
+2.000000000258183
+100
+AcDbArc
+ 50
+171.5869892045
+ 51
+180.0
+  0
+CIRCLE
+  5
+251
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-56.77137149
+ 20
+-83.6237327
+ 30
+0.0
+ 40
+4.499999999999986
+  0
+CIRCLE
+  5
+252
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+443.22862851
+ 20
+-83.6237327
+ 30
+0.0
+ 40
+4.5
+  0
+CIRCLE
+  5
+253
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+693.22862851
+ 20
+-83.6237327
+ 30
+0.0
+ 40
+4.499999999999886
+  0
+CIRCLE
+  5
+254
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1193.22862851
+ 20
+-83.6237327
+ 30
+0.0
+ 40
+4.5
+  0
+CIRCLE
+  5
+255
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1303.22862851
+ 20
+-127.05337834
+ 30
+0.0
+ 40
+4.5
+  0
+CIRCLE
+  5
+256
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1303.22862851
+ 20
+-187.05337834
+ 30
+0.0
+ 40
+4.5
+  0
+CIRCLE
+  5
+257
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1233.22862851
+ 20
+-157.05337834
+ 30
+0.0
+ 40
+4.499999999999773
+  0
+CIRCLE
+  5
+258
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-96.77137149
+ 20
+-157.05337834
+ 30
+0.0
+ 40
+4.499999999999787
+  0
+CIRCLE
+  5
+259
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-166.77137149
+ 20
+-187.05337834
+ 30
+0.0
+ 40
+4.499999999999943
+  0
+CIRCLE
+  5
+25A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-166.77137149
+ 20
+-127.05337834
+ 30
+0.0
+ 40
+4.499999999999943
+  0
+CIRCLE
+  5
+25B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+568.22862851
+ 20
+-147.05337834
+ 30
+0.0
+ 40
+5.499999999999886
+  0
+ARC
+  5
+25C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-146.77137149
+ 20
+-87.6237327
+ 30
+0.0
+ 40
+4.125
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+25D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-146.77137149
+ 20
+-79.6237327
+ 30
+0.0
+ 40
+4.125
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+25E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+533.22862851
+ 20
+-87.6237327
+ 30
+0.0
+ 40
+4.125000000000114
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+25F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+533.22862851
+ 20
+-79.6237327
+ 30
+0.0
+ 40
+4.125000000000114
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+260
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+603.22862851
+ 20
+-87.6237327
+ 30
+0.0
+ 40
+4.125
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+261
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+603.22862851
+ 20
+-79.6237327
+ 30
+0.0
+ 40
+4.125
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+262
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1283.22862851
+ 20
+-87.6237327
+ 30
+0.0
+ 40
+4.125
+100
+AcDbArc
+ 50
+180.0
+ 51
+0.0
+  0
+ARC
+  5
+263
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1283.22862851
+ 20
+-79.6237327
+ 30
+0.0
+ 40
+4.125
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+264
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-75.52137149
+ 20
+-210.05337834
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+265
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-81.52137149
+ 20
+-226.55337834
+ 30
+0.0
+ 40
+1.5
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+266
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-69.52137149
+ 20
+-226.55337834
+ 30
+0.0
+ 40
+1.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+267
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+467.97862851
+ 20
+-226.55337834
+ 30
+0.0
+ 40
+1.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+268
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+461.97862851
+ 20
+-210.05337834
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+269
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+455.97862851
+ 20
+-226.55337834
+ 30
+0.0
+ 40
+1.5
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+26A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+680.47862851
+ 20
+-226.55337834
+ 30
+0.0
+ 40
+1.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+26B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+674.47862851
+ 20
+-210.05337834
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+26C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+668.47862851
+ 20
+-226.55337834
+ 30
+0.0
+ 40
+1.5
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+26D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1217.97862851
+ 20
+-226.55337834
+ 30
+0.0
+ 40
+1.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+26E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1211.97862851
+ 20
+-210.05337834
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+26F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1205.97862851
+ 20
+-226.55337834
+ 30
+0.0
+ 40
+1.5
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+270
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-179.27137149
+ 20
+-58.69408706
+ 30
+0.0
+ 40
+2.5
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+ARC
+  5
+271
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1315.7286285073
+ 20
+-58.69408706
+ 30
+0.0
+ 40
+2.500000000000078
+100
+AcDbArc
+ 50
+0.0000000253
+ 51
+89.9999999371
+  0
+ARC
+  5
+272
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1315.7286285073
+ 20
+-269.4126696289
+ 30
+0.0
+ 40
+2.500000000000227
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+273
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1222.5409435973
+ 20
+-267.9126696289
+ 30
+0.0
+ 40
+4.000000000000171
+100
+AcDbArc
+ 50
+226.1628646905
+ 51
+270.0
+  0
+ARC
+  5
+274
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1211.9786285079
+ 20
+-278.9126696282
+ 30
+0.0
+ 40
+11.25000000099059
+100
+AcDbArc
+ 50
+46.1628646799
+ 51
+133.8371353095
+  0
+ARC
+  5
+275
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1201.4163134179
+ 20
+-267.9126696282
+ 30
+0.0
+ 40
+4.000000000991125
+100
+AcDbArc
+ 50
+270.0
+ 51
+313.8371353392
+  0
+ARC
+  5
+276
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+685.0409435979
+ 20
+-267.9126696292
+ 30
+0.0
+ 40
+4.000000000000284
+100
+AcDbArc
+ 50
+226.1628646905
+ 51
+270.0
+  0
+ARC
+  5
+277
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+674.4786285086
+ 20
+-278.9126696285
+ 30
+0.0
+ 40
+11.25000000099054
+100
+AcDbArc
+ 50
+46.1628646799
+ 51
+133.8371353095
+  0
+ARC
+  5
+278
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+663.9163134186
+ 20
+-267.9126696285
+ 30
+0.0
+ 40
+4.00000000099093
+100
+AcDbArc
+ 50
+270.0
+ 51
+313.8371353392
+  0
+ARC
+  5
+279
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+472.5409435986
+ 20
+-267.9126696294
+ 30
+0.0
+ 40
+4.000000000000018
+100
+AcDbArc
+ 50
+226.1628646905
+ 51
+270.0
+  0
+ARC
+  5
+27A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+461.9786285093
+ 20
+-278.9126696287
+ 30
+0.0
+ 40
+11.2500000009909
+100
+AcDbArc
+ 50
+46.1628646799
+ 51
+133.8371353095
+  0
+ARC
+  5
+27B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+451.4163134193
+ 20
+-267.9126696287
+ 30
+0.0
+ 40
+4.000000000990894
+100
+AcDbArc
+ 50
+270.0
+ 51
+313.8371353392
+  0
+ARC
+  5
+27C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-64.9590564007
+ 20
+-267.9126696297
+ 30
+0.0
+ 40
+4.000000000000284
+100
+AcDbArc
+ 50
+226.1628646905
+ 51
+270.0
+  0
+ARC
+  5
+27D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-75.52137149
+ 20
+-278.912669629
+ 30
+0.0
+ 40
+11.25000000099059
+100
+AcDbArc
+ 50
+46.1628646799
+ 51
+133.8371353095
+  0
+ARC
+  5
+27E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-86.08368658
+ 20
+-267.912669629
+ 30
+0.0
+ 40
+4.000000000990931
+100
+AcDbArc
+ 50
+270.0
+ 51
+313.8371353392
+  0
+ARC
+  5
+27F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-179.27137149
+ 20
+-269.41266963
+ 30
+0.0
+ 40
+2.5
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+CIRCLE
+  5
+280
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-86.27137149
+ 20
+-375.06972686
+ 30
+0.0
+ 40
+3.300000000000011
+  0
+CIRCLE
+  5
+281
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-86.27137149
+ 20
+-405.06972686
+ 30
+0.0
+ 40
+3.299999999999997
+  0
+CIRCLE
+  5
+282
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-146.27137149
+ 20
+-405.06972686
+ 30
+0.0
+ 40
+3.30000000000004
+  0
+CIRCLE
+  5
+283
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-146.27137149
+ 20
+-375.06972686
+ 30
+0.0
+ 40
+3.30000000000004
+  0
+CIRCLE
+  5
+284
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+231.72862851
+ 20
+-405.06972686
+ 30
+0.0
+ 40
+3.30000000000004
+  0
+CIRCLE
+  5
+285
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-24.27137149
+ 20
+-405.06972686
+ 30
+0.0
+ 40
+3.300000000000011
+  0
+CIRCLE
+  5
+286
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-24.27137149
+ 20
+-375.06972686
+ 30
+0.0
+ 40
+3.29999999999999
+  0
+CIRCLE
+  5
+287
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+231.72862851
+ 20
+-375.06972686
+ 30
+0.0
+ 40
+3.30000000000004
+  0
+ARC
+  5
+288
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+244.72862851
+ 20
+-432.97678409
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+289
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-176.77137149
+ 20
+-432.97678409
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+28A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-176.77137149
+ 20
+-347.16266963
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+ARC
+  5
+28B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+244.72862851
+ 20
+-347.16266963
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+CIRCLE
+  5
+28C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-89.77137149
+ 20
+-578.77324352
+ 30
+0.0
+ 40
+2.500000000000028
+  0
+CIRCLE
+  5
+28D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-89.77137149
+ 20
+-648.77324352
+ 30
+0.0
+ 40
+2.500000000000028
+  0
+CIRCLE
+  5
+28E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-166.77137149
+ 20
+-648.77324352
+ 30
+0.0
+ 40
+4.499999999999886
+  0
+CIRCLE
+  5
+28F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-166.77137149
+ 20
+-578.77324352
+ 30
+0.0
+ 40
+4.499999999999915
+  0
+CIRCLE
+  5
+290
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1113.22862851
+ 20
+-578.77324352
+ 30
+0.0
+ 40
+4.5
+  0
+CIRCLE
+  5
+291
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1113.22862851
+ 20
+-648.77324352
+ 30
+0.0
+ 40
+4.5
+  0
+CIRCLE
+  5
+292
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1036.22862851
+ 20
+-578.77324352
+ 30
+0.0
+ 40
+2.500000000000227
+  0
+CIRCLE
+  5
+293
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1036.22862851
+ 20
+-648.77324352
+ 30
+0.0
+ 40
+2.500000000000227
+  0
+CIRCLE
+  5
+294
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+473.22862851
+ 20
+-648.77324352
+ 30
+0.0
+ 40
+2.5
+  0
+CIRCLE
+  5
+295
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+473.22862851
+ 20
+-578.77324352
+ 30
+0.0
+ 40
+2.5
+  0
+ARC
+  5
+296
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1118.22862851
+ 20
+-572.77324352
+ 30
+0.0
+ 40
+10.0
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+ARC
+  5
+297
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1118.22862851
+ 20
+-654.77324352
+ 30
+0.0
+ 40
+10.00000000000011
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+298
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-171.77137149
+ 20
+-654.77324352
+ 30
+0.0
+ 40
+10.00000000000011
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+299
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-171.77137149
+ 20
+-572.77324352
+ 30
+0.0
+ 40
+10.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+ARC
+  5
+29A
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-137.27137149
+ 20
+-578.77324352
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+90.0
+ 51
+270.0
+  0
+ARC
+  5
+29B
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-132.27137149
+ 20
+-578.77324352
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+270.0
+ 51
+90.0
+  0
+ARC
+  5
+29C
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-137.27137149
+ 20
+-648.77324352
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+90.0
+ 51
+270.0
+  0
+ARC
+  5
+29D
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-132.27137149
+ 20
+-648.77324352
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+270.0
+ 51
+90.0
+  0
+ARC
+  5
+29E
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1075.72862851
+ 20
+-578.77324352
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+90.0
+ 51
+270.0
+  0
+ARC
+  5
+29F
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1080.72862851
+ 20
+-578.77324352
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+270.0
+ 51
+90.0
+  0
+ARC
+  5
+2A0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1075.72862851
+ 20
+-648.77324352
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+90.0
+ 51
+270.0
+  0
+ARC
+  5
+2A1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+1080.72862851
+ 20
+-648.77324352
+ 30
+0.0
+ 40
+4.5
+100
+AcDbArc
+ 50
+270.0
+ 51
+90.0
+  0
+CIRCLE
+  5
+2A2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-141.77137149
+ 20
+-761.56970295
+ 30
+0.0
+ 40
+2.499999999999972
+  0
+CIRCLE
+  5
+2A3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-171.77137149
+ 20
+-761.56970295
+ 30
+0.0
+ 40
+2.5
+  0
+ARC
+  5
+2A4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-176.77137149
+ 20
+-754.56970295
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+ARC
+  5
+2A5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-136.77137149
+ 20
+-754.56970295
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+ARC
+  5
+2A6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-136.77137149
+ 20
+-788.76457105
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+2A7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-176.77137149
+ 20
+-788.76457105
+ 30
+0.0
+ 40
+5.0
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+CIRCLE
+  5
+2A8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-61.77137149
+ 20
+-897.83563886
+ 30
+0.0
+ 40
+4.200000000000003
+  0
+CIRCLE
+  5
+2A9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-61.77137149
+ 20
+-957.83563886
+ 30
+0.0
+ 40
+4.199999999999996
+  0
+CIRCLE
+  5
+2AA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+8.22862851
+ 20
+-927.83563886
+ 30
+0.0
+ 40
+4.200000000000019
+  0
+CIRCLE
+  5
+2AB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-161.77137149
+ 20
+-927.83563886
+ 30
+0.0
+ 40
+4.199999999999989
+  0
+CIRCLE
+  5
+2AC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-91.77137149
+ 20
+-957.83563886
+ 30
+0.0
+ 40
+4.200000000000003
+  0
+CIRCLE
+  5
+2AD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-91.77137149
+ 20
+-897.83563886
+ 30
+0.0
+ 40
+4.200000000000003
+  0
+ARC
+  5
+2AE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-171.7713714913
+ 20
+-948.69350324
+ 30
+0.0
+ 40
+9.999999998680892
+100
+AcDbArc
+ 50
+180.0
+ 51
+225.0
+  0
+ARC
+  5
+2AF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-171.7713714913
+ 20
+-906.97777448
+ 30
+0.0
+ 40
+9.999999998680892
+100
+AcDbArc
+ 50
+135.0
+ 51
+180.0
+  0
+ARC
+  5
+2B0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-160.5581680538
+ 20
+-895.7645710475
+ 30
+0.0
+ 40
+10.00000000221644
+100
+AcDbArc
+ 50
+90.0
+ 51
+135.0000000405
+  0
+ARC
+  5
+2B1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+7.0154250662
+ 20
+-895.7645710475
+ 30
+0.0
+ 40
+10.00000000221644
+100
+AcDbArc
+ 50
+44.9999999595
+ 51
+90.0
+  0
+ARC
+  5
+2B2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+18.2286285037
+ 20
+-906.97777448
+ 30
+0.0
+ 40
+9.99999999868091
+100
+AcDbArc
+ 50
+0.0
+ 51
+45.0
+  0
+ARC
+  5
+2B3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+18.2286285037
+ 20
+-948.69350324
+ 30
+0.0
+ 40
+9.999999998680906
+100
+AcDbArc
+ 50
+315.0
+ 51
+0.0
+  0
+ARC
+  5
+2B4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+7.0154250662
+ 20
+-959.9067066725
+ 30
+0.0
+ 40
+10.00000000221632
+100
+AcDbArc
+ 50
+270.0
+ 51
+315.0000000405
+  0
+ARC
+  5
+2B5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-160.5581680538
+ 20
+-959.9067066725
+ 30
+0.0
+ 40
+10.00000000221632
+100
+AcDbArc
+ 50
+224.9999999595
+ 51
+270.0
+  0
+CIRCLE
+  5
+2B6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-90.77137149
+ 20
+-1101.90670667
+ 30
+0.0
+ 40
+2.5
+  0
+CIRCLE
+  5
+2B7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-90.77137149
+ 20
+-1071.90670667
+ 30
+0.0
+ 40
+2.5
+  0
+CIRCLE
+  5
+2B8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-150.77137149
+ 20
+-1101.90670667
+ 30
+0.0
+ 40
+2.5
+  0
+CIRCLE
+  5
+2B9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-150.77137149
+ 20
+-1071.90670667
+ 30
+0.0
+ 40
+2.5
+  0
+ARC
+  5
+2BA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-65.77137149
+ 20
+-1067.90670667
+ 30
+0.0
+ 40
+6.0
+100
+AcDbArc
+ 50
+0.0
+ 51
+90.0
+  0
+ARC
+  5
+2BB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-65.77137149
+ 20
+-1105.90670667
+ 30
+0.0
+ 40
+6.0
+100
+AcDbArc
+ 50
+270.0
+ 51
+0.0
+  0
+ARC
+  5
+2BC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-175.77137149
+ 20
+-1105.90670667
+ 30
+0.0
+ 40
+6.0
+100
+AcDbArc
+ 50
+180.0
+ 51
+270.0
+  0
+ARC
+  5
+2BD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_GEOMETRY
+  6
+SLD-Katý
+ 62
+7
+100
+AcDbCircle
+ 10
+-175.77137149
+ 20
+-1067.90670667
+ 30
+0.0
+ 40
+6.0
+100
+AcDbArc
+ 50
+90.0
+ 51
+180.0
+  0
+MTEXT
+  5
+2BF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+1305.7258309344
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+PARCA KODU: PBC300011014
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2C0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+1310.7258309344
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+ADET: 2
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2C1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+1315.7258309344
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+KALINLIK: 2 MM
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2C2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+1320.7258309344
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+MALZEME: St37-2 (S235JR)
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2C3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+448.5364514344
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+PARCA KODU: PBC300011052
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2C4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+453.5364514344
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+ADET: 2
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2C5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+458.5364514344
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+KALINLIK: 2 MM
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2C6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+463.5364514344
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+MALZEME: St37-2 (S235JR)
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2C7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+17.4509654844
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+PARCA KODU: PBC300011060
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2C8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+22.4509654844
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+ADET: 2
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2C9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+27.4509654844
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+KALINLIK: 2 MM
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2CA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+32.4509654844
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+MALZEME: St37-2 (S235JR)
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2CB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-308.5176170856
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+PARCA KODU: PBC300011050
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2CC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-303.5176170856
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+ADET: 2
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2CD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-298.5176170856
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+KALINLIK: 3 MM
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2CE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-293.5176170856
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+MALZEME: St37-2 (S235JR)
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2CF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-456.3317315456
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+PARCA KODU: PBC300011068
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2D0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-451.3317315456
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+ADET: 4
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2D1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-446.3317315456
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+KALINLIK: 3 MM
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2D2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-441.3317315456
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+MALZEME: St37-2 (S235JR)
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2D3
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-715.9246504056
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+PARCA KODU: PBC300011036
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2D4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-710.9246504056
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+ADET: 3
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2D5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-705.9246504056
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+KALINLIK: 4 MM
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2D6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-700.9246504056
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+MALZEME: St37-2 (S235JR)
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2D7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-812.1195185056
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+PARCA KODU: PBC300011066
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2D8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-807.1195185056
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+ADET: 8
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2D9
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-802.1195185056
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+KALINLIK: 4 MM
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2DA
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-797.1195185056
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+MALZEME: 1.0037 (S235JR)
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2DB
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-988.2616541256
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+PARCA KODU: PBC300011008
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2DC
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-983.2616541256
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+ADET: 2
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2DD
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-978.2616541256
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+KALINLIK: 5 MM
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2DE
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-973.2616541256
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+MALZEME: St37-2 (S235JR)
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2DF
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-1130.2616541256
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+PARCA KODU: PBC300011064
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2E0
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-1125.2616541256
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+ADET: 4
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2E1
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-1120.2616541256
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+KALINLIK: 6 MM
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2E2
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-1115.2616541256
+ 30
+0.0
+ 40
+3.4
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+MALZEME: St37-2 (S235JR)
+  7
+SLDTEXTSTYLE0
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2E4
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+2027.1303593321
+ 30
+0.0
+ 40
+8.0
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+2 MM
+  7
+SLDTEXTSTYLE1
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2E5
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-19.9704343979
+ 30
+0.0
+ 40
+8.0
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+3 MM
+  7
+SLDTEXTSTYLE1
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2E6
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-493.7531314279
+ 30
+0.0
+ 40
+8.0
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+4 MM
+  7
+SLDTEXTSTYLE1
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2E7
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-849.5409183879
+ 30
+0.0
+ 40
+8.0
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+5 MM
+  7
+SLDTEXTSTYLE1
+ 73
+     1
+ 44
+1.0
+  0
+MTEXT
+  5
+2E8
+330
+1F
+100
+AcDbEntity
+  8
+SRC_INFO
+ 62
+1
+100
+AcDbMText
+ 10
+-181.77137149
+ 20
+-1025.6830540079
+ 30
+0.0
+ 40
+8.0
+ 41
+0.0
+ 71
+     1
+ 72
+     1
+  1
+6 MM
+  7
+SLDTEXTSTYLE1
+ 73
+     1
+ 44
+1.0
+  0
+ENDSEC
+  0
+SECTION
+  2
+OBJECTS
+  0
+DICTIONARY
+  5
+C
+330
+0
+100
+AcDbDictionary
+281
+     1
+  3
+ACAD_GROUP
+350
+D
+  3
+ACAD_LAYOUT
+350
+1A
+  3
+ACAD_MLINESTYLE
+350
+17
+  3
+ACAD_PLOTSETTINGS
+350
+19
+  3
+ACAD_PLOTSTYLENAME
+350
+E
+  3
+ACAD_SCALELIST
+350
+47
+  3
+DWGPROPS
+350
+2E9
+  0
+DICTIONARY
+  5
+D
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  0
+DICTIONARY
+  5
+1A
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  3
+Layout1
+350
+1E
+  3
+Layout2
+350
+26
+  3
+Model
+350
+22
+  0
+DICTIONARY
+  5
+17
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  3
+Standard
+350
+18
+  0
+DICTIONARY
+  5
+19
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  0
+ACDBDICTIONARYWDFLT
+  5
+E
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  3
+Normal
+350
+F
+100
+AcDbDictionaryWithDefault
+340
+F
+  0
+DICTIONARY
+  5
+47
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbDictionary
+281
+     1
+  3
+A0
+350
+48
+  3
+A1
+350
+49
+  3
+A2
+350
+4A
+  3
+A3
+350
+4B
+  3
+A4
+350
+4C
+  3
+A5
+350
+4D
+  3
+A6
+350
+4E
+  3
+A7
+350
+4F
+  3
+A8
+350
+50
+  3
+A9
+350
+51
+  3
+B0
+350
+52
+  3
+B1
+350
+53
+  3
+B2
+350
+54
+  3
+B3
+350
+55
+  3
+B4
+350
+56
+  3
+B5
+350
+57
+  3
+B6
+350
+58
+  0
+XRECORD
+  5
+2E9
+102
+{ACAD_REACTORS
+330
+C
+102
+}
+330
+C
+100
+AcDbXrecord
+280
+     1
+  1
+DWGPROPS COOKIE
+  2
+
+  3
+
+  4
+
+  6
+
+  7
+
+  8
+SERCANTAPU
+  9
+
+300
+=
+301
+=
+302
+=
+303
+=
+304
+=
+305
+=
+306
+=
+307
+=
+308
+=
+309
+=
+ 40
+0.0
+ 41
+2461348.293033357
+ 42
+2461348.293034178
+  1
+
+ 90
+        0
+  0
+LAYOUT
+  5
+1E
+102
+{ACAD_REACTORS
+330
+1A
+102
+}
+330
+1A
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+
+  6
+
+ 40
+0.0
+ 41
+0.0
+ 42
+0.0
+ 43
+0.0
+ 44
+0.0
+ 45
+0.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+   688
+ 72
+     1
+ 73
+     0
+ 74
+     5
+  7
+
+ 75
+    16
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Layout1
+ 70
+     1
+ 71
+     1
+ 10
+0.0
+ 20
+0.0
+ 11
+420.0
+ 21
+297.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+1.0000000000E+20
+ 24
+1.0000000000E+20
+ 34
+1.0000000000E+20
+ 15
+-1.0000000000E+20
+ 25
+-1.0000000000E+20
+ 35
+-1.0000000000E+20
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+     0
+330
+1B
+  0
+LAYOUT
+  5
+26
+102
+{ACAD_REACTORS
+330
+1A
+102
+}
+330
+1A
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+
+  6
+
+ 40
+0.0
+ 41
+0.0
+ 42
+0.0
+ 43
+0.0
+ 44
+0.0
+ 45
+0.0
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+   688
+ 72
+     1
+ 73
+     0
+ 74
+     5
+  7
+
+ 75
+    16
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Layout2
+ 70
+     1
+ 71
+     2
+ 10
+0.0
+ 20
+0.0
+ 11
+0.0
+ 21
+0.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+0.0
+ 24
+0.0
+ 34
+0.0
+ 15
+0.0
+ 25
+0.0
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+     0
+330
+23
+  0
+LAYOUT
+  5
+22
+102
+{ACAD_REACTORS
+330
+1A
+102
+}
+330
+1A
+100
+AcDbPlotSettings
+  1
+
+  2
+none_device
+  4
+Letter_(8.50_x_11.00_Inches)
+  6
+
+ 40
+6.35
+ 41
+6.35
+ 42
+6.35000508
+ 43
+6.35000508
+ 44
+215.9
+ 45
+279.4
+ 46
+0.0
+ 47
+0.0
+ 48
+0.0
+ 49
+0.0
+140
+0.0
+141
+0.0
+142
+1.0
+143
+1.0
+ 70
+  1712
+ 72
+     1
+ 73
+     0
+ 74
+     0
+  7
+
+ 75
+     0
+147
+1.0
+148
+0.0
+149
+0.0
+100
+AcDbLayout
+  1
+Model
+ 70
+     1
+ 71
+     0
+ 10
+0.0
+ 20
+0.0
+ 11
+1189.0
+ 21
+841.0
+ 12
+0.0
+ 22
+0.0
+ 32
+0.0
+ 14
+0.0
+ 24
+0.0
+ 34
+0.0
+ 15
+1189.0
+ 25
+841.0
+ 35
+0.0
+146
+0.0
+ 13
+0.0
+ 23
+0.0
+ 33
+0.0
+ 16
+1.0
+ 26
+0.0
+ 36
+0.0
+ 17
+0.0
+ 27
+1.0
+ 37
+0.0
+ 76
+     0
+330
+1F
+331
+29
+  0
+MLINESTYLE
+  5
+18
+102
+{ACAD_REACTORS
+330
+17
+102
+}
+330
+17
+100
+AcDbMlineStyle
+  2
+Standard
+ 70
+     0
+  3
+
+ 62
+   256
+ 51
+90.0
+ 52
+90.0
+ 71
+     2
+ 49
+0.5
+ 62
+   256
+  6
+BYLAYER
+ 49
+-0.5
+ 62
+   256
+  6
+BYLAYER
+  0
+ACDBPLACEHOLDER
+  5
+F
+102
+{ACAD_REACTORS
+330
+E
+102
+}
+330
+E
+  0
+SCALE
+  5
+48
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:1
+140
+1.0
+141
+1.0
+290
+     1
+  0
+SCALE
+  5
+49
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:2
+140
+1.0
+141
+2.0
+290
+     0
+  0
+SCALE
+  5
+4A
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:4
+140
+1.0
+141
+4.0
+290
+     0
+  0
+SCALE
+  5
+4B
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:5
+140
+1.0
+141
+5.0
+290
+     0
+  0
+SCALE
+  5
+4C
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:8
+140
+1.0
+141
+8.0
+290
+     0
+  0
+SCALE
+  5
+4D
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:10
+140
+1.0
+141
+10.0
+290
+     0
+  0
+SCALE
+  5
+4E
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:16
+140
+1.0
+141
+16.0
+290
+     0
+  0
+SCALE
+  5
+4F
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:20
+140
+1.0
+141
+20.0
+290
+     0
+  0
+SCALE
+  5
+50
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:30
+140
+1.0
+141
+30.0
+290
+     0
+  0
+SCALE
+  5
+51
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:40
+140
+1.0
+141
+40.0
+290
+     0
+  0
+SCALE
+  5
+52
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:50
+140
+1.0
+141
+50.0
+290
+     0
+  0
+SCALE
+  5
+53
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+1:100
+140
+1.0
+141
+100.0
+290
+     0
+  0
+SCALE
+  5
+54
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+2:1
+140
+2.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+55
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+4:1
+140
+4.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+56
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+8:1
+140
+8.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+57
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+10:1
+140
+10.0
+141
+1.0
+290
+     0
+  0
+SCALE
+  5
+58
+102
+{ACAD_REACTORS
+330
+47
+102
+}
+330
+47
+100
+AcDbScale
+ 70
+     0
+300
+100:1
+140
+100.0
+141
+1.0
+290
+     0
+  0
+ENDSEC
+  0
+EOF
