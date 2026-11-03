@@ -64,6 +64,8 @@ namespace SrcCadWorks.Services
         public double UtilizationPercent { get; set; }
         public double UsedPartArea { get; set; }
         public double TotalSheetArea { get; set; }
+        public double SheetWidth { get; set; }
+        public double SheetHeight { get; set; }
         public SmartNestResult() { Placements = new List<SmartNestPlacement>(); }
     }
 
@@ -93,6 +95,8 @@ namespace SrcCadWorks.Services
             }
             parts = parts.OrderByDescending(p => Math.Abs(SignedArea(p.OuterContour))).ToList();
             var result = new SmartNestResult();
+            result.SheetWidth = settings.SheetWidth;
+            result.SheetHeight = settings.SheetHeight;
             result.TotalSheetArea = settings.SheetWidth * settings.SheetHeight;
             long candidateChecks = 0;
             int totalParts = parts.Count;
