@@ -95,6 +95,42 @@ internal static class CombinedDxfGroupTests
             }
             Assert(entities.Count(entity => entity.Value(8) == "SRC_GEOMETRY") == 21, "Original geometry count changed.");
             Assert(entities.Count(entity => entity.Type == "TEXT") == 34, "Part metadata or group labels missing.");
+
+            // SmartNest uses the same production R12 importer path as Toplu DXF.
+            // Two sheets with identical local coordinates must be separated in model space.
+            string nestOutput = Path.Combine(dir, "SMARTNEST_TEST.dxf");
+            var nest = new SmartNestResult
+            {
+                SheetCount = 2,
+                SheetWidth = 100,
+                SheetHeight = 200,
+                Placements = new List<SmartNestPlacement>
+                {
+                    new SmartNestPlacement
+                    {
+                        PartName = "NEST_A", SourceDxfPath = sources["P0"], SheetIndex = 0,
+                        X = 5, Y = 5, RotationDegrees = 0,
+                        Contour = new List<SmartNestPoint> { new SmartNestPoint(5,5), new SmartNestPoint(45,5), new SmartNestPoint(45,20), new SmartNestPoint(5,20) }
+                    },
+                    new SmartNestPlacement
+                    {
+                        PartName = "NEST_B", SourceDxfPath = sources["P0"], SheetIndex = 1,
+                        X = 5, Y = 5, RotationDegrees = 0,
+                        Contour = new List<SmartNestPoint> { new SmartNestPoint(5,5), new SmartNestPoint(45,5), new SmartNestPoint(45,20), new SmartNestPoint(5,20) }
+                    }
+                }
+            };
+            new CombinedDxfBuilder().BuildNesting(nest, nestOutput);
+            CombinedDxfBuilder.ValidateForImport(nestOutput);
+            var nestEntities = ReadEntities(nestOutput);
+            var firstSheetLine = nestEntities.First(entity => entity.Type == "LINE" && entity.Value(8) == "SMARTNEST_SHEET_1_GEOMETRY");
+            var secondSheetLine = nestEntities.First(entity => entity.Type == "LINE" && entity.Value(8) == "SMARTNEST_SHEET_2_GEOMETRY");
+            Assert(Math.Abs((secondSheetLine.Number(10) - firstSheetLine.Number(10)) - 205.0) < 0.000001,
+                "SmartNest sheets were not tiled apart in the combined DXF.");
+            DxfColorNormalizer.NormalizeProductionColors(nestOutput);
+            DxfColorNormalizer.ValidateNativeDxf(nestOutput);
+            Console.WriteLine("PASS: SmartNest R12 validation, two-sheet separation, and production color normalization.");
+
             byte[] validOutput = File.ReadAllBytes(output);
             File.WriteAllText(sources["P0"], "0\nSECTION\n2\nENTITIES\n0\nENDSEC\n0\nEOF\n");
             bool rejected = false;
