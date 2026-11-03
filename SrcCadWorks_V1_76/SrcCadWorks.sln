@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12224.181 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SrcCadWorks", "src\SrcCadWorks\SrcCadWorks.csproj", "{5E37A7E3-33FA-4C38-A29E-6B8B8486822A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SrcCadWorks.Watchdog", "src\SrcCadWorks.Watchdog\SrcCadWorks.Watchdog.csproj", "{D84FEE4F-5B59-4F11-9A7A-6E67EAAD6C31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SrcCadWorks.Viewer", "src\SrcCadWorks.Viewer\SrcCadWorks.Viewer.csproj", "{2C60A3E5-759A-4F15-9435-4A8EAAEFC120}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E37A7E3-33FA-4C38-A29E-6B8B8486822A}.Debug|x64.ActiveCfg = Debug|x64
+		{5E37A7E3-33FA-4C38-A29E-6B8B8486822A}.Debug|x64.Build.0 = Debug|x64
+		{5E37A7E3-33FA-4C38-A29E-6B8B8486822A}.Release|x64.ActiveCfg = Release|x64
+		{5E37A7E3-33FA-4C38-A29E-6B8B8486822A}.Release|x64.Build.0 = Release|x64
+		{D84FEE4F-5B59-4F11-9A7A-6E67EAAD6C31}.Debug|x64.ActiveCfg = Debug|x64
+		{D84FEE4F-5B59-4F11-9A7A-6E67EAAD6C31}.Debug|x64.Build.0 = Debug|x64
+		{D84FEE4F-5B59-4F11-9A7A-6E67EAAD6C31}.Release|x64.ActiveCfg = Release|x64
+		{D84FEE4F-5B59-4F11-9A7A-6E67EAAD6C31}.Release|x64.Build.0 = Release|x64
+		{2C60A3E5-759A-4F15-9435-4A8EAAEFC120}.Debug|x64.ActiveCfg = Debug|x64
+		{2C60A3E5-759A-4F15-9435-4A8EAAEFC120}.Debug|x64.Build.0 = Debug|x64
+		{2C60A3E5-759A-4F15-9435-4A8EAAEFC120}.Release|x64.ActiveCfg = Release|x64
+		{2C60A3E5-759A-4F15-9435-4A8EAAEFC120}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

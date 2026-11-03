@@ -1,0 +1,8 @@
+V1.76 paket notu
+
+Bu sürüm, V1.75 ile ortaya çıkan SMARTNEST boş parça listesi sorununu düzeltmeye odaklanır. SMARTNEST artık kendi özel Component2.IsSuppressed tabanlı montaj döngüsünü kullanmaz; mevcut Lazer Hazırla modülündeki AssemblyScanner akışını kullanır. Böylece alt montaj ve hafif yüklenmiş bileşen davranışı ortaklaştırılır.
+
+DXF okuyucu kapalı polyline dışında LINE/ARC zincirlerini ve daire/elips konturlarını da ele alır. Desteklenmeyen veya açık geometri varsa artık entity tipleriyle birlikte açıklayıcı hata verir.
+
+Kurulum: scripts\Build_Release.bat, başarılı derleme sonrası yönetici olarak scripts\Register_Addin.bat.
+Test: tests\Run_DxfContourReader_Tests.ps1 (Visual Studio Roslyn C# derleyicisi gerekir).

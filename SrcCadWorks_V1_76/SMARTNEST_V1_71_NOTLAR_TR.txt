@@ -1,0 +1,17 @@
+SrcCadWorks V1.71 – SMARTNEST modül entegrasyon ön sürümü
+
+- SMARTNEST, SrcCadWorks Task Pane içinde bağımsız ana modül düğmesi olarak eklendi. Lazer Hazırla formunun içine eklenmedi.
+- Ayrı SMARTNEST penceresi eklendi. Sac ölçüleri, varsayılan 5 mm parça aralığı, kenar payı ve kerf ayarlanabilir.
+- Açık montajın bileşenleri taranıp dosya bazında adetleri listelenir. Bastırılmış bileşenler atlanır.
+- DXF Ekle ile kapalı LWPOLYLINE dış konturu içeren DXF dosyaları alınabilir.
+- Mevcut poligon nesting çekirdeğiyle yerleşim ve R12 uyumlu LWPOLYLINE çıktı oluşturulabilir.
+
+ÖNEMLİ TAMAMLANMAMIŞ İŞLER:
+- Montaj taramasındaki parçaların sac metal / lazer kesim uygunluğu otomatik sınıflandırılmıyor.
+- Montajdan otomatik flat-pattern DXF çıkarımı ve montaj adetlerinin nesting geometrilerine bağlanması henüz yapılmadı. Şu an montaj taraması envanter listesidir; gerçek nesting geometrileri DXF Ekle ile sağlanır.
+- DXF okuyucu bu ön sürümde kapalı LWPOLYLINE dış konturunu alır; ARC/CIRCLE/SPLINE ve delik konturlarını içe aktarma kapsamı yoktur.
+- İç delikler DXF çıktısına henüz taşınmaz.
+- Nesting algoritması ilk yerleşim motorudur; endüstriyel NFP/true-shape optimizasyonu değildir.
+- SOLIDWORKS Windows ortamı ve .NET Framework 4.8 derleyicisi bu çalışma ortamında bulunmadığından derleme ve SOLIDWORKS içi doğrulama yapılmamıştır.
+
+Bu nedenle V1.71 kaynak ön sürümüdür; üretim ortamına dağıtılmadan önce Windows/SOLIDWORKS derlemesi ve entegrasyon testleri zorunludur.

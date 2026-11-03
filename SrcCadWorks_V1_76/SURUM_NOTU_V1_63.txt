@@ -1,0 +1,9 @@
+SrcCadWorks V1.63 - Sürüm Gösterim Düzeltmesi
+
+- Ana SrcCadWorks paneli artık V1.50 sabit metnini kullanmaz; ortak AppVersion kaynağını kullanır.
+- Montaj Hazırla, Kaynak/Lazer/İmalat/Talaşlı İmalat ve Otomatik Teknik Resim başlıkları ortak sürümü gösterir.
+- Ayrı Montaj Görüntüleme uygulamasının başlığı ve dosya sürüm bilgisi de V1.63 olarak hizalanmıştır.
+- Register_Addin.bat hedef DLL sürümünü kontrol eder; eski bin\Release DLL varsa yeniden derler, eski DLL’yi sessizce kaydetmez.
+- Ana eklenti AssemblyVersion ve AssemblyFileVersion: 1.63.0.0.
+
+Not: Bu ZIP kaynak paketidir; yeni DLL/EXE üretmek için Windows üzerinde projenin yeniden derlenip mevcut eklentinin güncellenmesi gerekir. Bu ortamda Visual Studio/MSBuild ve SOLIDWORKS bulunmadığından gerçek derleme/çalıştırma testi yapılamamıştır.

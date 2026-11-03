@@ -1,0 +1,8 @@
+SrcCadWorks V1.64 - Derleme ve kayit betigi duzeltmesi
+
+- Register_Addin.bat dosyasi UTF-8 BOM olmadan kaydedildi; ilk satir artik cmd tarafindan dogru okunur.
+- Hedef surum 1.64.0.0 olarak ayarlandi. V1.63 DLL mevcutsa kurulumdan once Release x64 yeniden derleme tetiklenir.
+- Ana eklenti ve Montaj Goruntuleme dosya surumleri 1.64.0.0 olarak hizalandi.
+- Kullaniciya gosterilen ortak surum etiketi V1.64 olarak guncellendi.
+
+Not: Kaynak kod paketi. Derleme kullanicinin Windows/Visual Studio 2022 ve SOLIDWORKS API ortaminda Register_Addin.bat calistirilirken yapilir. Bu ortamda Windows/MSBuild/SOLIDWORKS olmadigindan derleme veya gercek calisma testi yapilmamistir.

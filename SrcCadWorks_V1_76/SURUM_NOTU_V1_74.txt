@@ -1,0 +1,10 @@
+SrcCadWorks V1.74 - SMARTNEST DXF kontur okuma duzeltmesi
+
+- SMARTNEST DXF okuyucusu kapali LWPOLYLINE yaninda klasik POLYLINE/VERTEX/SEQEND konturlarini da okur.
+- Kontur noktalarinda kapanis noktasinin tekrar edilmesi normalize edilir.
+- Gecersiz/kapali olmayan geometri acik hata mesaji ile raporlanir.
+- Yerlesime uygun parca yoksa nesting motoru cagrilmaz; kullaniciya acik uyari gosterilir.
+- Ana eklenti ve kurulum dogrulama surumu 1.74.0.0 olarak guncellenmistir.
+
+Dogrulama siniri:
+Bu paket kaynak kodu uzerinde duzenlenmistir. Bu calisma ortaminda Windows/.NET Framework 4.8, SOLIDWORKS ve MSBuild bulunmadigindan Release x64 derlemesi ve SOLIDWORKS icinde gercek montaj acinim testi yapilmamistir. Kurulum sonrasi kullanici tarafinda dogrulanmalidir.

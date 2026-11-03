@@ -1,0 +1,12 @@
+SrcCadWorks V1.76 – SMARTNEST montaj hiyerarşisi ve DXF kontur düzeltmesi
+
+- SMARTNEST montaj taraması, Lazer Hazırla ekranının kullandığı AssemblyScanner/PartAnalyzer akışına taşındı.
+- Alt montaj bileşenleri, suppressed/lightweight durumları, SLDPRT dosya filtresi ve parça+konfigürasyon adetleri ortak tarama mantığıyla ele alınır.
+- Parça koduna göre gruplanan satırlarda kaynak occurrence dosya yolu, konfigürasyon, adet, malzeme ve kalınlık bilgileri korunur.
+- Sac levha olmayan cıvata, somun ve diğer standart parçalar PartAnalyzer sonucu olmadığı için SMARTNEST aday listesine girmez.
+- DXF kontur okuyucu kapalı LWPOLYLINE/POLYLINE, bulge yayları, CIRCLE, ELLIPSE ve LINE/ARC/SPLINE-fit kapalı zincirlerini destekler.
+- Okuyucu sadece DXF ENTITIES bölümünü tarar; kapalı loop bulamazsa bulunan entity türlerini hata metnine yazar.
+- Beş sentetik DXF kontur regresyon testi eklendi (LWPOLYLINE, POLYLINE, LINE zinciri, ARC+LINE, CIRCLE).
+- AssemblyVersion, AssemblyFileVersion, AppVersion, Register_Addin ve Verify_Build 1.76.0.0/V1.76 ile eşitlendi.
+
+Doğrulama sınırı: Bu paket, kaynak hiyerarşisi ve parser regresyon testleriyle hazırlanmıştır. Bu çalışma ortamında Windows/.NET Framework/SOLIDWORKS bulunmadığı için Release x64 derlemesi ve gerçek montaj içi test yapılamadı.

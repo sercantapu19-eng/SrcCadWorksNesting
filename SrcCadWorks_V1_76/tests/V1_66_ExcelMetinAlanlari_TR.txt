@@ -1,0 +1,11 @@
+SrcCadWorks V1.66 — Montaj Excel metin alanları regresyon kontrolü
+
+1. Montaj Hazırla ile birleşik Excel üretin.
+2. Sıra sütunundaki hiyerarşik değerler 1.1, 1.10, 1.35, 2.11.3 gibi görünmeli; 1.Oca/1.Şub gibi tarih görünümüne dönüşmemeli.
+3. Parça/Montaj Kodu sütunundaki "46023" değeri 46023 sayısı değil metin kodu olarak saklanmalı.
+4. Kod alanı "00123" olsaydı baştaki sıfırlar korunmalı (metin alanı biçiminin regresyon kontrolü).
+5. Ürün Tanımı, Renk Kodu, İşlem Tipi, Dosya Kodu ve Açıklama/Notlar alanları metin olarak korunmalı.
+6. Adet ve Kütle hücreleri sayısal kalmalı; Excel'de adet/kütle hesapları bozulmamalı.
+7. RMRG00150002 ve RMRG00150003 bölüm sırası ile DRLC00060018'in üst montajlarının altında kalması V1.65'teki davranışıyla aynı olmalı.
+
+Not: Bu dosya beklenti kontrol listesidir. Canlı SOLIDWORKS/Excel testi bu ortamda yapılmamıştır.

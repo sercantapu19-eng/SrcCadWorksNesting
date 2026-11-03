@@ -1,0 +1,24 @@
+SrcCadWorks V1.70 - SMARTNEST çekirdek ön sürümü
+
+Temel alınan kaynak: V1.69 MontajAltSeviyePdfFix
+
+Kullanıcı tercihleri:
+- Girdi, mevcut Lazer Hazırla DXF üretim akışıyla uyumlu tutulacak.
+- Varsayılan parça aralığı 5 mm; ayarlanabilir.
+- Çıktılar: yerleşim DXF'i, parça/adet listesi için veri, sac kullanım/fire hesabı ve önizleme için yerleşim koordinatları.
+
+Bu pakette eklenen:
+- Services/SmartNestEngine.cs: mm koordinatlı çokgen dış kontur yerleşim çekirdeği.
+- Sac ölçüsü, 5 mm varsayılan parça aralığı, kenar payı ve kerf ayrı ayarlar.
+- Parça adedini çoğaltma ve 360 derece döndürme (varsayılan 5 derece adım; parça başına değiştirilebilir).
+- Gerçek çokgen dış kontur üzerinden SAT çakışma kontrolü.
+- Sac sınır kontrolü, yerleşim koordinatları, sac sayısı ve kullanım oranı.
+- Yerleşim dış konturlarını AutoCAD DXF LWPOLYLINE olarak yazma.
+
+ÖNEMLİ SINIRLAR / DOĞRULAMA DURUMU:
+- Bu, SMARTNEST çekirdek ön sürümüdür; henüz Lazer Hazırla formuna kullanıcı arayüzü olarak bağlanmış değildir.
+- V1.69 DXF dosyalarını okuyup çokgenlere dönüştüren adaptör henüz eklenmemiştir. Girdi olarak kapalı çokgen kontur koordinatları bekler.
+- İç delikler veri modelinde tutulur ancak bu ilk çekirdekte yerleşim çakışma hesabına ve DXF çıktısına dahil edilmez.
+- Kerf/boşluk için güvenli geometrik ofset yerine muhafazakâr radyal genişletme yaklaşımı kullanılır; üretim öncesi CAM doğrulaması gerekir.
+- Bu ortamda .NET Framework 4.8 / SOLIDWORKS API bulunmadığından Windows derlemesi ve SOLIDWORKS entegrasyon testi çalıştırılamadı.
+- Bu nedenle bu paket kurulum/üretim onaylı sürüm değil, kaynak kod ön sürümüdür. Mevcut Lazer Hazırla ve toplu DXF akışına dokunulmamıştır.

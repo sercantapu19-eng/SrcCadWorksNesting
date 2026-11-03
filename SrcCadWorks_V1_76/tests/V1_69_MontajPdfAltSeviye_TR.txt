@@ -1,0 +1,23 @@
+SrcCadWorks V1.69 - Montaj Hazırla PDF regresyon kontrolü
+
+Girdi BOM örneği (MONTAJ olarak işaretli gerçek montaj belgeleri):
+- 1 / RCRC00010008
+- 1.16 / DRLC00060018
+- 1.17 / DRLC00060010
+- 1.18 / DRLC00020012
+- 2 / RCRC00030000
+- 2.12 / DRLC00060010 (tekrar eden aynı belge)
+- 2.13 / DRLC00020012 (tekrar eden aynı belge)
+- 2.14 / DRLC00060018 (tekrar eden aynı belge)
+
+Beklenen:
+1. PDF hedef sayısı, aynı SourcePath + Configuration tekilleştirildikten sonra 5 olmalı (örnek satırlardaki tekrarların aynı belge/konfigürasyon olması halinde).
+2. RCRC00010008 ve RCRC00030000 yanında DRLC00060018, DRLC00060010 ve DRLC00020012 için de teknik resim aranmalı ve varsa PDF üretilmeli.
+3. Aynı SLDASM/konfigürasyon iki üst montajın altında görünüyorsa aynı PDF iki kez oluşturulmamalı.
+4. Farklı dosya veya konfigürasyona ait aynı Parça Kodu varsa ayrı PDF çıktıları benzersiz adlandırılmalı.
+5. DrawingPath boş veya dosya mevcut değilse hedef sessizce atlanmamalı; PDF hedef sayısı içinde sayılmalı ve eksik teknik resim olarak raporlanmalı.
+6. PDF işlemi, Excel'in doğrudan alt montaj bölüm sınırına bağlı olmamalı.
+7. Excel üretimi tek birleşik çalışma kitabı olarak kalmalı; iç içe montajlar Excel'de ayrıca ana bölüm yapılmamalı.
+8. “Sadece üst montajları dahil et” seçeneği taramayı yalnız üst seviyede durduruyorsa, PDF hedefleri de yalnızca taramada bulunan üst seviye montajlardan oluşmalı.
+
+Bu dosya regresyon beklentilerini açıklar; canlı SOLIDWORKS çalışma testi sonucu değildir.

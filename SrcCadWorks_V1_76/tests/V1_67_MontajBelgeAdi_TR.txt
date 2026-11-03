@@ -1,0 +1,12 @@
+V1.67 Montaj Hazırla regresyon kontrolü
+
+1. WORKSTATION KATI RULOLU MERGE montajını açıp Montaj Hazırla taramasını çalıştırın.
+2. M5x10 Havşa İmbus Civata_DIN7991.SLDPRT bileşeni için Parça/Montaj Kodu hücresinin `M5x10 Havşa İmbus Civata_DIN7991` olduğunu doğrulayın.
+   - Bu ad `WORKSTATION KATI RULOLU MERGE.zip` içinde gerçek belge adı olarak mevcut.
+3. Hücrede `91294A208_NO THREADS_Black-Oxide Alloy Steel Hex Drive Flat Head Screw` görünmediğini doğrulayın. Bu tedarikçi iç kimliği parça belgesi adı yerine kullanılmamalıdır.
+4. Şirket tarafından tanımlanmış `Ürün Kodu` veya `Parça Kodu` özel alanı olan belgelerde bu açık şirket alanının hâlâ öncelikli olduğunu doğrulayın.
+5. CR rulo satırlarında açıklayıcı Interroll belgesi/örnek adı ve miktarların korunduğunu kontrol edin.
+6. Çıktının tek Excel olduğunu, iç içe montajların ayrıca ana bölüm yapılmadığını ve sıra kodlarının tarih biçimine dönüşmediğini kontrol edin.
+7. Kaynak Hazırla ve Talaşlı İmalat çıktılarında metadata tercihinin değişmediğini doğrulayın.
+
+Bu dosya test planıdır; test sonuçlarının geçtiğini belirtmez.

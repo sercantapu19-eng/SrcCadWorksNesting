@@ -1,0 +1,7 @@
+V1.75 paket notu
+
+SMARTNEST montaj taraması artık PartAnalyzer üzerinden sac levha doğrulaması yapar. Sac olmayan standart bağlantı elemanları açınım aktarımına gönderilmez. Malzeme ve kalınlık alanları analiz sonucundan gösterilir. SOLIDWORKS PDM başlıklı uyarı pencerelerindeki Tamam/OK düğmesi tarama boyunca otomatik tıklanır.
+
+Kurulum: scripts\Build_Release.bat ardından yönetici olarak scripts\Register_Addin.bat.
+
+Not: Bu kaynak paketi statik olarak kontrol edilmiştir; Windows x64 derlemesi ve SOLIDWORKS içi test kullanıcı bilgisayarında doğrulanmalıdır. Excel aktarımı henüz bu pakete dahil değildir.

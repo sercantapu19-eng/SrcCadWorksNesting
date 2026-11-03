@@ -1,0 +1,14 @@
+SrcCadWorks V1.65 — Montaj Hazırla regresyon kontrolü
+
+Test modeli: WORKSTATION KATI RULOLU MERGE
+Referans: SOLİDBOMLİST.xls ve EXST038-40064-27.10.2026.xlsx
+
+1. Montaj Hazırla'yı aktif ana montaj açıkken çalıştırın.
+2. Montaj Adedi alanını referansla aynı değere ayarlayın. Referans BOM'da üst montajlar 1 adet; SrcCadWorks örnek çıktısında 2 adet kullanılmışsa bu alanı ayrıca kontrol edin.
+3. Birleşik Excel'de bölüm kökleri yalnızca RMRG00150002 ve RMRG00150003 olmalı; sıraları referans BOM gibi RMRG00150002, sonra RMRG00150003 olmalı. DRLC00060018 ayrı bir üst bölüm olarak görünmemeli.
+4. DRLC00060018, her iki üst montajın alt ağacında uygun yerde bulunmalı (referans BOM'da 1.9 ve 2.12). Her bölümdeki adet, üretim çarpanı dışında referansla uyumlu olmalı.
+5. Rulo bileşenlerinde `CRxxxx_Tube`, `1` gibi genel değerler yerine açıklayıcı SOLIDWORKS bileşen adı beklenir. Örnek referans adları Interroll_R734261...596mm ve Interroll_R786004...BF620_Roller_Series.step.
+6. Rulo sayısını doğrulayın: her bir üst montajın BOM'unda 15 adet tekil Interroll rulo satırı ve 7 adetlik bir rulo satırı bulunur. Adların düzelmesi satır veya adet sayısını değiştirmemeli.
+7. Montaj şablonu ilk çalıştırmadan sonra seçim istemeden `%LOCALAPPDATA%\SrcCadWorks\templates\MONTAJ FORMU.xls` üzerinden bulunmalı.
+
+Not: Bu metin beklenen kontrol listesidir; bu ortamda SOLIDWORKS üzerinde canlı test yapılmış değildir.

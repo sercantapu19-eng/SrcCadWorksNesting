@@ -1,0 +1,14 @@
+SrcCadWorks V1.70 - SMARTNEST çekirdek ön sürümü
+Temel: V1.69 MontajAltSeviyePdfFix
+
+Yeni: polygon tabanlı SMARTNEST yerleşim motoru (SmartNestEngine).
+Varsayılan parça aralığı 5 mm; kenar payı ve kerf ayrı ayarlanabilir.
+360 derece rotasyon taraması (varsayılan 5 derece adım), adet çoğaltma,
+gerçek dış kontur SAT çakışma kontrolü, sac sınırı, sac sayısı/kullanım oranı
+ve yerleşim konturlarını DXF LWPOLYLINE olarak yazma eklendi.
+
+ÖN SÜRÜM: Lazer Hazırla arayüzüne DXF okuyucu/aktarıcı bağlantısı henüz yapılmadı.
+İç konturlar bu sürümde veri modelinde korunur ancak çakışma hesabı ve DXF çıktısına
+yazılmaz. Kerf/boşluk ofseti yaklaşık korumalı genişletmedir. Windows + SOLIDWORKS
+API ortamı olmadığından derleme ve SOLIDWORKS testi yapılamadı. Mevcut Lazer Hazırla
+akışı değiştirilmemiştir. Üretim kullanımı için eksik entegrasyon ve testler tamamlanmalıdır.

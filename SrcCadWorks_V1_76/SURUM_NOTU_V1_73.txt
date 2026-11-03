@@ -1,0 +1,16 @@
+SrcCadWorks V1.74 - SMARTNEST kurulum/surum dogrulama duzeltmesi
+
+Temel: V1.72 SMARTNEST entegre kaynak paketi.
+
+Bu surumde:
+- Ana SrcCadWorks eklentisinin AssemblyVersion ve AssemblyFileVersion degerleri 1.74.0.0 olarak guncellendi.
+- Kullaniciya gosterilen surum etiketi V1.74 yapildi.
+- Register_Addin.bat icindeki ana eklenti DLL surum beklentisi 1.74.0.0 olarak duzeltildi.
+- Boylece 1.72 DLL'sinin 1.69 bekleyen kurulum betigi tarafindan yanlis surum olarak reddedilmesi giderildi.
+- SrcCadWorks.Viewer yardimci uygulamasinin 1.69 surumu bagimsiz tutuldu; ana eklenti surum kontrolune dahil degildir.
+
+Dogrulama siniri:
+V1.72 kullanici derleme kaydinda Release x64 derlemesi 0 uyari / 0 hata ile tamamlanmistir.
+Bu paket icin Linux hazirlik ortaminda Visual Studio / SOLIDWORKS bulunmadigindan Windows derlemesi,
+COM kaydi ve SOLIDWORKS icinde calisma testi yapilmamistir. Windows'ta Build_Release.bat ve
+Register_Addin.bat calistirilarak dogrulanmalidir.

@@ -1,0 +1,8 @@
+SrcCadWorks V1.62 — Montaj Excel önizlemelerinde beyaz arka plan düzeltmesi
+
+- Montaj Hazırla Excel görsellerinde önce canlı SOLIDWORKS önizlemesi alınır. PreviewService görüntü alırken arka planı geçici olarak düz beyaza ayarlar ve işlem sonunda kullanıcının önceki SOLIDWORKS arka plan tercihlerini geri yükler.
+- Canlı önizleme başarısız olursa kayıtlı küçük resim yedek olarak denenir; kırmızı/yeşil kenara bağlı chroma arka plan temizlenir.
+- Montaj önizleme cache anahtarı MontajBeyazZeminV2 olarak sürümlendi. Böylece eski sürümlerin beyaz zemin garantisi olmayan/kırmızı arka planlı PNG önbellekleri tekrar kullanılmaz. İlk çalıştırmada görseller yeniden üretileceği için daha uzun sürebilir; yeni önbellek oluşturulduktan sonraki çalıştırmalar tekrar hızlanır.
+- Montaj Hazırla tek Excel üretme davranışı ve V1.61 alt hiyerarşi düzeltmesi korunmuştur.
+
+Doğrulama: Kaynak değişiklikleri ve ZIP bütünlüğü statik olarak kontrol edilmiştir. Bu ortamda Windows/MSBuild ve SOLIDWORKS bulunmadığından gerçek derleme ve çalışma testi yapılmamıştır.

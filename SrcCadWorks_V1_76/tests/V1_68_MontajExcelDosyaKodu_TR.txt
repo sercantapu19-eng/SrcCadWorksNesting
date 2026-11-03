@@ -1,0 +1,10 @@
+SrcCadWorks V1.68 — Montaj Excel dosya adı regresyon kontrolü
+
+Beklenti:
+1. Montaj Hazırla ekranında "MONTAJ DOSYA KODU" alanına EXST038-40064-27.10.2026 girildiğinde tek birleşik Excel bu dosya koduyla adlandırılmalı: EXST038-40064-27.10.2026.xlsx (veya şablonun koruduğu uygun Excel uzantısı).
+2. Aktif SOLIDWORKS montaj belgesinin adı WORKSTATION KATI RULOLU MERGE olsa bile çıktı adı bu belge adına dönmemeli.
+3. "MONTAJ DOSYA KODU" boşsa, varsa ana montajın Dosya Kodu özelliği; o da boşsa belge adı yedek olarak kullanılmalı.
+4. Excel içindeki satırların "Dosya Kodu" sütunu mevcut süreç-kodu eşlemesine göre yazılmaya devam etmeli; bu düzeltme sadece birleşik Excel dosyasının disk üzerindeki adını değiştirir.
+5. PDF adlandırma davranışı değişmemeli.
+
+Bu dosya beklenen davranışı tanımlar; canlı SOLIDWORKS testi sonucu değildir.

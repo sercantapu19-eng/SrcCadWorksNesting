@@ -1,0 +1,18 @@
+SrcCadWorks V1.72 – SMARTNEST mevcut DXF açınım hattına bağlantı
+
+Bu sürümde: 
+- SMARTNEST bağımsız SrcCadWorks ana modülü olarak kalır; Lazer Hazırla içine taşınmaz.
+- Montaj taraması, bileşen dosyası + referans konfigürasyon bazında adet toplar; bastırılmış bileşenleri atlar.
+- Her benzersiz parça/konfigürasyon için mevcut SrcCadWorks Services/DxfExporter.Export kullanılır. Bu, üretim paketindeki SOLIDWORKS ExportToDWG2 flat-pattern yoludur.
+- Alınan DXF'deki kapalı LWPOLYLINE dış konturu nesting motoruna adet bilgisiyle aktarılır.
+- Varsayılan parça aralığı 5 mm; sac ölçüsü, kenar payı ve kerf ayarlanabilir.
+- Elle DXF ekleme ve yerleşim DXF kaydetme korunur.
+
+Önemli sınırlamalar / doğrulama:
+- SOLIDWORKS ve Windows derleme ortamı bu geliştirme ortamında bulunmadığından .NET/COM derlemesi ve gerçek SOLIDWORKS montaj testi çalıştırılamadı.
+- Şu an geometri aktarımı kapalı LWPOLYLINE dış konturunu kullanır. DXF iç delikleri, yay/bulge segmentleri ve spline'lar nesting geometrisine tam aktarılmaz.
+- Malzeme/kalınlık bazında ayrı nesting partileri henüz uygulanmadı; aynı çalıştırmadaki tüm parçalar aynı sac ayarlarıyla yerleştirilir. Üretimde farklı malzeme/kalınlıkları karıştırmamak için bu sınırlama giderilmeden üretim DXF'si kullanılmamalıdır.
+- Montaj taraması tüm bastırılmamış dosya bileşenlerini dener; lazer uygunluğu/flat-pattern bulunması DxfExporter başarısıyla belirlenir.
+- SMARTNEST DXF çıktısı dış kontur yerleşimini içerir; delik ve iç kontur aktarımı sonraki entegrasyon adımıdır.
+
+Bu nedenle V1.72, mevcut açınım çıkarma koduna gerçek bağlantı içeren geliştirme ön sürümüdür; doğrulanmış üretim sürümü değildir.

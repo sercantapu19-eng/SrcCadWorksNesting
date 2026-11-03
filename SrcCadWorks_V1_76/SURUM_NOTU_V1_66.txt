@@ -1,0 +1,10 @@
+SrcCadWorks V1.66 - Montaj Excel metin alanı düzeltmesi
+
+- Excel'e yazılmadan önce B:D ve G:I/J alanları metin biçimine alınır.
+- Hiyerarşik sıra değerlerinin (ör. 1.1) bölgesel Excel ayarları nedeniyle tarih görünümüne (ör. 1.Oca) dönüşmesi önlenir.
+- Sayısal görünen parça/montaj kodları (ör. 46023) metin olarak korunur.
+- Adet ve Kütle sütunları sayısal kalır.
+- Önceki V1.65 montaj ağacı ve rulo adı düzeltmeleri korunur.
+- Ana eklenti/görüntüleyici dosya sürümü: 1.66.0.0; görünür etiket: V1.66.
+
+Not: Kaynak kodu paketidir. Bu ortamda Windows/MSBuild/SOLIDWORKS olmadığı için derleme ve canlı test yapılamamıştır.

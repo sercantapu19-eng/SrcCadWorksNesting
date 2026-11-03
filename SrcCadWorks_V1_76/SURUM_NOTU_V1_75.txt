@@ -1,0 +1,10 @@
+SrcCadWorks V1.75 – SMARTNEST sac filtresi ve PDM uyarı yönetimi
+
+- Montaj taramasında her benzersiz parça/konfigürasyon PartAnalyzer ile doğrulanır.
+- Yalnız gerçek SOLIDWORKS sac levha analizi başarılı olan parçalar açınım aktarımına gider.
+- Somun, cıvata ve diğer standart katı parçalar yerleşim listesinden elenir.
+- Malzeme ve sac kalınlığı PartAnalyzer sonucundan listeye aktarılır.
+- SMARTNEST taraması sırasında başlığı SOLIDWORKS PDM olan modal uyarılarda Tamam/OK düğmesi otomatik tıklanır. Bu otomasyon yalnız tarama süresince çalışır.
+- AssemblyVersion, Register_Addin ve Verify_Build beklentileri 1.75.0.0 olarak eşitlendi.
+
+Test sınırı: Kaynak kontrolleri yapılmıştır. Windows/MSBuild/SOLIDWORKS bu ortamda bulunmadığından gerçek x64 derleme ve PDM/SOLIDWORKS çalışma testi yapılmamıştır. Excel içe aktarma bu sürümde henüz yoktur.

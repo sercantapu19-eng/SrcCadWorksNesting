@@ -1,0 +1,15 @@
+SrcCadWorks V1.74 kaynak paketi
+
+Kurulum/derleme:
+1. ZIP arsivini tamamen cikartin.
+2. scripts\Build_Release.bat dosyasini calistirin.
+3. Derleme ve cikti dogrulamasi basariliysa scripts\Register_Addin.bat dosyasini Yonetici olarak calistirin.
+4. SOLIDWORKS'u kapatip yeniden acin; Eklentiler listesinden SrcCadWorks'u etkinlestirin.
+
+V1.74 duzeltmesi:
+Kurulum betigi artik ana SrcCadWorks.dll icin 1.74.0.0 bekler. Onceki V1.72 kaynaklarinda
+kurulum betigi 1.69.0.0 beklediği icin derleme basarili olsa da DLL surum hatasi veriyordu.
+Viewer yardimci uygulamasinin 1.69 surumu ayri tutulmustur.
+
+Not: Paket kaynak kodudur. Bu calisma ortaminda Windows/MSBuild/SOLIDWORKS olmadigindan
+Windows derlemesi, COM kaydi ve gercek SOLIDWORKS entegrasyon testi yapilmamistir.

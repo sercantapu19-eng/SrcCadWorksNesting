@@ -1,0 +1,8 @@
+SrcCadWorks V1.65 - Montaj BOM ve Rulo Adi Duzeltmeleri
+
+- Birlesik Montaj Hazirla Excel bolumleri yalnizca aktif ana montajin dogrudan MONTAJ alt montajlarindan olusur. Ic ice alt montajlar (or. DRLC00060018) ust bolum olarak tekrar eklenmez; ust montaj BOM altinda kalir. Bolumler parca/montaj koduna gore kararlı siralanir.
+- CRxxxx_Tube gibi genel sablon kodlari veya yalniz sayidan olusan kodlar gorulurse, bilesenin SOLIDWORKS montaj agacindaki aciklayici adi yedek olarak kullanilir. Normal imalat/parca kodlari bu kuralla degistirilmez.
+- Montaj formu sabit kullanici templates klasorune kurulur ve FindTemplate bu konumu varsayilan aramada onceliklendirir.
+- Ana eklenti ve goruntuleyici surumleri 1.65.0.0; ekranda gorunen surum V1.65.
+
+Not: Kaynak kodu paketidir. Bu ortamda Windows/MSBuild/SOLIDWORKS bulunmadigindan derleme veya gercek montaj uzerinde calisma testi yapilmamistir. Kurulum betigi Windows'ta Release x64 derlemesini tetikler.

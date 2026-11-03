@@ -1,0 +1,1 @@
+@echo off\r\ntitle SrcCadWorks Yardimci Surecleri Kapat\r\necho SrcCadWorks Viewer ve Watchdog surecleri kapatiliyor...\r\ntaskkill /F /IM SrcCadWorks.Viewer.exe >nul 2>&1\r\ntaskkill /F /IM SrcCadWorks.Watchdog.exe >nul 2>&1\r\necho Tamam. Eski surum klasorunu tekrar silebilirsiniz.\r\npause\r\n

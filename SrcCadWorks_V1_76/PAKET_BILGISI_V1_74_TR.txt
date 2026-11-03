@@ -1,0 +1,9 @@
+SrcCadWorks V1.74 kaynak paketi
+
+V1.74 SMARTNEST duzeltmesi:
+- DXF parser artik LWPOLYLINE ve klasik POLYLINE/VERTEX/SEQEND kapali dis konturlarini okuyabilir.
+- Tekrarlanan son/kapanis noktasi temizlenir.
+- Uygun geometri yoksa nesting acik hata verir.
+- DLL ve kurulum dogrulama surumu 1.74.0.0.
+
+Not: Kaynak paketidir. Windows Release x64 derlemesi ve SOLIDWORKS runtime testi bu ortamda yapilmamistir.

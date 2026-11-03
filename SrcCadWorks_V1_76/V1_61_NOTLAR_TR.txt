@@ -1,0 +1,7 @@
+SrcCadWorks V1.61 — Montaj alt hiyerarşisi temsilci seçimi düzeltmesi
+
+- Aynı montaj dosyasının tekrarlı örnekleri BOM'da tek satırda toplandığında, artık ilk örnek körlemesine seçilmez.
+- Taranmış alt bileşen sayısı en fazla olan örnek temsilci seçilir. Bu, ilk örnekte çocuk hiyerarşisi yakalanmamışken başka bir örnekte mevcut olan alt parçaların birleşik Excel'de kaybolmasını önlemeyi amaçlar.
+- Montaj Excel'i tek birleşik çalışma kitabı olarak kalır.
+
+Doğrulama notu: Kaynak kodu düzeyinde kontrol edilmiştir. Bu ortamda Windows/MSBuild ve SOLIDWORKS bulunmadığından derleme ve gerçek montaj üzerinde çalışma testi yapılamamıştır.

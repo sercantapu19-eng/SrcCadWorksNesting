@@ -1,0 +1,11 @@
+SrcCadWorks V1.69 - Montaj Hazırla tüm seviyelerde PDF hedefleri
+
+- Önceki sürümde PDF döngüsü GetMontajRoots() listesini kullanıyordu. Bu liste yalnız aktif ana montajın doğrudan altındaki MONTAJ bileşenlerini içerdiğinden, BOM içindeki iç içe MONTAJ belgeleri PDF üretimine hiç alınmıyordu.
+- PDF hedef listesi artık tüm taranmış BOM satırlarından seçiliyor: IsWeldRoot=true ve OperationType=MONTAJ.
+- Aynı kaynak SLDASM dosyası + konfigürasyon birden fazla BOM konumunda bulunursa tek PDF üretiliyor.
+- Aynı kod farklı belge/konfigürasyonla kullanılmışsa ayrı, benzersiz dosya adı veriliyor.
+- Teknik resmi olmayan nested montajlar da sayılıyor ve hata/eksik resim raporuna ekleniyor.
+- Excel kökleri ve tek birleşik Excel davranışı etkilenmiyor.
+- Örnek BOM'da hedeflenen benzersiz belgeler: RCRC00010008, DRLC00060018, DRLC00060010, DRLC00020012, RCRC00030000.
+
+Statik kaynak/ZIP kontrolleri yapıldı. Windows/MSBuild ve gerçek SOLIDWORKS ortamında derleme/çalıştırma testi yapılmadı.

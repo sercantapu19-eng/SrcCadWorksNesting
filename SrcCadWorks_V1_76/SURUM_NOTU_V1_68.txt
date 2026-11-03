@@ -1,0 +1,6 @@
+SrcCadWorks V1.68 - Montaj Excel dosya kodu ile adlandırma
+
+- Montaj Hazırla birleşik Excel dosyasının adı artık önce kullanıcı tarafından girilen "MONTAJ DOSYA KODU" alanından alınır.
+- Bu alan boşsa ana montajın Dosya Kodu özelliği kullanılır; o da yoksa belge adı son yedek olarak kullanılır.
+- Bu değişiklik Excel içindeki "Dosya Kodu" sütununu veya PDF adlandırmasını değiştirmez.
+- Kaynak kodu statik kontrol edildi. Bu ortamda Windows/MSBuild ve SOLIDWORKS olmadığından derleme ve canlı çalışma testi yapılmadı.
