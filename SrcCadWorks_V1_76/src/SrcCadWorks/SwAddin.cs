@@ -173,6 +173,25 @@ namespace SrcCadWorks
             }
             catch { }
             _automaticDrawingForm = null;
+            // SMARTNEST penceresi de add-in bağlantısı kesilirken kapatılmalı.
+            // Önceki sürümde bu form DisconnectFromSW akışında atlanıyordu;
+            // açık form ve olay abonelikleri add-in kaynaklarının serbest kalmasını geciktirebilirdi.
+            try
+            {
+                if (_smartNestForm != null && !_smartNestForm.IsDisposed)
+                {
+                    _smartNestForm.Close();
+                    _smartNestForm.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error("SMARTNEST kapatılırken kaynak temizliği başarısız", ex);
+            }
+            finally
+            {
+                _smartNestForm = null;
+            }
             CloseManagedViewers();
             try
             {
