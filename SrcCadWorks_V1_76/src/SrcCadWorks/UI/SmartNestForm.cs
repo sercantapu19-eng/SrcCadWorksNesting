@@ -28,6 +28,7 @@ namespace SrcCadWorks.UI
         private readonly List<SmartNestPart> _parts = new List<SmartNestPart>();
         private readonly List<AssemblyItem> _assemblyItems = new List<AssemblyItem>();
         private SmartNestResult _result;
+        private string _sourceDxfDirectory;
         public SmartNestForm(SldWorks sw) { _sw = sw; SolidWorksOwnedWindow.Initialize(_sw); Text = "SMARTNEST | SrcCadWorks"; Width = 1120; Height = 760; MinimumSize = new Size(900, 600); StartPosition = FormStartPosition.CenterScreen; Build(); _ownedWindowTracker = SolidWorksOwnedWindow.Track(this, _sw, _keepOnTop.Checked); FormClosed += (s,e) => { try { _ownedWindowTracker?.Dispose(); } catch { } }; }
         private void Build()
         {
@@ -51,7 +52,12 @@ namespace SrcCadWorks.UI
 
         private void ScanAndExportAssembly()
         {
+            if (!string.IsNullOrWhiteSpace(_sourceDxfDirectory))
+            {
+                try { if (Directory.Exists(_sourceDxfDirectory)) Directory.Delete(_sourceDxfDirectory, true); } catch { }
+            }
             string temp = Path.Combine(Path.GetTempPath(), "SrcCadWorks", "SMARTNEST_" + Guid.NewGuid().ToString("N"));
+            _sourceDxfDirectory = temp;
             try
             {
                 var doc = _sw.ActiveDoc as ModelDoc2;
@@ -140,6 +146,7 @@ namespace SrcCadWorks.UI
                             _parts.Add(new SmartNestPart
                             {
                                 Name = item.Row.PartCode,
+                                SourceDxfPath = dxf,
                                 Quantity = item.Quantity,
                                 OuterContour = contour,
                                 AllowRotation = true,
@@ -181,7 +188,8 @@ namespace SrcCadWorks.UI
             }
             finally
             {
-                try { if (Directory.Exists(temp)) Directory.Delete(temp, true); } catch { }
+                // Keep the exact Laser Prep flat-pattern DXFs alive until the user saves
+                // the nesting output. The production DXF writer reads these source entities.
             }
         }
         private void AddPartRow(string name, int quantity, string material, string state)
@@ -193,7 +201,7 @@ namespace SrcCadWorks.UI
         private void AddDxf()
         {
             using(var d=new OpenFileDialog{Filter="DXF dosyaları (*.dxf)|*.dxf",Multiselect=true,Title="Nesting için DXF parçaları seçin"})
-            {if(d.ShowDialog(this)!=DialogResult.OK)return;foreach(string f in d.FileNames){try{var contour=ReadClosedOuterContour(f);if(contour.Count<3)throw new InvalidDataException("Kapalı dış kontur bulunamadı.");_parts.Add(new SmartNestPart{Name=Path.GetFileNameWithoutExtension(f),Quantity=1,OuterContour=contour});AddPartRow(Path.GetFileName(f),1,"DXF içinden","Geometri alındı");}catch(Exception ex){AddPartRow(Path.GetFileName(f),0,"-","Atlandı: "+ex.Message);}}_status.Text="Geometri alınan parça türü: "+_parts.Count;}
+            {if(d.ShowDialog(this)!=DialogResult.OK)return;foreach(string f in d.FileNames){try{var contour=ReadClosedOuterContour(f);if(contour.Count<3)throw new InvalidDataException("Kapalı dış kontur bulunamadı.");_parts.Add(new SmartNestPart{Name=Path.GetFileNameWithoutExtension(f),SourceDxfPath=f,Quantity=1,OuterContour=contour});AddPartRow(Path.GetFileName(f),1,"DXF içinden","Geometri alındı");}catch(Exception ex){AddPartRow(Path.GetFileName(f),0,"-","Atlandı: "+ex.Message);}}_status.Text="Geometri alınan parça türü: "+_parts.Count;}
         }
         private static IList<SmartNestPoint> ReadClosedOuterContour(string path)
         {
