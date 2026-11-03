@@ -277,18 +277,25 @@ namespace SrcCadWorks.UI
                 Width = 1000, Height = 720, MinimumSize = new Size(640, 480),
                 StartPosition = FormStartPosition.CenterParent, BackColor = Color.FromArgb(244, 246, 249)
             };
+            int selectedSheet = 0;
+            var top = new Panel { Dock = DockStyle.Top, Height = 38, BackColor = Color.White };
             var info = new Label
             {
-                Dock = DockStyle.Top, Height = 38, TextAlign = ContentAlignment.MiddleLeft,
-                Padding = new Padding(12, 0, 0, 0), BackColor = Color.White,
+                Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleLeft,
+                Padding = new Padding(12, 0, 0, 0),
                 Text = string.Format(CultureInfo.CurrentCulture,
                     "{0} sac | {1} adet yerleşti | Kullanım %{2:0.0}",
                     _result.SheetCount, _result.Placements.Count, _result.UtilizationPercent)
             };
+            var sheetPicker = new ComboBox { Dock = DockStyle.Right, Width = 130, DropDownStyle = ComboBoxStyle.DropDownList };
+            for (int i = 0; i < _result.SheetCount; i++) sheetPicker.Items.Add("Sac " + (i + 1).ToString(CultureInfo.InvariantCulture));
+            if (sheetPicker.Items.Count > 0) sheetPicker.SelectedIndex = 0;
             var canvas = new Panel { Dock = DockStyle.Fill, BackColor = Color.FromArgb(235, 239, 243) };
+            sheetPicker.SelectedIndexChanged += (s, e) => { selectedSheet = Math.Max(0, sheetPicker.SelectedIndex); canvas.Invalidate(); };
+            top.Controls.Add(info); top.Controls.Add(sheetPicker);
             canvas.Paint += (sender, e) =>
             {
-                var placements = _result.Placements.Where(p => p.SheetIndex == 0 && p.Contour != null && p.Contour.Count >= 3).ToList();
+                var placements = _result.Placements.Where(p => p.SheetIndex == selectedSheet && p.Contour != null && p.Contour.Count >= 3).ToList();
                 if (placements.Count == 0) return;
                 e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
                 float pad = 36f;
@@ -320,7 +327,7 @@ namespace SrcCadWorks.UI
                 }
             };
             preview.Controls.Add(canvas);
-            preview.Controls.Add(info);
+            preview.Controls.Add(top);
             preview.ShowDialog(this);
             preview.Dispose();
         }
