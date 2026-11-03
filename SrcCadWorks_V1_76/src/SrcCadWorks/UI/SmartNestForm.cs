@@ -22,6 +22,7 @@ namespace SrcCadWorks.UI
         private readonly DataGridView _grid = new DataGridView();
         private readonly NumericUpDown _width = new NumericUpDown(), _height = new NumericUpDown(), _gap = new NumericUpDown(), _margin = new NumericUpDown(), _kerf = new NumericUpDown();
         private readonly Label _status = new Label();
+        private readonly ProgressBar _nestProgress = new ProgressBar();
         private CheckBox _keepOnTop;
         private SolidWorksOwnedWindow.Tracker _ownedWindowTracker;
         private readonly List<SmartNestPart> _parts = new List<SmartNestPart>();
@@ -39,7 +40,11 @@ namespace SrcCadWorks.UI
             AddButton(bar,"NESTING YAP",RunNest); AddButton(bar,"Yerleşim DXF Kaydet",SaveDxf); root.Controls.Add(bar,0,1);
             _grid.Dock=DockStyle.Fill; _grid.BackgroundColor=Color.White; _grid.AllowUserToAddRows=false; _grid.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill; _grid.RowHeadersVisible=false;
             _grid.Columns.Add("No","Sıra No"); _grid.Columns.Add("Name","Parça / DXF"); _grid.Columns.Add("Qty","Adet"); _grid.Columns.Add("Material","Malzeme / Kalınlık"); _grid.Columns.Add("State","Durum"); root.Controls.Add(_grid,0,2);
-            _status.Dock=DockStyle.Fill; _status.Text="Hazır. Yalnız SOLIDWORKS sac levha parçaları taranır; standart bağlantı elemanları elenir."; _status.TextAlign=ContentAlignment.MiddleLeft; _status.ForeColor=Color.FromArgb(70,80,90); root.Controls.Add(_status,0,3);
+            var footer = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RowCount = 1 };
+            footer.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100)); footer.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 190));
+            _status.Dock=DockStyle.Fill; _status.Text="Hazır. Yalnız SOLIDWORKS sac levha parçaları taranır; standart bağlantı elemanları elenir."; _status.TextAlign=ContentAlignment.MiddleLeft; _status.ForeColor=Color.FromArgb(70,80,90);
+            _nestProgress.Dock=DockStyle.Fill; _nestProgress.Minimum=0; _nestProgress.Maximum=100; _nestProgress.Value=0; _nestProgress.Style=ProgressBarStyle.Continuous;
+            footer.Controls.Add(_status,0,0); footer.Controls.Add(_nestProgress,1,0); root.Controls.Add(footer,0,3);
         }
         private static void AddButton(Control parent,string text,Action action){var b=new Button{Text=text,AutoSize=true,Height=34,Margin=new Padding(4),BackColor=Color.White};b.Click+=(s,e)=>action();parent.Controls.Add(b);}
         private static void AddNumeric(Control parent,string label,NumericUpDown n,decimal value,decimal min,decimal max){var p=new FlowLayoutPanel{AutoSize=true,FlowDirection=FlowDirection.TopDown,Width=110,Margin=new Padding(4,0,4,0)};p.Controls.Add(new Label{Text=label,AutoSize=true});n.Minimum=min;n.Maximum=max;n.Value=value;n.DecimalPlaces=2;n.Width=100;p.Controls.Add(n);parent.Controls.Add(p);}
@@ -138,7 +143,7 @@ namespace SrcCadWorks.UI
                                 Quantity = item.Quantity,
                                 OuterContour = contour,
                                 AllowRotation = true,
-                                RotationStepDegrees = 5.0
+                                RotationStepDegrees = 10.0
                             });
                             string mat = string.IsNullOrWhiteSpace(item.Row.Material) ? "Malzeme belirtilmemiş" : item.Row.Material;
                             string thk = item.Row.ThicknessMm.HasValue
@@ -230,10 +235,27 @@ namespace SrcCadWorks.UI
                     EdgeMargin = (double)_margin.Value,
                     Kerf = (double)_kerf.Value
                 };
-                _result = SmartNestEngine.Nest(_parts, cfg);
+                _nestProgress.Value = 0;
+                var nestWatch = System.Diagnostics.Stopwatch.StartNew();
+                _status.Text = "Nesting başlatıldı; yerleşim hesaplanıyor...";
+                _result = SmartNestEngine.Nest(_parts, cfg, (completed, total, checks) =>
+                {
+                    int percent = total <= 0 ? 100 : (int)Math.Round(100.0 * completed / total);
+                    percent = Math.Max(0, Math.Min(100, percent));
+                    _nestProgress.Value = percent;
+                    string remaining = completed > 0
+                        ? TimeSpan.FromSeconds(Math.Max(0, nestWatch.Elapsed.TotalSeconds / completed * (total - completed))).ToString(@"hh\\:mm\\:ss")
+                        : "hesaplanıyor";
+                    _status.Text = string.Format(CultureInfo.CurrentCulture,
+                        "Nesting: %{0} | {1}/{2} parça yerleşti | {3} konum denendi | Kalan: {4}",
+                        percent, completed, total, checks, remaining);
+                    Application.DoEvents();
+                });
+                nestWatch.Stop();
+                _nestProgress.Value = 100;
                 _status.Text = string.Format(CultureInfo.CurrentCulture,
-                    "Yerleşim tamamlandı: {0} sac, {1} adet parça, kullanım %{2:0.0}",
-                    _result.SheetCount, _result.Placements.Count, _result.UtilizationPercent);
+                    "Yerleşim tamamlandı: {0} sac, {1} adet parça, kullanım %{2:0.0} | Süre: {3:0.0} sn",
+                    _result.SheetCount, _result.Placements.Count, _result.UtilizationPercent, nestWatch.Elapsed.TotalSeconds);
             }
             catch (Exception ex)
             {
