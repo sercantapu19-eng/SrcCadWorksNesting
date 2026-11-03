@@ -31,6 +31,7 @@ namespace SrcCadWorks.UI
         private readonly List<AssemblyItem> _assemblyItems = new List<AssemblyItem>();
         private SmartNestResult _result;
         private string _sourceDxfDirectory;
+        private string _lastDxfDirectory;
         public SmartNestForm(SldWorks sw) { _sw = sw; SolidWorksOwnedWindow.Initialize(_sw); Text = "SMARTNEST | SrcCadWorks"; Width = 1120; Height = 760; MinimumSize = new Size(900, 600); StartPosition = FormStartPosition.CenterScreen; Build(); _ownedWindowTracker = SolidWorksOwnedWindow.Track(this, _sw, _keepOnTop.Checked); FormClosed += (s,e) => { try { _ownedWindowTracker?.Dispose(); } catch { } try { if (!string.IsNullOrWhiteSpace(_sourceDxfDirectory) && Directory.Exists(_sourceDxfDirectory)) Directory.Delete(_sourceDxfDirectory, true); } catch { } }; }
         private void Build()
         {
@@ -207,16 +208,61 @@ namespace SrcCadWorks.UI
         }
         private void AddDxfFolderWithExcel()
         {
-            using (var folder = new FolderBrowserDialog { Description = "Önceden hazırlanmış DXF dosyalarının bulunduğu klasörü seçin." })
+            IDisposable zOrderPause = null;
+            try
             {
-                if (folder.ShowDialog(this) != DialogResult.OK) return;
-                using (var excel = new OpenFileDialog { Filter = "Excel çalışma kitabı (*.xlsx)|*.xlsx", Title = "Parça kodu ve adet bilgilerini içeren Excel dosyasını seçin" })
+                // Diğer modüllerdeki ortak modern klasör seçiciyi kullan.
+                // SOLIDWORKS sahip pencere takibini seçim boyunca duraklat.
+                zOrderPause = _ownedWindowTracker?.Suspend();
+
+                string selected = _lastDxfDirectory;
+                string picked;
+                bool cancelled = false;
+                try
+                {
+                    if (ModernFolderPicker.TryPickFolder(Handle, selected,
+                        "Önceden hazırlanmış DXF dosyalarının bulunduğu klasörü seçin",
+                        out picked, out cancelled))
+                    {
+                        selected = picked;
+                        _lastDxfDirectory = picked;
+                    }
+                    else if (cancelled)
+                    {
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Info("Modern klasör seçici açılamadı; klasik seçici kullanılacak. " + ex.Message);
+                }
+
+                // Modern pencere yalnız açılamazsa klasik seçici yedek olarak kullanılır.
+                if (string.IsNullOrWhiteSpace(selected) || !Directory.Exists(selected))
+                {
+                    using (var folder = new FolderBrowserDialog
+                    {
+                        Description = "Önceden hazırlanmış DXF dosyalarının bulunduğu klasörü seçin.",
+                        SelectedPath = Directory.Exists(_lastDxfDirectory) ? _lastDxfDirectory : ""
+                    })
+                    {
+                        if (folder.ShowDialog(this) != DialogResult.OK) return;
+                        selected = folder.SelectedPath;
+                        _lastDxfDirectory = selected;
+                    }
+                }
+
+                using (var excel = new OpenFileDialog
+                {
+                    Filter = "Excel çalışma kitabı (*.xlsx)|*.xlsx",
+                    Title = "Parça kodu ve adet bilgilerini içeren Excel dosyasını seçin"
+                })
                 {
                     if (excel.ShowDialog(this) != DialogResult.OK) return;
                     try
                     {
                         var quantities = ReadDxfQuantitiesFromExcel(excel.FileName);
-                        var files = Directory.GetFiles(folder.SelectedPath, "*.dxf", SearchOption.AllDirectories);
+                        var files = Directory.GetFiles(selected, "*.dxf", SearchOption.AllDirectories);
                         var fileMap = files.GroupBy(f => NormalizePartKey(Path.GetFileNameWithoutExtension(f)))
                             .ToDictionary(g => g.Key, g => g.ToList(), StringComparer.OrdinalIgnoreCase);
                         _parts.Clear();
@@ -270,9 +316,9 @@ namespace SrcCadWorks.UI
                             matched, missingDxf, duplicateDxf, invalid, unusedDxf.Count);
                         _status.Text = summary;
                         if (missingCodes.Count > 0)
-                            summary += "\r\n" + "\r\n" + "DXF bulunamayan kodlar: " + string.Join(", ", missingCodes.Take(20));
+                            summary += "\\r\\n" + "\\r\\n" + "DXF bulunamayan kodlar: " + string.Join(", ", missingCodes.Take(20));
                         if (unusedDxf.Count > 0)
-                            summary += "\r\n" + "\r\n" + "Excel'de karşılığı olmayan DXF'ler: " + string.Join(", ", unusedDxf.Take(20));
+                            summary += "\\r\\n" + "\\r\\n" + "Excel'de karşılığı olmayan DXF'ler: " + string.Join(", ", unusedDxf.Take(20));
                         MessageBox.Show(this, summary, "SMARTNEST - Excel / DXF eşleştirmesi", MessageBoxButtons.OK,
                             missingDxf > 0 || duplicateDxf > 0 || invalid > 0 ? MessageBoxIcon.Warning : MessageBoxIcon.Information);
                     }
@@ -283,6 +329,10 @@ namespace SrcCadWorks.UI
                         Logger.Error("SMARTNEST Excel-DXF import", ex);
                     }
                 }
+            }
+            finally
+            {
+                zOrderPause?.Dispose();
             }
         }
 
