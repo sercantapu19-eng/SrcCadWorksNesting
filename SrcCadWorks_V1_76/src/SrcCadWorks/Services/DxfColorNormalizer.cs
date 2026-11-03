@@ -151,8 +151,9 @@ namespace SrcCadWorks.Services
                 text.IndexOf("EOF", StringComparison.OrdinalIgnoreCase) < 0)
                 throw new InvalidOperationException("SOLIDWORKS DXF doğrulama başarısız: temel DXF bölümleri eksik.");
 
-            if (text.IndexOf("SRC_GEOMETRY", StringComparison.OrdinalIgnoreCase) < 0)
-                throw new InvalidOperationException("SOLIDWORKS DXF doğrulama başarısız: SRC_GEOMETRY bulunamadı.");
+            if (text.IndexOf("SRC_GEOMETRY", StringComparison.OrdinalIgnoreCase) < 0 &&
+                text.IndexOf("SMARTNEST_SHEET_1_GEOMETRY", StringComparison.OrdinalIgnoreCase) < 0)
+                throw new InvalidOperationException("SOLIDWORKS DXF doğrulama başarısız: kesim geometrisi layer'ı bulunamadı.");
         }
 
         private static void SetOrInsertColor(List<Pair> pairs, int start, ref int end, int color, bool removeTrueColor)
@@ -225,22 +226,29 @@ namespace SrcCadWorks.Services
         {
             color = 7;
             if (string.Equals(layer, "SRC_SEPARATOR", StringComparison.OrdinalIgnoreCase)) return true;
-            if (string.Equals(layer, "SRC_GEOMETRY", StringComparison.OrdinalIgnoreCase))
+            string normalized = layer ?? "";
+            if (normalized.StartsWith("SMARTNEST_SHEET_", StringComparison.OrdinalIgnoreCase))
+            {
+                if (normalized.EndsWith("_GEOMETRY", StringComparison.OrdinalIgnoreCase)) normalized = "SRC_GEOMETRY";
+                else if (normalized.EndsWith("_BEND", StringComparison.OrdinalIgnoreCase)) normalized = "SRC_BEND";
+                else if (normalized.EndsWith("_CENTER", StringComparison.OrdinalIgnoreCase)) normalized = "SRC_CENTER";
+            }
+            if (string.Equals(normalized, "SRC_GEOMETRY", StringComparison.OrdinalIgnoreCase))
             {
                 color = 7; // white on dark AutoCAD background
                 return true;
             }
-            if (string.Equals(layer, "SRC_BEND", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(normalized, "SRC_BEND", StringComparison.OrdinalIgnoreCase))
             {
                 color = 3;
                 return true;
             }
-            if (string.Equals(layer, "SRC_CENTER", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(normalized, "SRC_CENTER", StringComparison.OrdinalIgnoreCase))
             {
                 color = 4;
                 return true;
             }
-            if (string.Equals(layer, "SRC_INFO", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(normalized, "SRC_INFO", StringComparison.OrdinalIgnoreCase))
             {
                 color = 1;
                 return true;
