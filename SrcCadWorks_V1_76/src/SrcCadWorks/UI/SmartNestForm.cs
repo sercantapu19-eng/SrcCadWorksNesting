@@ -38,7 +38,7 @@ namespace SrcCadWorks.UI
             AddNumeric(bar,"Sac genişliği",_width,1000,1,10000); AddNumeric(bar,"Sac yüksekliği",_height,2000,1,10000); AddNumeric(bar,"Parça aralığı",_gap,5,0,1000); AddNumeric(bar,"Kenar payı",_margin,5,0,1000); AddNumeric(bar,"Kerf",_kerf,0,0,100);
             AddButton(bar,"NESTING YAP",RunNest); AddButton(bar,"Yerleşim DXF Kaydet",SaveDxf); root.Controls.Add(bar,0,1);
             _grid.Dock=DockStyle.Fill; _grid.BackgroundColor=Color.White; _grid.AllowUserToAddRows=false; _grid.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill; _grid.RowHeadersVisible=false;
-            _grid.Columns.Add("Name","Parça / DXF"); _grid.Columns.Add("Qty","Adet"); _grid.Columns.Add("Material","Malzeme / Kalınlık"); _grid.Columns.Add("State","Durum"); root.Controls.Add(_grid,0,2);
+            _grid.Columns.Add("No","Sıra No"); _grid.Columns.Add("Name","Parça / DXF"); _grid.Columns.Add("Qty","Adet"); _grid.Columns.Add("Material","Malzeme / Kalınlık"); _grid.Columns.Add("State","Durum"); root.Controls.Add(_grid,0,2);
             _status.Dock=DockStyle.Fill; _status.Text="Hazır. Yalnız SOLIDWORKS sac levha parçaları taranır; standart bağlantı elemanları elenir."; _status.TextAlign=ContentAlignment.MiddleLeft; _status.ForeColor=Color.FromArgb(70,80,90); root.Controls.Add(_status,0,3);
         }
         private static void AddButton(Control parent,string text,Action action){var b=new Button{Text=text,AutoSize=true,Height=34,Margin=new Padding(4),BackColor=Color.White};b.Click+=(s,e)=>action();parent.Controls.Add(b);}
@@ -144,12 +144,12 @@ namespace SrcCadWorks.UI
                             string thk = item.Row.ThicknessMm.HasValue
                                 ? item.Row.ThicknessMm.Value.ToString("0.###", CultureInfo.InvariantCulture) + " mm"
                                 : "Kalınlık belirtilmemiş";
-                            _grid.Rows.Add(item.Row.PartCode, item.Quantity, mat + " / " + thk, "Sac açınımı alındı; nesting'e hazır");
+                            AddPartRow(item.Row.PartCode, item.Quantity, mat + " / " + thk, "Sac açınımı alındı; nesting'e hazır");
                             ok++;
                         }
                         catch (Exception ex)
                         {
-                            _grid.Rows.Add(item.Row.PartCode, item.Quantity, "-", "Açınım/kontur hatası: " + ex.Message);
+                            AddPartRow(item.Row.PartCode, item.Quantity, "-", "Açınım/kontur hatası: " + ex.Message);
                             failed++;
                             Logger.Error("SMARTNEST sheet metal flat pattern export: " + item.Row.PartCode, ex);
                         }
@@ -179,11 +179,16 @@ namespace SrcCadWorks.UI
                 try { if (Directory.Exists(temp)) Directory.Delete(temp, true); } catch { }
             }
         }
+        private void AddPartRow(string name, int quantity, string material, string state)
+        {
+            int sequence = _grid.Rows.Count + 1;
+            _grid.Rows.Add(sequence.ToString(CultureInfo.InvariantCulture), name, quantity, material, state);
+        }
         private static string SafeName(string s){foreach(char c in Path.GetInvalidFileNameChars())s=s.Replace(c,'_');return string.IsNullOrWhiteSpace(s)?"PARCA":s;}
         private void AddDxf()
         {
             using(var d=new OpenFileDialog{Filter="DXF dosyaları (*.dxf)|*.dxf",Multiselect=true,Title="Nesting için DXF parçaları seçin"})
-            {if(d.ShowDialog(this)!=DialogResult.OK)return;foreach(string f in d.FileNames){try{var contour=ReadClosedOuterContour(f);if(contour.Count<3)throw new InvalidDataException("Kapalı dış kontur bulunamadı.");_parts.Add(new SmartNestPart{Name=Path.GetFileNameWithoutExtension(f),Quantity=1,OuterContour=contour});_grid.Rows.Add(Path.GetFileName(f),1,"DXF içinden","Geometri alındı");}catch(Exception ex){_grid.Rows.Add(Path.GetFileName(f),0,"-","Atlandı: "+ex.Message);}}_status.Text="Geometri alınan parça türü: "+_parts.Count;}
+            {if(d.ShowDialog(this)!=DialogResult.OK)return;foreach(string f in d.FileNames){try{var contour=ReadClosedOuterContour(f);if(contour.Count<3)throw new InvalidDataException("Kapalı dış kontur bulunamadı.");_parts.Add(new SmartNestPart{Name=Path.GetFileNameWithoutExtension(f),Quantity=1,OuterContour=contour});AddPartRow(Path.GetFileName(f),1,"DXF içinden","Geometri alındı");}catch(Exception ex){AddPartRow(Path.GetFileName(f),0,"-","Atlandı: "+ex.Message);}}_status.Text="Geometri alınan parça türü: "+_parts.Count;}
         }
         private static IList<SmartNestPoint> ReadClosedOuterContour(string path)
         {
