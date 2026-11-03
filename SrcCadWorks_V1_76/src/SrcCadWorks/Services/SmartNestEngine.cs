@@ -201,7 +201,10 @@ namespace SrcCadWorks.Services
                         if (hit) continue;
 
                         if (best == null || y < bestY - 1e-7 ||
-                            (Math.Abs(y - bestY) <= 1e-7 && x < bestX - 1e-7))
+                            (Math.Abs(y - bestY) <= 1e-7 && x < bestX - 1e-7) ||
+                            (Math.Abs(y - bestY) <= 1e-7 && Math.Abs(x - bestX) <= 1e-7 &&
+                             (best == null || h < best.H - 1e-7 ||
+                              (Math.Abs(h - best.H) <= 1e-7 && w < best.W - 1e-7))))
                         {
                             best = new Candidate { P = normalized, A = angle, W = w, H = h, MinX = minX, MinY = minY };
                             bestSheet = sheet;
