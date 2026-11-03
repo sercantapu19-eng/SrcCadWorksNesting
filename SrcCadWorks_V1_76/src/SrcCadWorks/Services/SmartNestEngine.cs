@@ -123,45 +123,112 @@ namespace SrcCadWorks.Services
             return result;
         }
 
+        private sealed class Bounds
+        {
+            public double MinX, MinY, MaxX, MaxY;
+        }
+
         private static void FindBest(SmartNestPart part, SmartNestSettings cfg, IList<SmartNestPlacement> placed, int sheet,
             ref Candidate best, ref int bestSheet, ref double bestX, ref double bestY,
             ref long candidateChecks, Action<int, int, long> progress, int partIndex, int totalParts)
         {
-            // Expand existing parts once per search, not once for every tested position.
+            // Candidate-based bottom-left search: test meaningful alignments against already
+            // placed part bounds instead of scanning every 10-20 mm point on the whole sheet.
             double clearance = cfg.PartGap + cfg.Kerf;
-            var expandedPlaced = placed.Select(old => ExpandRadially(old.Contour, clearance / 2.0)).ToList();
+            var expandedPlaced = new List<IList<SmartNestPoint>>(placed.Count);
+            var placedBounds = new List<Bounds>(placed.Count);
+            foreach (var old in placed)
+            {
+                var expanded = ExpandRadially(old.Contour, clearance / 2.0);
+                expandedPlaced.Add(expanded);
+                placedBounds.Add(GetBounds(expanded));
+            }
+
             double step = part.AllowRotation ? Math.Max(1, Math.Min(90, part.RotationStepDegrees)) : 360;
-            int rotations = part.AllowRotation ? (int)Math.Ceiling(360.0 / step) : 1;
+            int rotations = part.AllowRotation ? Math.Max(1, (int)Math.Ceiling(360.0 / step)) : 1;
             for (int r = 0; r < rotations; r++)
             {
                 double angle = part.AllowRotation ? r * step : 0;
                 var rotated = Rotate(part.OuterContour, angle);
-                var minX = rotated.Min(q => q.X); var minY = rotated.Min(q => q.Y);
+                double minX = rotated.Min(q => q.X), minY = rotated.Min(q => q.Y);
                 var normalized = rotated.Select(q => new SmartNestPoint(q.X - minX, q.Y - minY)).ToList();
                 double w = normalized.Max(q => q.X), h = normalized.Max(q => q.Y);
                 double maxX = cfg.SheetWidth - cfg.EdgeMargin - w;
                 double maxY = cfg.SheetHeight - cfg.EdgeMargin - h;
-                double searchStep = Math.Max(10, Math.Min(20, clearance <= 0 ? 10 : clearance * 2.0));
-                for (double y = cfg.EdgeMargin; y <= maxY + 1e-7; y += searchStep)
-                for (double x = cfg.EdgeMargin; x <= maxX + 1e-7; x += searchStep)
+                if (maxX < cfg.EdgeMargin - 1e-7 || maxY < cfg.EdgeMargin - 1e-7) continue;
+
+                var candidateXs = new SortedSet<double> { cfg.EdgeMargin };
+                var candidateYs = new SortedSet<double> { cfg.EdgeMargin };
+                foreach (var b in placedBounds)
                 {
-                    candidateChecks++;
-                    var candidate = Translate(normalized, x, y);
-                    var newExpanded = ExpandRadially(candidate, clearance / 2.0);
-                    bool hit = false;
-                    foreach (var oldExpanded in expandedPlaced)
+                    AddCandidate(candidateXs, b.MinX, cfg.EdgeMargin, maxX);
+                    AddCandidate(candidateXs, b.MaxX + clearance, cfg.EdgeMargin, maxX);
+                    AddCandidate(candidateXs, b.MinX - w - clearance, cfg.EdgeMargin, maxX);
+                    AddCandidate(candidateXs, b.MaxX - w, cfg.EdgeMargin, maxX);
+                    AddCandidate(candidateYs, b.MinY, cfg.EdgeMargin, maxY);
+                    AddCandidate(candidateYs, b.MaxY + clearance, cfg.EdgeMargin, maxY);
+                    AddCandidate(candidateYs, b.MinY - h - clearance, cfg.EdgeMargin, maxY);
+                    AddCandidate(candidateYs, b.MaxY - h, cfg.EdgeMargin, maxY);
+                }
+
+                var expandedNormalized = ExpandRadially(normalized, clearance / 2.0);
+                foreach (double y in candidateYs)
+                {
+                    foreach (double x in candidateXs)
                     {
-                        if (PolygonsIntersect(newExpanded, oldExpanded)) { hit = true; break; }
+                        candidateChecks++;
+                        var candidateBounds = new Bounds
+                        {
+                            MinX = x, MinY = y, MaxX = x + w, MaxY = y + h
+                        };
+                        bool hit = false;
+                        for (int i = 0; i < expandedPlaced.Count; i++)
+                        {
+                            if (BoundsOverlap(candidateBounds, placedBounds[i]) &&
+                                PolygonsIntersect(Translate(expandedNormalized, x, y), expandedPlaced[i]))
+                            {
+                                hit = true;
+                                break;
+                            }
+                        }
+                        if (progress != null && candidateChecks % 1000 == 0)
+                            progress(partIndex, totalParts, candidateChecks);
+                        if (hit) continue;
+
+                        if (best == null || y < bestY - 1e-7 ||
+                            (Math.Abs(y - bestY) <= 1e-7 && x < bestX - 1e-7))
+                        {
+                            best = new Candidate { P = normalized, A = angle, W = w, H = h, MinX = minX, MinY = minY };
+                            bestSheet = sheet;
+                            bestX = x;
+                            bestY = y;
+                        }
+                        break;
                     }
-                    if (progress != null && candidateChecks % 10000 == 0)
-                        progress(partIndex, totalParts, candidateChecks);
-                    if (!hit)
-                    {
-                        best = new Candidate { P = normalized, A = angle, W = w, H = h, MinX = minX, MinY = minY };
-                        bestSheet = sheet; bestX = x; bestY = y; return;
-                    }
+                    if (best != null && bestSheet == sheet) break;
                 }
             }
+        }
+
+        private static void AddCandidate(SortedSet<double> values, double value, double min, double max)
+        {
+            if (value >= min - 1e-7 && value <= max + 1e-7)
+                values.Add(Math.Max(min, Math.Min(max, value)));
+        }
+
+        private static Bounds GetBounds(IList<SmartNestPoint> polygon)
+        {
+            return new Bounds
+            {
+                MinX = polygon.Min(p => p.X), MinY = polygon.Min(p => p.Y),
+                MaxX = polygon.Max(p => p.X), MaxY = polygon.Max(p => p.Y)
+            };
+        }
+
+        private static bool BoundsOverlap(Bounds a, Bounds b)
+        {
+            return a.MinX < b.MaxX - 1e-7 && a.MaxX > b.MinX + 1e-7 &&
+                   a.MinY < b.MaxY - 1e-7 && a.MaxY > b.MinY + 1e-7;
         }
 
         public static void WriteDxf(string path, SmartNestResult result)
