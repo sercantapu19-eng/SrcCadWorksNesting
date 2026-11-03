@@ -215,7 +215,7 @@ namespace SrcCadWorks.Services
             // are drawn on top of one another in the combined DXF.
             double sheetWidth = result.SheetWidth > 0 ? result.SheetWidth : 0.0;
             double sheetGap = sheetWidth > 0 ? Math.Max(100.0, sheetWidth * 0.05) : 100.0;
-            double sheetOffset(int sheetIndex) => sheetWidth > 0
+            Func<int, double> sheetOffset = sheetIndex => sheetWidth > 0
                 ? Math.Max(0, sheetIndex) * (sheetWidth + sheetGap)
                 : 0.0;
 
