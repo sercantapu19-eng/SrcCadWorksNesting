@@ -40,7 +40,7 @@ namespace SrcCadWorks.UI
             var bar = new FlowLayoutPanel { Dock = DockStyle.Fill, WrapContents = true, BackColor = Color.White, Padding = new Padding(8) };
             AddButton(bar,"Montajı Tara + Açınımları Al",ScanAndExportAssembly); AddButton(bar,"DXF Klasörü + Excel Adetleri",AddDxfFolderWithExcel); AddButton(bar,"DXF Ekle",AddDxf); _keepOnTop = new CheckBox { Text = "Pencereyi üstte tut", AutoSize = true, Checked = true, Margin = new Padding(8, 10, 4, 0) }; _keepOnTop.CheckedChanged += (s,e) => { SolidWorksOwnedWindow.Apply(this, _sw, _keepOnTop.Checked, true); _ownedWindowTracker?.SetEnabled(_keepOnTop.Checked); }; bar.Controls.Add(_keepOnTop);
             AddNumeric(bar,"Sac genişliği",_width,1000,1,10000); AddNumeric(bar,"Sac yüksekliği",_height,2000,1,10000); AddNumeric(bar,"Parça aralığı",_gap,5,0,1000); AddNumeric(bar,"Kenar payı",_margin,5,0,1000); AddNumeric(bar,"Kerf",_kerf,0,0,100);
-            AddButton(bar,"NESTING YAP",RunNest); AddButton(bar,"Önizleme",ShowPreview); AddButton(bar,"Yerleşim DXF Kaydet",SaveDxf); AddButton(bar,"Excel Raporu Kaydet",SaveExcel); root.Controls.Add(bar,0,1);
+            AddButton(bar,"NESTING YAP",RunNest); AddButton(bar,"Önizleme",ShowPreview); AddButton(bar,"Yerleşim DXF Kaydet",SaveDxf); root.Controls.Add(bar,0,1);
             _grid.Dock=DockStyle.Fill; _grid.BackgroundColor=Color.White; _grid.AllowUserToAddRows=false; _grid.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill; _grid.RowHeadersVisible=false;
             _grid.Columns.Add("No","Sıra No"); _grid.Columns.Add("Name","Parça / DXF"); _grid.Columns.Add("Qty","Adet"); _grid.Columns.Add("Material","Malzeme / Kalınlık"); _grid.Columns.Add("State","Durum"); root.Controls.Add(_grid,0,2);
             var footer = new TableLayoutPanel { Dock = DockStyle.Fill, ColumnCount = 2, RowCount = 1 };
@@ -540,102 +540,6 @@ namespace SrcCadWorks.UI
             preview.Controls.Add(top);
             preview.ShowDialog(this);
             preview.Dispose();
-        }
-
-        private void SaveExcel()
-        {
-            if (_result == null || _result.Placements == null || _result.Placements.Count == 0)
-            {
-                MessageBox.Show(this, "Önce NESTING YAP ile yerleşim oluşturun.");
-                return;
-            }
-            using (var d = new SaveFileDialog { Filter = "Excel çalışma kitabı (*.xlsx)|*.xlsx", FileName = "SMARTNEST_RAPOR.xlsx" })
-            {
-                if (d.ShowDialog(this) != DialogResult.OK) return;
-                try
-                {
-                    CreateSmartNestWorkbook(d.FileName, _result, (double)_width.Value, (double)_height.Value,
-                        (double)_gap.Value, (double)_margin.Value, (double)_kerf.Value);
-                    var fi = new FileInfo(d.FileName);
-                    if (!fi.Exists || fi.Length < 500) throw new InvalidDataException("Excel raporu oluşturulamadı veya boş.");
-                    _status.Text = "Excel raporu kaydedildi: " + d.FileName;
-                }
-                catch (Exception ex)
-                {
-                    _status.Text = "Excel kaydedilemedi: " + ex.Message;
-                    MessageBox.Show(this, ex.Message, "SMARTNEST Excel", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Logger.Error("SMARTNEST Excel export", ex);
-                }
-            }
-        }
-
-        private static void CreateSmartNestWorkbook(string path, SmartNestResult result,
-            double sheetWidth, double sheetHeight, double gap, double margin, double kerf)
-        {
-            XNamespace main = "http://schemas.openxmlformats.org/spreadsheetml/2006/main";
-            XNamespace rel = "http://schemas.openxmlformats.org/officeDocument/2006/relationships";
-            XNamespace pkgRel = "http://schemas.openxmlformats.org/package/2006/relationships";
-            XNamespace content = "http://schemas.openxmlformats.org/package/2006/content-types";
-            string dir = Path.GetDirectoryName(path);
-            if (!string.IsNullOrWhiteSpace(dir)) Directory.CreateDirectory(dir);
-            if (File.Exists(path)) File.Delete(path);
-
-            Func<string, XElement> textCell = value => new XElement(main + "c", new XAttribute("t", "inlineStr"),
-                new XElement(main + "is", new XElement(main + "t", new XAttribute(XNamespace.Xml + "space", "preserve"), value ?? "")));
-            Func<double, XElement> numberCell = value => new XElement(main + "c", new XElement(main + "v", value.ToString("0.########", CultureInfo.InvariantCulture)));
-            Func<int, IEnumerable<XElement>, XElement> makeRow = (index, cells) => new XElement(main + "row", new XAttribute("r", index), cells);
-
-            var placementRows = new List<XElement>();
-            placementRows.Add(makeRow(1, new[] { textCell("SMARTNEST - YERLEŞİM RAPORU") }));
-            placementRows.Add(makeRow(2, new[] { textCell("Toplam sac"), numberCell(result.SheetCount), textCell("Toplam parça"), numberCell(result.Placements.Count), textCell("Kullanım (%)"), numberCell(result.UtilizationPercent) }));
-            placementRows.Add(makeRow(3, new[] { textCell("Sac ölçüsü (mm)"), numberCell(sheetWidth), textCell("x"), numberCell(sheetHeight), textCell("Parça aralığı (mm)"), numberCell(gap) }));
-            placementRows.Add(makeRow(4, new[] { textCell("Kenar payı (mm)"), numberCell(margin), textCell("Kerf (mm)"), numberCell(kerf), textCell("Rapor tarihi"), textCell(DateTime.Now.ToString("dd.MM.yyyy HH:mm")) }));
-            placementRows.Add(makeRow(6, new[] { textCell("Sıra No"), textCell("Sac No"), textCell("Parça / DXF"), textCell("X (mm)"), textCell("Y (mm)"), textCell("Dönüş (°)"), textCell("Kaynak DXF") }));
-            for (int i = 0; i < result.Placements.Count; i++)
-            {
-                var p = result.Placements[i];
-                placementRows.Add(makeRow(7 + i, new[] { numberCell(i + 1), numberCell(p.SheetIndex + 1), textCell(p.PartName),
-                    numberCell(p.X), numberCell(p.Y), numberCell(p.RotationDegrees), textCell(Path.GetFileName(p.SourceDxfPath ?? "")) }));
-            }
-
-            var summaryRows = new List<XElement>();
-            summaryRows.Add(makeRow(1, new[] { textCell("PARÇA ÖZETİ") }));
-            summaryRows.Add(makeRow(3, new[] { textCell("Sıra No"), textCell("Parça / DXF"), textCell("Toplam Adet"), textCell("Kullanıldığı Saclar") }));
-            var grouped = result.Placements.GroupBy(p => p.PartName ?? "", StringComparer.OrdinalIgnoreCase)
-                .OrderBy(g => g.Key, StringComparer.OrdinalIgnoreCase).ToList();
-            for (int i = 0; i < grouped.Count; i++)
-            {
-                var g = grouped[i];
-                string sheets = string.Join(", ", g.Select(p => (p.SheetIndex + 1).ToString(CultureInfo.InvariantCulture)).Distinct().OrderBy(x => int.Parse(x, CultureInfo.InvariantCulture)));
-                summaryRows.Add(makeRow(4 + i, new[] { numberCell(i + 1), textCell(g.Key), numberCell(g.Count()), textCell(sheets) }));
-            }
-
-            using (var archive = ZipFile.Open(path, ZipArchiveMode.Create))
-            {
-                Action<string, XDocument> writeXml = (entryName, doc) =>
-                {
-                    var entry = archive.CreateEntry(entryName, CompressionLevel.Optimal);
-                    using (var stream = entry.Open()) doc.Save(stream);
-                };
-                writeXml("[Content_Types].xml", new XDocument(new XElement(content + "Types",
-                    new XElement(content + "Default", new XAttribute("Extension", "rels"), new XAttribute("ContentType", "application/vnd.openxmlformats-package.relationships+xml")),
-                    new XElement(content + "Default", new XAttribute("Extension", "xml"), new XAttribute("ContentType", "application/xml")),
-                    new XElement(content + "Override", new XAttribute("PartName", "/xl/workbook.xml"), new XAttribute("ContentType", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml")),
-                    new XElement(content + "Override", new XAttribute("PartName", "/xl/worksheets/sheet1.xml"), new XAttribute("ContentType", "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml")),
-                    new XElement(content + "Override", new XAttribute("PartName", "/xl/worksheets/sheet2.xml"), new XAttribute("ContentType", "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml")))));
-                writeXml("_rels/.rels", new XDocument(new XElement(pkgRel + "Relationships",
-                    new XElement(pkgRel + "Relationship", new XAttribute("Id", "rId1"), new XAttribute("Type", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument"), new XAttribute("Target", "xl/workbook.xml")))));
-                writeXml("xl/workbook.xml", new XDocument(new XElement(main + "workbook",
-                    new XAttribute(XNamespace.Xmlns + "r", rel),
-                    new XElement(main + "sheets",
-                        new XElement(main + "sheet", new XAttribute("name", "Yerleşim"), new XAttribute("sheetId", "1"), new XAttribute(rel + "id", "rId1")),
-                        new XElement(main + "sheet", new XAttribute("name", "Parça Özeti"), new XAttribute("sheetId", "2"), new XAttribute(rel + "id", "rId2"))))));
-                writeXml("xl/_rels/workbook.xml.rels", new XDocument(new XElement(pkgRel + "Relationships",
-                    new XElement(pkgRel + "Relationship", new XAttribute("Id", "rId1"), new XAttribute("Type", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet"), new XAttribute("Target", "worksheets/sheet1.xml")),
-                    new XElement(pkgRel + "Relationship", new XAttribute("Id", "rId2"), new XAttribute("Type", "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet"), new XAttribute("Target", "worksheets/sheet2.xml")))));
-                writeXml("xl/worksheets/sheet1.xml", new XDocument(new XElement(main + "worksheet", new XElement(main + "sheetData", placementRows))));
-                writeXml("xl/worksheets/sheet2.xml", new XDocument(new XElement(main + "worksheet", new XElement(main + "sheetData", summaryRows))));
-            }
         }
 
         private void SaveDxf()
