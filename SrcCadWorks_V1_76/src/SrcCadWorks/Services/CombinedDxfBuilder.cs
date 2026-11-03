@@ -209,7 +209,21 @@ namespace SrcCadWorks.Services
                 throw new InvalidOperationException("Nesting yerleşimi boş.");
             if (string.IsNullOrWhiteSpace(outputPath)) throw new ArgumentException("DXF çıktı yolu boş.", nameof(outputPath));
 
-            var allPoints = result.Placements.SelectMany(p => p.Contour ?? new List<SmartNestPoint>()).ToList();
+            // Keep the exact same R12 writer, layer/table setup and model-space viewport
+            // as the Laser Prep bulk-DXF export. Each nest sheet is tiled horizontally in
+            // model space; otherwise equal local sheet coordinates from different sheets
+            // are drawn on top of one another in the combined DXF.
+            double sheetWidth = result.SheetWidth > 0 ? result.SheetWidth : 0.0;
+            double sheetGap = sheetWidth > 0 ? Math.Max(100.0, sheetWidth * 0.05) : 100.0;
+            double sheetOffset(int sheetIndex) => sheetWidth > 0
+                ? Math.Max(0, sheetIndex) * (sheetWidth + sheetGap)
+                : 0.0;
+
+            var allPoints = result.Placements
+                .Where(p => p.Contour != null)
+                .SelectMany(p => p.Contour.Select(point => new SmartNestPoint(
+                    point.X + sheetOffset(p.SheetIndex), point.Y)))
+                .ToList();
             if (allPoints.Count < 3) throw new InvalidOperationException("Nesting konturları geçersiz.");
             double minX = allPoints.Min(p => p.X), minY = allPoints.Min(p => p.Y);
             double maxX = allPoints.Max(p => p.X), maxY = allPoints.Max(p => p.Y);
@@ -236,7 +250,7 @@ namespace SrcCadWorks.Services
                     ScanExtents(geometry.Entities, ref gMinX, ref gMinY, ref gMaxX, ref gMaxY);
                     if (double.IsInfinity(gMinX) || double.IsInfinity(gMinY))
                         throw new InvalidDataException("Kaynak DXF geometrisinin sınırları okunamadı: " + placement.PartName);
-                    double dx = placement.X - gMinX;
+                    double dx = placement.X + sheetOffset(placement.SheetIndex) - gMinX;
                     double dy = placement.Y - gMinY;
                     string layerPrefix = "SMARTNEST_SHEET_" + (placement.SheetIndex + 1).ToString(CultureInfo.InvariantCulture);
                     int written = AppendTranslatedEntities(sb, geometry, dx, dy, layerPrefix);
