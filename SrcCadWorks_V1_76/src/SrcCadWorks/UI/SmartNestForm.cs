@@ -316,15 +316,16 @@ namespace SrcCadWorks.UI
                 var relation = relationships.Root.Elements(packageRel + "Relationship")
                     .FirstOrDefault(x => string.Equals((string)x.Attribute("Id"), relationId, StringComparison.Ordinal));
                 if (relation == null) throw new InvalidDataException("Excel çalışma sayfası bağlantısı okunamadı.");
-                string target = (string)relation.Attribute("Target");
-                string sheetPath = target.StartsWith("/", StringComparison.Ordinal)
-                    ? target.TrimStart('/')
-                    : "xl/" + target.Replace('\\', '/');
-                while (sheetPath.Contains("../"))
+                string target = ((string)relation.Attribute("Target") ?? "").Replace('\\', '/');
+                string combinedTarget = target.StartsWith("/", StringComparison.Ordinal) ? target.TrimStart('/') :
+                    (target.StartsWith("xl/", StringComparison.OrdinalIgnoreCase) ? target : "xl/" + target);
+                var pathParts = new List<string>();
+                foreach (string segment in combinedTarget.Split('/'))
                 {
-                    int parent = sheetPath.IndexOf("../", StringComparison.Ordinal);
-                    if (parent >= 0) sheetPath = sheetPath.Remove(parent > 0 ? parent - 1 : 0, parent > 0 ? 3 : 3);
+                    if (segment == "..") { if (pathParts.Count > 0) pathParts.RemoveAt(pathParts.Count - 1); }
+                    else if (segment != "." && segment.Length > 0) pathParts.Add(segment);
                 }
+                string sheetPath = string.Join("/", pathParts);
                 var sheetEntry = archive.GetEntry(sheetPath);
                 if (sheetEntry == null) throw new InvalidDataException("İlk çalışma sayfası bulunamadı: " + sheetPath);
                 var shared = new List<string>();
@@ -366,7 +367,7 @@ namespace SrcCadWorks.UI
                     foreach (var cell in rows[r])
                     {
                         string h = NormalizeHeader(cell.Value);
-                        if (codeColumn < 0 && (h.Contains("parcakodu") || h.Contains("stokKodu".ToLowerInvariant()) || h.Contains("partcode") || h == "kod" || h.Contains("dxfadi") || h.Contains("dosyaadi")))
+                        if (codeColumn < 0 && (h.Contains("parcakodu") || h.Contains("parcano") || h.Contains("stokkodu") || h.Contains("stokno") || h.Contains("malzemekodu") || h.Contains("urunkodu") || h.Contains("partcode") || h == "kod" || h.Contains("dxfadi") || h.Contains("dosyaadi")))
                             codeColumn = cell.Key;
                         if (quantityColumn < 0 && (h == "adet" || h.Contains("miktar") || h.Contains("quantity") || h == "qty"))
                             quantityColumn = cell.Key;
