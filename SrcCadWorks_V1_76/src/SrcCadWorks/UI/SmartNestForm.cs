@@ -603,19 +603,33 @@ namespace SrcCadWorks.UI
             using (var d = new SaveFileDialog { Filter = "DXF (*.dxf)|*.dxf", FileName = "SMARTNEST_YERLESIM.dxf" })
             {
                 if (d.ShowDialog(this) != DialogResult.OK) return;
+                string stagingDirectory = Path.Combine(Path.GetTempPath(), "SrcCadWorks", "SmartNestConvert_" + Guid.NewGuid().ToString("N"));
+                string stagingDxf = Path.Combine(stagingDirectory, "SMARTNEST_SOURCE.dxf");
                 try
                 {
-                    SmartNestEngine.WriteDxf(d.FileName, _result);
+                    Directory.CreateDirectory(stagingDirectory);
+                    SmartNestEngine.WriteDxf(stagingDxf, _result);
+                    CombinedDxfBuilder.ValidateForImport(stagingDxf);
+
+                    // Match Laser Prep's Toplu DXF path: SOLIDWORKS imports the staging DXF
+                    // as a drawing and authors the final DXF via SaveAs.
+                    new DwgConverter(_sw).ConvertOutputs(stagingDxf, d.FileName, null, true, false);
+                    DxfColorNormalizer.ValidateNativeDxf(d.FileName);
+
                     var fi = new FileInfo(d.FileName);
                     if (!fi.Exists || fi.Length < 128)
-                        throw new InvalidDataException("DXF çıktı dosyası boş veya beklenenden küçük.");
-                    _status.Text = "DXF doğrulandı ve kaydedildi: " + d.FileName;
+                        throw new InvalidDataException("SOLIDWORKS tarafından oluşturulan DXF boş veya beklenenden küçük.");
+                    _status.Text = "SOLIDWORKS DXF çıktısı doğrulandı ve kaydedildi: " + d.FileName;
                 }
                 catch (Exception ex)
                 {
                     _status.Text = "DXF kaydedilemedi: " + ex.Message;
                     MessageBox.Show(this, ex.Message, "SMARTNEST DXF", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Logger.Error("SMARTNEST DXF export", ex);
+                }
+                finally
+                {
+                    try { if (Directory.Exists(stagingDirectory)) Directory.Delete(stagingDirectory, true); } catch { }
                 }
             }
         }
