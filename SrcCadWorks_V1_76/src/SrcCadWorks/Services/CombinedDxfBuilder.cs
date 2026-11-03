@@ -866,11 +866,31 @@ namespace SrcCadWorks.Services
                 {
                     double cx = GetDouble(entity, 10, double.NaN);
                     double cy = GetDouble(entity, 20, double.NaN);
-                    double r = Math.Abs(GetDouble(entity, 40, double.NaN));
-                    if (!double.IsNaN(cx) && !double.IsNaN(cy) && !double.IsNaN(r))
+                    double radius = Math.Abs(GetDouble(entity, 40, double.NaN));
+                    if (!double.IsNaN(cx) && !double.IsNaN(cy) && !double.IsNaN(radius))
                     {
-                        Include(cx - r, cy - r, ref minX, ref minY, ref maxX, ref maxY);
-                        Include(cx + r, cy + r, ref minX, ref minY, ref maxX, ref maxY);
+                        if (string.Equals(type, "CIRCLE", StringComparison.OrdinalIgnoreCase))
+                        {
+                            Include(cx - radius, cy - radius, ref minX, ref minY, ref maxX, ref maxY);
+                            Include(cx + radius, cy + radius, ref minX, ref minY, ref maxX, ref maxY);
+                        }
+                        else
+                        {
+                            double start = GetDouble(entity, 50, 0.0);
+                            double end = GetDouble(entity, 51, 360.0);
+                            double sweep = end - start;
+                            while (sweep <= 0.0) sweep += 360.0;
+                            IncludeArcPoint(cx, cy, radius, start, ref minX, ref minY, ref maxX, ref maxY);
+                            IncludeArcPoint(cx, cy, radius, start + sweep, ref minX, ref minY, ref maxX, ref maxY);
+                            for (int cardinal = 0; cardinal < 4; cardinal++)
+                            {
+                                double angle = cardinal * 90.0;
+                                double delta = angle - start;
+                                while (delta < 0.0) delta += 360.0;
+                                if (delta <= sweep + 1e-8)
+                                    IncludeArcPoint(cx, cy, radius, angle, ref minX, ref minY, ref maxX, ref maxY);
+                            }
+                        }
                         continue;
                     }
                 }
@@ -896,6 +916,13 @@ namespace SrcCadWorks.Services
                     if (!double.IsNaN(y)) Include(x, y, ref minX, ref minY, ref maxX, ref maxY);
                 }
             }
+        }
+
+        private static void IncludeArcPoint(double cx, double cy, double radius, double degrees,
+            ref double minX, ref double minY, ref double maxX, ref double maxY)
+        {
+            double angle = degrees * Math.PI / 180.0;
+            Include(cx + radius * Math.Cos(angle), cy + radius * Math.Sin(angle), ref minX, ref minY, ref maxX, ref maxY);
         }
 
         private static void Include(double x, double y, ref double minX, ref double minY, ref double maxX, ref double maxY)
