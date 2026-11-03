@@ -172,6 +172,8 @@ namespace SrcCadWorks.Services
                 }
 
                 var expandedNormalized = ExpandRadially(normalized, clearance / 2.0);
+                var expandedCandidateBounds = GetBounds(expandedNormalized);
+                bool foundForRotation = false;
                 foreach (double y in candidateYs)
                 {
                     foreach (double x in candidateXs)
@@ -179,7 +181,10 @@ namespace SrcCadWorks.Services
                         candidateChecks++;
                         var candidateBounds = new Bounds
                         {
-                            MinX = x, MinY = y, MaxX = x + w, MaxY = y + h
+                            MinX = x + expandedCandidateBounds.MinX,
+                            MinY = y + expandedCandidateBounds.MinY,
+                            MaxX = x + expandedCandidateBounds.MaxX,
+                            MaxY = y + expandedCandidateBounds.MaxY
                         };
                         bool hit = false;
                         for (int i = 0; i < expandedPlaced.Count; i++)
@@ -203,9 +208,10 @@ namespace SrcCadWorks.Services
                             bestX = x;
                             bestY = y;
                         }
+                        foundForRotation = true;
                         break;
                     }
-                    if (best != null && bestSheet == sheet) break;
+                    if (foundForRotation) break;
                 }
             }
         }
